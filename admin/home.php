@@ -106,11 +106,11 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                 function drawChart() {
                     var data = google.visualization.arrayToDataTable([
                         ['Month', 'Participated'],
-                        <?php
-                        foreach ($result as $row) {
-                            echo "['" . $row['month_name'] . "'," . $row['month_wise_count'] . "],";
-                        }
-                        ?>
+                    <?php
+                    foreach ($result as $row) {
+                        echo "['" . $row['month_name'] . "'," . $row['month_wise_count'] . "],";
+                    }
+                    ?>
                     ]);
                     var options = {
                         chart: {
@@ -127,11 +127,11 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                 function drawChart1() {
                     var data = google.visualization.arrayToDataTable([
                         ['Month', 'Registered'],
-                        <?php
-                        foreach ($users as $row) {
-                            echo "['" . $row['month_name_wise_user_count'] . "'," . $row['month_wise_user_count'] . "],";
-                        }
-                        ?>
+                    <?php
+                    foreach ($users as $row) {
+                        echo "['" . $row['month_name_wise_user_count'] . "'," . $row['month_wise_user_count'] . "],";
+                    }
+                    ?>
                     ]);
                     var options = {
                         chart: {

@@ -5,6 +5,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
     return false;
     exit();
 }
+$type = 1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +63,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                                 <label class="control-label col-md-1 col-sm-3 col-xs-12" for="category">Category</label>
                                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                                     <?php
-                                                    $sql = "select id,`category_name` from `category` order by id desc";
+                                                    $sql = "SELECT id, category_name FROM category WHERE type=" . $type . " ORDER BY id DESC";
                                                     $db->sql($sql);
                                                     $categories = $db->getResult();
                                                     ?>
@@ -228,28 +229,16 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                         <div class="col-md-3">
                                             <button class="btn btn-danger btn-sm" id="delete_multiple_questions" title="Delete Selected Questions"><em class='fa fa-trash'></em></button>
                                         </div>
-                                        <div class="col-md-9">
-                                            <select id='export_select' class="form-control" >
-                                                <option value="basic">Export This Page</option>
-                                                <!--<option value="all">Export All</option>-->
-                                                <option value="selected">Export Selected</option>
-                                            </select>
-                                        </div>
                                     </div>
                                     <table aria-describedby="mydesc" class='table-striped' id='questions'
-                                           data-toggle="table"
-                                           data-url="get-list.php?table=question"
-                                           data-click-to-select="true"
-                                           data-side-pagination="server"
-                                           data-pagination="true"
-                                           data-page-list="[5, 10, 20, 50, 100, 200]"
-                                           data-search="true" data-show-columns="true"
-                                           data-show-refresh="true" data-trim-on-search="false"
+                                           data-toggle="table" data-url="get-list.php?table=question"
                                            data-sort-name="id" data-sort-order="desc"
-                                           data-mobile-responsive="true"
-                                           data-toolbar="#toolbar" data-show-export="true"
-                                           data-maintain-selected="true"
-                                           data-export-types='["txt","excel"]'
+                                           data-click-to-select="true" data-side-pagination="server"                                           
+                                           data-search="true" data-show-columns="true"
+                                           data-show-refresh="true" data-trim-on-search="false"                                                    
+                                           data-toolbar="#toolbar" data-mobile-responsive="true" data-maintain-selected="true"  
+                                           data-pagination="true" data-page-list="[5, 10, 20, 50, 100, 200]"  
+                                           data-show-export="false" data-export-types='["txt","excel"]'
                                            data-export-options='{
                                            "fileName": "questions-list-<?= date('d-m-y') ?>",
                                            "ignoreColumn": ["state"]	
@@ -447,44 +436,16 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
         </div>
 
         <!-- jQuery -->
-        <script>
-            $('input[name="question_type"]').on("click", function (e) {
-                var question_type = $(this).val();
-                if (question_type == "2") {
-                    $('#tf').hide('fast');
-                    $('#a').val("<?php echo $config['true_value'] ?>");
-                    $('#b').val("<?php echo $config['false_value'] ?>");
-                    $('.ntf').hide('fast');
-                } else {
-                    $('#a').val('');
-                    $('#b').val('');
-                    $('#tf').show('fast');
-                    $('.ntf').show('fast');
-                }
-            });
-            $('input[name="edit_question_type"]').on("click", function (e) {
-                var edit_question_type = $(this).val();
 
-                if (edit_question_type == "2") {
-                    $('#edit_tf').hide('fast');
-                    $('#edit_a').val("<?php echo $config['true_value'] ?>");
-                    $('#edit_b').val("<?php echo $config['false_value'] ?>");
-                    $('.edit_ntf').hide('fast');
-                    $('#edit_answer').val('');
-                } else {
-                    $('#edit_tf').show('fast');
-                    $('.edit_ntf').show('fast');
-                }
-            });
-        </script>
         <script>
+            var type =<?= $type ?>;
 <?php if ($fn->is_language_mode_enabled()) { ?>
                 $('#language_id').on('change', function (e) {
                     var language_id = $('#language_id').val();
                     $.ajax({
                         type: 'POST',
                         url: "db_operations.php",
-                        data: 'get_categories_of_language=1&language_id=' + language_id,
+                        data: 'get_categories_of_language=1&language_id=' + language_id + '&type=' + type,
                         beforeSend: function () {
                             $('#category').html('Please wait..');
                         },
@@ -498,7 +459,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                     $.ajax({
                         type: 'POST',
                         url: "db_operations.php",
-                        data: 'get_categories_of_language=1&language_id=' + language_id,
+                        data: 'get_categories_of_language=1&language_id=' + language_id + '&type=' + type,
                         beforeSend: function () {
                             $('#edit_category').html('Please wait..');
                         },
@@ -506,6 +467,21 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                             $('#edit_category').html(result).trigger("change");
                             if (language_id == row_language_id && row_category != 0)
                                 $('#edit_category').val(row_category).trigger("change", [row_category, row_subcategory]);
+                        }
+                    });
+                });
+                $('#filter_language').on('change', function (e) {
+                    var language_id = $('#filter_language').val();
+                    $.ajax({
+                        type: 'POST',
+                        url: "db_operations.php",
+                        data: 'get_categories_of_language=1&language_id=' + language_id + '&type=' + type,
+                        beforeSend: function () {
+                            $('#filter_category').html('<option>Please wait..</option>');
+                        },
+                        success: function (result) {
+                            $('#filter_category').html(result);
+                            $('#filter_subcategory').html('<option>Select Sub Category</option>');
                         }
                     });
                 });
@@ -535,8 +511,6 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                     }
                 });
             });
-        </script>
-        <script>
             $('#edit_category').on('change', function (e, row_category, row_subcategroy) {
                 var category_id = $('#edit_category').val();
                 $.ajax({
@@ -553,8 +527,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                     }
                 });
             });
-        </script>
-        <script>
+
             $('#filter_category').on('change', function (e) {
                 var category_id = $('#filter_category').val();
                 $.ajax({
@@ -570,146 +543,10 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                 });
             });
         </script>
-        <?php if ($fn->is_language_mode_enabled()) { ?>
-            <script>
-                $('#filter_language').on('change', function (e) {
-                    var language_id = $('#filter_language').val();
-                    $.ajax({
-                        type: 'POST',
-                        url: "db_operations.php",
-                        data: 'get_categories_of_language=1&language_id=' + language_id,
-                        beforeSend: function () {
-                            $('#filter_category').html('<option>Please wait..</option>');
-                        },
-                        success: function (result) {
-                            $('#filter_category').html(result);
-                            $('#filter_subcategory').html('<option>Select Sub Category</option>');
-                        }
-                    });
-                });
-            </script>
-        <?php } ?>
-        <script>
-            $('#filter_btn').on('click', function (e) {
-                $('#questions').bootstrapTable('refresh');
-            });
-            $('#delete_multiple_questions').on('click', function (e) {
-                sec = 'question';
-                is_image = 1;
-                table = $('#questions');
-                delete_button = $('#delete_multiple_questions');
-                selected = table.bootstrapTable('getAllSelections');
-                ids = "";
-                $.each(selected, function (i, e) {
-                    ids += e.id + ",";
-                });
-                ids = ids.slice(0, -1); // removes last comma character
-                if (ids == "") {
-                    alert("Please select some questions to delete!");
-                } else {
-                    if (confirm("Are you sure you want to delete all selected questions?")) {
-                        $.ajax({
-                            type: 'GET',
-                            url: "db_operations.php",
-                            data: 'delete_multiple=1&ids=' + ids + '&sec=' + sec + '&is_image=' + is_image,
-                            beforeSend: function () {
-                                delete_button.html('<i class="fa fa-spinner fa-pulse"></i>');
-                            },
-                            success: function (result) {
-                                if (result == 1) {
-                                    alert("Questions deleted successfully");
-                                } else {
-                                    ("Could not delete questions. Try again!");
-                                }
-                                delete_button.html('<i class="fa fa-trash"></i>');
-                                table.bootstrapTable('refresh');
-                            }
-                        });
-                    }
-                }
-            });
-        </script>
 
-        <script>
-            $('#register_form').validate({
-                rules: {
-                    question: "required",
-                    category: "required",
-                    a: "required",
-                    b: "required",
-                    c: "required",
-                    d: "required",
-                    level: "required",
-                    answer: "required"
-                }
-            });
-        </script>
-        <script>
-            $('#register_form').on('submit', function (e) {
-                e.preventDefault();
-                var formData = new FormData(this);
-                if ($("#register_form").validate().form()) {
-<?php if ($fn->is_language_mode_enabled()) { ?>
-                        var language = $('#language_id').val();
-<?php } ?>
-                    var category = $('#category').val();
-                    var subcategory = $('#subcategory').val();
-                    $.ajax({
-                        type: 'POST',
-                        url: $(this).attr('action'),
-                        data: formData,
-                        beforeSend: function () {
-                            $('#submit_btn').html('Please wait..');
-                            $('#submit_btn').prop('disabled', true);
-                        },
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        success: function (result) {
-                            $('#submit_btn').html('Create Now');
-                            $('#result').html(result);
-                            $('#result').show().delay(4000).fadeOut();
-                            $('#register_form')[0].reset();
-                            $('#category').val(category);
-                            $('#subcategory').val(subcategory);
-<?php if ($fn->is_language_mode_enabled()) { ?>
-                                $('#language_id').val(language);
-<?php } ?>
-                            $('#tf').show('fast');
-                            $('.ntf').show('fast');
-                            $('#submit_btn').prop('disabled', false);
-                            $('#questions').bootstrapTable('refresh');
-                        }
-                    });
-                }
-            });
-        </script>
-        <script>
-            var $table = $('#questions');
-            $('#toolbar').find('select').change(function () {
-                $table.bootstrapTable('refreshOptions', {
-                    exportDataType: $(this).val()
-                });
-            });
-        </script>
-        <script>
-            function queryParams_1(p) {
-                return {
-                    "language": $('#filter_language').val(),
-                    "category": $('#filter_category').val(),
-                    "subcategory": $('#filter_subcategory').val(),
-                    limit: p.limit,
-                    sort: p.sort,
-                    order: p.order,
-                    offset: p.offset,
-                    search: p.search
-                };
-            }
-        </script>
         <script>
             window.actionEvents = {
                 'click .edit-question': function (e, value, row, index) {
-                    // alert('You click remove icon, row: ' + JSON.stringify(row));
                     if (row.image != 'No image') {
                         var regex = /<img.*?src="(.*?)"/;
                         var src = regex.exec(row.image)[1];
@@ -766,6 +603,103 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
             };
         </script>
         <script>
+            $(document).on('click', '.delete-question', function () {
+                if (confirm('Are you sure? Want to delete question')) {
+                    id = $(this).data("id");
+                    image = $(this).data("image");
+                    $.ajax({
+                        url: 'db_operations.php',
+                        type: "get",
+                        data: 'id=' + id + '&image=' + image + '&delete_question=1',
+                        success: function (result) {
+                            if (result == 1) {
+                                $('#questions').bootstrapTable('refresh');
+                            } else
+                                alert('Error! Question could not be deleted');
+                        }
+                    });
+                }
+            });
+        </script>    
+        <script>
+            function queryParams_1(p) {
+                return {
+                    "language": $('#filter_language').val(),
+                    "category": $('#filter_category').val(),
+                    "subcategory": $('#filter_subcategory').val(),
+                    limit: p.limit,
+                    sort: p.sort,
+                    order: p.order,
+                    offset: p.offset,
+                    search: p.search
+                };
+            }
+        </script>
+        <script>
+            var $table = $('#questions');
+            $('#toolbar').find('select').change(function () {
+                $table.bootstrapTable('refreshOptions', {
+                    exportDataType: $(this).val()
+                });
+            });
+        </script>        
+
+        <script>
+            $('#register_form').validate({
+                rules: {
+                    question: "required",
+                    category: "required",
+                    a: "required",
+                    b: "required",
+                    c: "required",
+                    d: "required",
+                    level: "required",
+                    answer: "required"
+                }
+            });
+        </script>
+        <script>
+            $('#register_form').on('submit', function (e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+                if ($("#register_form").validate().form()) {
+<?php if ($fn->is_language_mode_enabled()) { ?>
+                        var language = $('#language_id').val();
+<?php } ?>
+                    var category = $('#category').val();
+                    var subcategory = $('#subcategory').val();
+                    $.ajax({
+                        type: 'POST',
+                        url: $(this).attr('action'),
+                        data: formData,
+                        beforeSend: function () {
+                            $('#submit_btn').html('Please wait..');
+                            $('#submit_btn').prop('disabled', true);
+                        },
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        success: function (result) {
+                            $('#submit_btn').html('Create Now');
+                            $('#result').html(result);
+                            $('#result').show().delay(4000).fadeOut();
+                            $('#register_form')[0].reset();
+                            $('#category').val(category);
+                            $('#subcategory').val(subcategory);
+<?php if ($fn->is_language_mode_enabled()) { ?>
+                                $('#language_id').val(language);
+<?php } ?>
+                            $('#tf').show('fast');
+                            $('.ntf').show('fast');
+                            $('#submit_btn').prop('disabled', false);
+                            $('#questions').bootstrapTable('refresh');
+                        }
+                    });
+                }
+            });
+        </script>
+
+        <script>
             $('#update_form').validate({
                 rules: {
                     edit_question: "required",
@@ -808,27 +742,74 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
             });
         </script>
         <script>
-            var role = "<?php Print($_SESSION['role']); ?>";
-            $(document).on('click', '.delete-question', function () {
-                if(role == 'admin'){
-                if (confirm('Are you sure? Want to delete question')) {
-                    id = $(this).data("id");
-                    image = $(this).data("image");
-                    $.ajax({
-                        url: 'db_operations.php',
-                        type: "get",
-                        data: 'id=' + id + '&image=' + image + '&delete_question=1',
-                        success: function (result) {
-                            if (result == 1) {
-                                $('#questions').bootstrapTable('refresh');
-                            } else
-                                alert('Error! Question could not be deleted');
-                        }
-                    });
-                }}else{
-                alert('Error! Just Admin can delete data');
-            }
+            $('#filter_btn').on('click', function (e) {
+                $('#questions').bootstrapTable('refresh');
+            });
+            $('#delete_multiple_questions').on('click', function (e) {
+                sec = 'question';
+                is_image = 1;
+                table = $('#questions');
+                delete_button = $('#delete_multiple_questions');
+                selected = table.bootstrapTable('getAllSelections');
+                ids = "";
+                $.each(selected, function (i, e) {
+                    ids += e.id + ",";
+                });
+                ids = ids.slice(0, -1); // removes last comma character
+                if (ids == "") {
+                    alert("Please select some questions to delete!");
+                } else {
+                    if (confirm("Are you sure you want to delete all selected questions?")) {
+                        $.ajax({
+                            type: 'GET',
+                            url: "db_operations.php",
+                            data: 'delete_multiple=1&ids=' + ids + '&sec=' + sec + '&is_image=' + is_image,
+                            beforeSend: function () {
+                                delete_button.html('<i class="fa fa-spinner fa-pulse"></i>');
+                            },
+                            success: function (result) {
+                                if (result == 1) {
+                                    alert("Questions deleted successfully");
+                                } else {
+                                    ("Could not delete questions. Try again!");
+                                }
+                                delete_button.html('<i class="fa fa-trash"></i>');
+                                table.bootstrapTable('refresh');
+                            }
+                        });
+                    }
+                }
             });
         </script>
+        <script>
+            $('input[name="question_type"]').on("click", function (e) {
+                var question_type = $(this).val();
+                if (question_type == "2") {
+                    $('#tf').hide('fast');
+                    $('#a').val("<?php echo $config['true_value'] ?>");
+                    $('#b').val("<?php echo $config['false_value'] ?>");
+                    $('.ntf').hide('fast');
+                } else {
+                    $('#a').val('');
+                    $('#b').val('');
+                    $('#tf').show('fast');
+                    $('.ntf').show('fast');
+                }
+            });
+            $('input[name="edit_question_type"]').on("click", function (e) {
+                var edit_question_type = $(this).val();
+                if (edit_question_type == "2") {
+                    $('#edit_tf').hide('fast');
+                    $('#edit_a').val("<?php echo $config['true_value'] ?>");
+                    $('#edit_b').val("<?php echo $config['false_value'] ?>");
+                    $('.edit_ntf').hide('fast');
+                    $('#edit_answer').val('');
+                } else {
+                    $('#edit_tf').show('fast');
+                    $('.edit_ntf').show('fast');
+                }
+            });
+        </script>
+
     </body>
 </html>

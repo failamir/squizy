@@ -33,7 +33,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-                                    
+
                                     <table aria-describedby="mydesc" class='table-striped' id='daily_leaderboard'
                                            data-toggle="table"
                                            data-url="get-list.php?table=daily_leaderboard"
@@ -56,7 +56,6 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                            >
                                         <thead>
                                             <tr>
-                                                <th scope="col" data-field="state" data-checkbox="true"></th>
                                                 <th scope="col" data-field="id" data-sortable="true">ID</th>
                                                 <th scope="col" data-field="user_id" data-sortable="true" data-visible="false">User ID</th>
                                                 <th scope="col" data-field="name" data-sortable="true">Name</th>

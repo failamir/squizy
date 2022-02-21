@@ -35,7 +35,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                 <div class="x_content">
                                     <br />
                                     <?php
-                                     $db->sql("SET NAMES 'utf8'");
+                                    $db->sql("SET NAMES 'utf8'");
                                     $sql = "select * from `settings` where type='update_terms'";
                                     $db->sql($sql);
                                     $res = $db->getResult();

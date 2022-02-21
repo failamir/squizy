@@ -55,7 +55,6 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                            >
                                         <thead>
                                             <tr>
-                                                <th scope="col" data-field="state" data-checkbox="true"></th>
                                                 <th scope="col" data-field="id" data-sortable="true">ID</th>
                                                 <th scope="col" data-field="user_id" data-sortable="true" data-visible="false">User ID</th>
                                                 <th scope="col" data-field="name" data-sortable="true">Name</th>

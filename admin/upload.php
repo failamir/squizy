@@ -1,6 +1,6 @@
 <?php
 
-$accepted_origins = array("http://".$_SERVER['HTTP_HOST']);
+$accepted_origins = array("http://" . $_SERVER['HTTP_HOST']);
 
 // Images upload path
 
@@ -42,7 +42,7 @@ if (is_uploaded_file($temp['tmp_name'])) {
     }
 
 // Location
-   $location = $imageFolder . $temp['name'];
+    $location = $imageFolder . $temp['name'];
 
 // file extension
     $file_extension = pathinfo($location, PATHINFO_EXTENSION);

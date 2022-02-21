@@ -66,7 +66,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                 </form>
                                 <hr>
                                 <div class="x_content">
-                                    
+
                                     <table  aria-describedby="mydesc" class='table-striped' id='admin_list'
                                             data-toggle="table"
                                             data-url="get-list.php?table=admin"

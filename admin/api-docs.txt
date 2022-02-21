@@ -1,5 +1,5 @@
 /*
-	API v7.0.3
+	API v7.0.5
 	Quiz Online - WRTeam.in 
 	WRTeam Developers
 */
@@ -56,6 +56,10 @@ API methods
   45. destroy_room_by_room_id()
   46. get_public_room()
   47. invite_friend()
+  49. get_learning()
+  50. get_questions_by_learning()
+  51. delete_user_account()
+  52. get_maths_questions()
 
 ------------------------------------------
 What parameters to be Passed?  See here >>
@@ -66,17 +70,19 @@ Use POST method to pass the parameters
 1. get_languages()
         access_key:6808
 	get_languages:1
-	id:1 // {optional}
+	id:1 // {optional}       
 
 2. get_categories_by_language()
 	access_key:6808
 	get_categories_by_language:1
 	language_id:1
+        type:2  //2-learning zone , 1-quiz zone
 
 3. get_categories()
 	access_key:6808
 	get_categories:1
 	id:31 //{optional}
+        type:2  //2-learning zone , 1-quiz zone
 
 4. get_subcategory_by_maincategory()
 	access_key:6808
@@ -370,3 +376,25 @@ Use POST method to pass the parameters
         room_id:1
         invited_id:2
         room_key: your room key
+
+49. get_learning()
+        access_key:6808
+        get_learning:1
+        category:31
+
+50. get_questions_by_learning()
+        access_key:6808
+        get_questions_by_learning:1
+        learning_id:1
+
+51. delete_user_account()
+        access_key:6808
+        delete_user_account:1
+        user_id:1
+
+52. get_maths_questions()
+        access_key:6808
+        get_maths_questions:1
+        language_id:2   // {optional}
+        category:1 {or}
+        subcategory:1

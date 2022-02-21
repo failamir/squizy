@@ -18,13 +18,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $sql = "SELECT * FROM authenticate WHERE auth_username='$username' AND auth_pass='$pwordhash' ";
         if ($db->sql($sql)) {
             $result = $db->getResult();
-            
+
             if (!empty($result)) {
                 if (strcmp($result[0]["auth_username"], $username) == 0) {
                     foreach ($result as $row) {
-                        $_SESSION['role'] = $row["role"];
                         $_SESSION['username'] = $row["auth_username"];
-                        $_SESSION['company_name'] = 'SQuizy';
+                        $_SESSION['company_name'] = 'Quiz';
                     }
                     echo "1";
                 } else {

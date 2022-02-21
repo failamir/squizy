@@ -38,8 +38,8 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
 
                                             <div class="form-group">
                                                 <?php
-$yearArray = range(2017, date('Y'));
-?>
+                                                $yearArray = range(2017, date('Y'));
+                                                ?>
                                                 <label class="control-label" for="year">Select Filter By Year</label>
                                                 <select name="year" id="year" class="form-control">
                                                     <?php foreach ($yearArray as $year) { ?>
@@ -49,7 +49,7 @@ $yearArray = range(2017, date('Y'));
 
                                             </div>
                                         </div>
-                                         <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="col-md-3 col-sm-6 col-xs-12">
                                             <div class="form-group">
                                                 <?php
                                                 $monthArray = array(
@@ -94,7 +94,6 @@ $yearArray = range(2017, date('Y'));
                                            >
                                         <thead>
                                             <tr>
-                                                <th scope="col" data-field="state" data-checkbox="true"></th>
                                                 <th scope="col" data-field="id" data-sortable="true">ID</th>
                                                 <th scope="col" data-field="user_id" data-sortable="true" data-visible="false">User ID</th>
                                                 <th scope="col" data-field="name" data-sortable="true">Name</th>
@@ -129,9 +128,9 @@ $yearArray = range(2017, date('Y'));
             });
             $(document).ready(function () {
                 var today = new Date();
-                  document.getElementById("year").value = today.getFullYear();
-                  document.getElementById("month").value = ('0' + (today.getMonth() + 1)).slice(-2);
-              
+                document.getElementById("year").value = today.getFullYear();
+                document.getElementById("month").value = ('0' + (today.getMonth() + 1)).slice(-2);
+
                 $('#monthly_leaderboard').bootstrapTable('refresh');
                 $('#monthly_leaderboard').show();
             });

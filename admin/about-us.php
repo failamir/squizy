@@ -38,7 +38,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                     $db->sql("SET NAMES 'utf8'");
                                     $sql = "select * from `settings` where type='about_us'";
                                     $db->sql($sql);
-                                    $res = $db->getResult();                                 
+                                    $res = $db->getResult();
                                     $data1 = $res[0]; /* about us message */
                                     ?>
                                     <div class="col-md-offset-1 col-md-6">

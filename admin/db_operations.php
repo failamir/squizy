@@ -1,7 +1,7 @@
 <?php
 
 /*
-  API v5.6
+  API v7.0.4
   Quiz Online - WRTeam.in
   WRTeam Developers
  */
@@ -38,53 +38,58 @@ $toDate = date('Y-m-d');
 $toDateTime = date('Y-m-d H:i:s');
 $allowedExts = array("gif", "jpeg", "jpg", "png", "JPEG", "JPG", "PNG");
 
-
+define('ALLOW_MODIFICATION', 1);
 /*
-  1. add_category()
-  2. update_category()
-  3. delete_category()
-  4. add_subcategory()
-  5. update_subcategory()
-  6. delete_subcategory()
-  7. get_subcategories_of_category()
-  8. add_question()
-  9. update_question()
-  10. delete_question()
-  11. send_notifications()
-  12. delete_notification()
-  13. update_fcm_server_key()
-  14. delete_question_report()
-  15. import_questions()
-  16. update_category_order()
-  17. update_subcategory_order()
-  18. update_policy()
-  19. update_terms()
-  20. update_user()
-  21. add_admin_form()
-  22. update_admin()
-  23. delete_admin()
-  24. system_configurations()
-  25. delete_multiple()
-  26. add_language()
-  27. update_language()
-  28. delete_language()
-  29. get_categories_of_language()
-  30. update_about_us()
-  31. update_instructions()
+  1. add_category
+  2. update_category
+  3. delete_category
+  4. add_subcategory
+  5. update_subcategory
+  6. delete_subcategory
+  7. get_subcategories_of_category
+  8. add_question
+  9. update_question
+  10. delete_question
+  11. send_notifications
+  12. delete_notification
+  13. update_fcm_server_key
+  14. delete_question_report
+  15. import_questions
+  16. update_category_order
+  17. update_subcategory_order
+  18. update_policy
+  19. update_terms
+  20. update_user
+  21. add_admin_form
+  22. update_admin
+  23. delete_admin
+  24. system_configurations
+  25. delete_multiple
+  26. add_language
+  27. update_language
+  28. delete_language
+  29. get_categories_of_language
+  30. update_about_us
+  31. update_instructions
   32. update_daily_quiz_order
   33. get_selected_date - Date options
-  34. add_contest()
-  35. delete_contest()
-  36. update_contest()
-  37. update_contest_status()
-  38. add_contest_prize()
-  39. update_contest_prize()
-  40. delete_contest_prize()
-  41. add_contest_question()
-  42. update_contest_question()
-  43. delete_contest_question()
-  44. import_contest_questions()
-  45. web_firebase_settings
+  34. add_contest
+  35. delete_contest
+  36. update_contest
+  37. update_contest_status
+  38. add_contest_prize
+  39. update_contest_prize
+  40. delete_contest_prize
+  41. add_contest_question
+  42. update_contest_question
+  43. delete_contest_question
+  44. import_contest_questions
+  45. battle_settings()
+  46. add_learning
+  47. update_question
+  48. update_learning_status
+  49. delete_question
+
 
   functions
   ----------------
@@ -105,8 +110,109 @@ function checkadmin($auth_username) {
     }
 }
 
+//7. get_subcategories_of_category - ajax dropdown menu options 
+if (isset($_POST['get_subcategories_of_category']) && $_POST['get_subcategories_of_category'] != '') {
+    $id = $_POST['category_id'];
+    if (empty($id)) {
+        echo '<option value="">Select Sub Category</option>';
+        return false;
+    }
+    $sql = 'SELECT * FROM `subcategory` WHERE `maincat_id`=' . $id . ' ORDER BY row_order + 0 ASC';
+
+    $db->sql($sql);
+    $res = $db->getResult();
+
+    if (isset($_POST['sortable']) && $_POST['sortable'] == 'sortable') {
+        $options = '';
+        foreach ($res as $category) {
+            if (!empty($category["image"])) {
+                $options .= "<li id='" . $category["id"] . "'><big>" . $category["row_order"] . ".</big> &nbsp;<img src='images/subcategory/$category[image]' height=30 > " . $category["subcategory_name"] . "</li>";
+            } else {
+                $options .= "<li id='" . $category["id"] . "'><big>" . $category["row_order"] . ".</big> &nbsp;<img src='images/logo-half.png' height=30 > " . $category["subcategory_name"] . "</li>";
+            }
+        }
+    } else {
+        $options = '<option value="">Select Sub Category</option>';
+        foreach ($res as $option) {
+            $options .= "<option value='" . $option['id'] . "'>" . $option['subcategory_name'] . "</option>";
+        }
+    }
+    echo $options;
+}
+
+// 29. get_categories_of_language - ajax dropdown menu options 
+if (isset($_POST['get_categories_of_language']) && $_POST['get_categories_of_language'] != '') {
+    $id = $_POST['language_id'];
+    $type = (isset($_POST['type'])) ? $_POST['type'] : 1;
+    if (empty($id)) {
+        echo '<option value="">Select Category</option>';
+        return false;
+    }
+    $sql = 'SELECT * FROM `category` WHERE `language_id`=' . $id . ' AND `type`=' . $type . ' ORDER BY row_order + 0 ASC';
+    $db->sql($sql);
+    $res = $db->getResult();
+
+    if (isset($_POST['sortable']) && $_POST['sortable'] == 'sortable') {
+        $options = '';
+        foreach ($res as $category) {
+
+            if (!empty($category["image"])) {
+                $options .= "<li id='" . $category["id"] . "'><big>" . $category["row_order"] . ".</big> &nbsp;<img src='images/category/$category[image]' height=30 > " . $category["category_name"] . "</li>";
+            } else {
+                $options .= "<li id='" . $category["id"] . "'><big>" . $category["row_order"] . ".</big> &nbsp;<img src='images/logo-half.png' height=30 > " . $category["category_name"] . "</li>";
+            }
+        }
+    } else {
+        $options = '<option value="">Select Category</option>';
+        foreach ($res as $option) {
+            $options .= "<option value='" . $option['id'] . "'>" . $option['category_name'] . "</option>";
+        }
+    }
+    echo $options;
+}
+
+// 33. get_selected_date - Date options 
+if (isset($_POST['get_selected_date']) && !empty($_POST['get_selected_date']) && $_POST['language_id'] != "") {
+    $selected_date = $db->escapeString($_POST['selected_date']);
+    $language_id = $db->escapeString($_POST['language_id']);
+
+    $sql = "SELECT * from daily_quiz WHERE date_published='$selected_date' AND language_id= '$language_id'";
+    $db->sql($sql);
+    $res = $db->getResult();
+    $html = "";
+
+    if (!empty($res)) {
+        foreach ($res as $row) {
+            $language_id = $row['language_id'];
+        }
+        $questions = $response = array();
+        $questions = $res[0]['questions_id'];
+        $sql = "SELECT `id`, `question` FROM `question` WHERE `id` IN (" . $questions . ") ORDER BY FIELD(id," . $questions . ")";
+        $db->sql($sql);
+        $res = $db->getResult();
+        foreach ($res as $question) {
+            $html .= "<li id=" . $question['id'] . " class='ui-state-default ui-sortable-handle'>" . $question['id'] . ". " . $question['question'] . "<a class='btn btn-danger btn-xs remove-row pull-right'>x</a></li>";
+        }
+        $response['error'] = false;
+        $response['language_id'] = $language_id;
+        $response['questions_list'] = $html;
+    } else {
+//        $html .= "<li id='' class='ui-state-default ui-sortable-handle'>There are no questions added today<a class='btn btn-danger btn-xs remove-row pull-right'>x</a></li>";
+        $response['error'] = false;
+        $response['questions_list'] = $html;
+        $response['language_id'] = '';
+    }
+    print_r(json_encode($response));
+}
+
+if (ALLOW_MODIFICATION == 0 && !defined(ALLOW_MODIFICATION)) {
+    echo '<label class="alert alert-danger">This operation is not allowed in demo panel!.</label>';
+    return false;
+}
+
 //1. add_category 
 if (isset($_POST['name']) && isset($_POST['add_category'])) {
+    $type = $db->escapeString($_POST['type']);
     $name = $db->escapeString($_POST['name']);
     $language_id = ($fn->is_language_mode_enabled()) ? $db->escapeString($_POST['language_id']) : 0;
     $filename = '';
@@ -134,7 +240,7 @@ if (isset($_POST['name']) && isset($_POST['add_category'])) {
         }
     }
 
-    $sql = "INSERT INTO `category` (`language_id`,`category_name`, `image`,`row_order`) VALUES ('" . $language_id . "','" . $name . "','" . $filename . "','0')";
+    $sql = "INSERT INTO `category` (`language_id`, `category_name`, `type`, `image`, `row_order`) VALUES ('" . $language_id . "','" . $name . "','" . $type . "','" . $filename . "','0')";
     $db->sql($sql);
 
     echo '<label class="alert alert-success">Category created successfully!</label>';
@@ -169,25 +275,29 @@ if (isset($_POST['category_id']) && isset($_POST['update_category'])) {
             return false;
         }
         if ($image_url != "images/logo-half.png" && file_exists($image_url)) {
-            // if its not half logo image
             unlink($image_url);
         }
-
-        $sql = "Update category set `image`='" . $filename . "' where `id`=" . $id;
+        $sql = "UPDATE category SET `image`='" . $filename . "' WHERE `id`=" . $id;
         $db->sql($sql);
     }
 
-    $sql = "Update `category` set `category_name`='" . $name . "'";
+    $sql = "UPDATE `category` SET `category_name`='" . $name . "'";
     $sql .= ($fn->is_language_mode_enabled()) ? ", `language_id` = " . $language_id . " " : "";
-    $sql .= " where `id`=" . $id;
+    $sql .= " WHERE `id`=" . $id;
     $db->sql($sql);
 
     if ($fn->is_language_mode_enabled()) {
-        $sql1 = "Update subcategory set `language_id`='" . $language_id . "' where `maincat_id`=" . $id;
+        $sql1 = "UPDATE subcategory SET `language_id`='" . $language_id . "' WHERE `maincat_id`=" . $id;
         $db->sql($sql1);
 
-        $sql2 = "Update question set `language_id`='" . $language_id . "' where `category`=" . $id;
+        $sql2 = "UPDATE question SET `language_id`='" . $language_id . "' WHERE `category`=" . $id;
         $db->sql($sql2);
+
+        $sql3 = "UPDATE tbl_learning SET `language_id`='" . $language_id . "' WHERE `category`=" . $id;
+        $db->sql($sql3);
+
+        $sql4 = "UPDATE tbl_maths_question SET `language_id`='" . $language_id . "' WHERE `category`=" . $id;
+        $db->sql($sql4);
     }
 
     echo "<p class='alert alert-success'>Category updated successfully!</p>";
@@ -208,10 +318,9 @@ if (isset($_GET['delete_category']) && $_GET['delete_category'] != '') {
         }
 
         // select sub category images & delete it
-        $sql = 'select `image` FROM `subcategory` WHERE `maincat_id`=' . $id;
+        $sql = 'SELECT `image` FROM `subcategory` WHERE `maincat_id`=' . $id;
         $db->sql($sql);
         $sub_category_images = $db->getResult();
-
         if (!empty($sub_category_images)) {
             foreach ($sub_category_images as $image) {
                 if (!empty($image['image']) && file_exists('images/subcategory/' . $image['image'])) {
@@ -219,14 +328,12 @@ if (isset($_GET['delete_category']) && $_GET['delete_category'] != '') {
                 }
             }
         }
-
         $sql = 'DELETE FROM `subcategory` WHERE `maincat_id`=' . $id;
         $db->sql($sql);
 
-        $sql = 'select `image` FROM `question` WHERE `category`=' . $id;
+        $sql = 'SELECT `image` FROM `question` WHERE `category`=' . $id;
         $db->sql($sql);
         $question_images = $db->getResult();
-
         if (!empty($question_images)) {
             foreach ($question_images as $image) {
                 if (!empty($image['image']) && file_exists('images/questions/' . $image['image'])) {
@@ -234,9 +341,33 @@ if (isset($_GET['delete_category']) && $_GET['delete_category'] != '') {
                 }
             }
         }
-
         $sql = 'DELETE FROM `question` WHERE `category`=' . $id;
         $db->sql($sql);
+
+        $sql2 = 'SELECT `id` FROM `tbl_learning` WHERE `category`=' . $id;
+        $db->sql($sql2);
+        $question_images2 = $db->getResult();
+        if (!empty($question_images2)) {
+            $learning_id = $question_images2[0]['id'];
+            $sql = 'DELETE FROM `tbl_learning_question` WHERE `learning_id`=' . $learning_id;
+            $db->sql($sql);
+        }
+        $sql2 = 'DELETE FROM `tbl_learning` WHERE `category`=' . $id;
+        $db->sql($sql2);
+
+        $sql3 = 'SELECT `image` FROM `tbl_maths_question` WHERE `category`=' . $id;
+        $db->sql($sql3);
+        $question_images3 = $db->getResult();
+        if (!empty($question_images3)) {
+            foreach ($question_images3 as $image3) {
+                if (!empty($image3['image']) && file_exists('images/maths-question/' . $image3['image'])) {
+                    unlink('images/maths-question/' . $image3['image']);
+                }
+            }
+        }
+        $sql3 = 'DELETE FROM `tbl_maths_question` WHERE `category`=' . $id;
+        $db->sql($sql3);
+
         echo 1;
     } else {
         echo 0;
@@ -315,19 +446,29 @@ if (isset($_POST['subcategory_id']) && isset($_POST['update_subcategory'])) {
             // if its not half logo image
             unlink($image_url);
         }
-        $sql = "Update subcategory set `image`='" . $filename . "' where `id`=" . $id;
+        $sql = "UPDATE subcategory SET `image`='" . $filename . "' WHERE `id`=" . $id;
         $db->sql($sql);
     }
 
-    $sql = "Update subcategory set `maincat_id`='" . $maincat_id . "', `subcategory_name`='" . $name . "', `status`='" . $status . "' ";
+    $sql = "UPDATE subcategory SET `maincat_id`='" . $maincat_id . "', `subcategory_name`='" . $name . "', `status`='" . $status . "' ";
     $sql .= ($fn->is_language_mode_enabled()) ? ", `language_id` = " . $language_id . " " : "";
-    $sql .= " where `id`=" . $id;
+    $sql .= " WHERE `id`=" . $id;
     $db->sql($sql);
 
-    $sql = "Update question set `category`='" . $maincat_id . "' ";
-    $sql .= ($fn->is_language_mode_enabled()) ? ", `language_id` = " . $language_id . " " : "";
-    $sql .= " where `subcategory` =" . $id;
-    $db->sql($sql);
+    $sql1 = "UPDATE question SET `category`='" . $maincat_id . "' ";
+    $sql1 .= ($fn->is_language_mode_enabled()) ? ", `language_id` = " . $language_id . " " : "";
+    $sql1 .= " WHERE `subcategory` =" . $id;
+    $db->sql($sql1);
+
+    // $sql2 = "UPDATE tbl_learning SET `category`='" . $maincat_id . "' ";
+    // $sql2 .= ($fn->is_language_mode_enabled()) ? ", `language_id` = " . $language_id . " " : "";
+    // $sql2 .= " WHERE `subcategory` =" . $id;
+    // $db->sql($sql2);
+
+    $sql3 = "UPDATE tbl_maths_question SET `category`='" . $maincat_id . "' ";
+    $sql3 .= ($fn->is_language_mode_enabled()) ? ", `language_id` = " . $language_id . " " : "";
+    $sql3 .= " WHERE `subcategory` =" . $id;
+    $db->sql($sql3);
 
     echo "<p class='alert alert-success'>Sub category updated successfully!</p>";
 }
@@ -346,10 +487,10 @@ if (isset($_GET['delete_subcategory']) && $_GET['delete_subcategory'] != '') {
         if (!empty($image) && file_exists($image)) {
             unlink($image);
         }
-        $sql = 'select `image` FROM `question` WHERE `subcategory`=' . $id;
+
+        $sql = 'SELECT `image` FROM `question` WHERE `subcategory`=' . $id;
         $db->sql($sql);
         $question_images = $db->getResult();
-
         if (!empty($question_images)) {
             foreach ($question_images as $image) {
                 if (!empty($image['image']) && file_exists('images/questions/' . $image['image'])) {
@@ -357,62 +498,40 @@ if (isset($_GET['delete_subcategory']) && $_GET['delete_subcategory'] != '') {
                 }
             }
         }
-
         $sql = 'DELETE FROM `question` WHERE `subcategory`=' . $id;
         $db->sql($sql);
+
+        $sql2 = 'SELECT `image` FROM `tbl_maths_question` WHERE `subcategory`=' . $id;
+        $db->sql($sql2);
+        $question_images2 = $db->getResult();
+        if (!empty($question_images2)) {
+            foreach ($question_images2 as $image2) {
+                if (!empty($image2['image']) && file_exists('images/maths-question/' . $image2['image'])) {
+                    unlink('images/maths-question/' . $image2['image']);
+                }
+            }
+        }
+        $sql2 = 'DELETE FROM `tbl_maths_question` WHERE `subcategory`=' . $id;
+        $db->sql($sql2);
+
         echo 1;
     } else {
         echo 0;
     }
 }
 
-//7. get_subcategories_of_category - ajax dropdown menu options 
-if (isset($_POST['get_subcategories_of_category']) && $_POST['get_subcategories_of_category'] != '') {
-    $id = $_POST['category_id'];
-    if (empty($id)) {
-        echo '<option value="">Select Sub Category</option>';
-        return false;
-    }
-    $sql = 'select * FROM `subcategory` WHERE `maincat_id`=' . $id . ' ORDER BY row_order + 0 ASC';
-
-    $db->sql($sql);
-    $res = $db->getResult();
-
-    if (isset($_POST['sortable']) && $_POST['sortable'] == 'sortable') {
-        $options = '';
-        foreach ($res as $category) {
-
-            if (!empty($category["image"])) {
-                $options .= "<li id='" . $category["id"] . "'><big>" . $category["row_order"] . ".</big> &nbsp;<img src='images/subcategory/$category[image]' height=30 > " . $category["subcategory_name"] . "</li>";
-            } else {
-                $options .= "<li id='" . $category["id"] . "'><big>" . $category["row_order"] . ".</big> &nbsp;<img src='images/logo-half.png' height=30 > " . $category["subcategory_name"] . "</li>";
-            }
-        }
-    } else {
-        $options = '<option value="">Select Sub Category</option>';
-        foreach ($res as $option) {
-            $options .= "<option value='" . $option['id'] . "'>" . $option['subcategory_name'] . "</option>";
-        }
-    }
-    echo $options;
-}
-
 //8. add_question
 if (isset($_POST['question']) && isset($_POST['add_question'])) {
     $question = $db->escapeString($_POST['question']);
     $category = $db->escapeString($_POST['category']);
-
     $subcategory = (empty($_POST['subcategory'])) ? 0 : $db->escapeString($_POST['subcategory']);
-
     $language_id = ($fn->is_language_mode_enabled()) ? $db->escapeString($_POST['language_id']) : 0;
-
     $question_type = $db->escapeString($_POST['question_type']);
-
     $a = $db->escapeString($_POST['a']);
     $b = $db->escapeString($_POST['b']);
     $c = ($question_type == 1) ? $db->escapeString($_POST['c']) : "";
     $d = ($question_type == 1) ? $db->escapeString($_POST['d']) : "";
-    $e = ($fn->is_option_e_mode_enabled()) ? $db->escapeString($_POST['e']) : "";
+    $e = ($fn->is_option_e_mode_enabled()) ? (($question_type == 1) ? $db->escapeString($_POST['e']) : "") : "";
     $level = $db->escapeString($_POST['level']);
     $answer = $db->escapeString($_POST['answer']);
     $note = $db->escapeString($_POST['note']);
@@ -481,18 +600,15 @@ if (isset($_POST['question_id']) && isset($_POST['update_question'])) {
         if (!empty($image_url) && file_exists($image_url)) {
             unlink($image_url);
         }
-        $sql = "Update `question` set `image`='" . $filename . "' where `id`=" . $id;
+        $sql = "UPDATE `question` SET `image`='" . $filename . "' where `id`=" . $id;
         $db->sql($sql);
     }
 
     $question = $db->escapeString($_POST['question']);
     $category = $db->escapeString($_POST['category']);
     $subcategory = (empty($_POST['subcategory'])) ? 0 : $db->escapeString($_POST['subcategory']);
-
     $language_id = ($fn->is_language_mode_enabled()) ? $db->escapeString($_POST['language_id']) : 0;
-
     $question_type = $db->escapeString($_POST['edit_question_type']);
-
     $a = $db->escapeString($_POST['a']);
     $b = $db->escapeString($_POST['b']);
     $c = ($question_type == 1) ? $db->escapeString($_POST['c']) : "";
@@ -1015,6 +1131,7 @@ if (isset($_GET['delete_multiple']) && $_GET['delete_multiple'] != '') {
             'notifications' => 'images/notifications/',
             'contest' => 'images/contest/',
             'contest_questions' => 'images/contest-question/',
+            'tbl_maths_question' => 'images/maths-question/',
         );
 
         $sql = "select `image` from " . $table . " where id in ( " . $ids . " )";
@@ -1086,37 +1203,6 @@ if (isset($_GET['delete_language']) && $_GET['delete_language'] == '1') {
     }
 }
 
-// 29. get_categories_of_language - ajax dropdown menu options 
-if (isset($_POST['get_categories_of_language']) && $_POST['get_categories_of_language'] != '') {
-    $id = $_POST['language_id'];
-    if (empty($id)) {
-        echo '<option value="">Select Category</option>';
-        return false;
-    }
-    $sql = 'select * FROM `category` WHERE `language_id`=' . $id . ' ORDER BY row_order + 0 ASC';
-
-    $db->sql($sql);
-    $res = $db->getResult();
-
-    if (isset($_POST['sortable']) && $_POST['sortable'] == 'sortable') {
-        $options = '';
-        foreach ($res as $category) {
-
-            if (!empty($category["image"])) {
-                $options .= "<li id='" . $category["id"] . "'><big>" . $category["row_order"] . ".</big> &nbsp;<img src='images/category/$category[image]' height=30 > " . $category["category_name"] . "</li>";
-            } else {
-                $options .= "<li id='" . $category["id"] . "'><big>" . $category["row_order"] . ".</big> &nbsp;<img src='images/logo-half.png' height=30 > " . $category["category_name"] . "</li>";
-            }
-        }
-    } else {
-        $options = '<option value="">Select Category</option>';
-        foreach ($res as $option) {
-            $options .= "<option value='" . $option['id'] . "'>" . $option['category_name'] . "</option>";
-        }
-    }
-    echo $options;
-}
-
 // 30. update_about_us()
 if (isset($_POST['update_about_us'])) {
     if (!checkadmin($auth_username)) {
@@ -1178,40 +1264,6 @@ if (isset($_POST['question_ids']) && isset($_POST['update_daily_quiz_order']) &&
     }
     $db->sql($sql1);
     echo "<p class='alert alert-success'> Saved </p>";
-}
-
-// 33. get_selected_date - Date options 
-if (isset($_POST['get_selected_date']) && !empty($_POST['get_selected_date']) && $_POST['language_id'] != "") {
-    $selected_date = $db->escapeString($_POST['selected_date']);
-    $language_id = $db->escapeString($_POST['language_id']);
-
-    $sql = "SELECT * from daily_quiz WHERE date_published='$selected_date' AND language_id= '$language_id'";
-    $db->sql($sql);
-    $res = $db->getResult();
-    $html = "";
-
-    if (!empty($res)) {
-        foreach ($res as $row) {
-            $language_id = $row['language_id'];
-        }
-        $questions = $response = array();
-        $questions = $res[0]['questions_id'];
-        $sql = "SELECT `id`, `question` FROM `question` WHERE `id` IN (" . $questions . ") ORDER BY FIELD(id," . $questions . ")";
-        $db->sql($sql);
-        $res = $db->getResult();
-        foreach ($res as $question) {
-            $html .= "<li id=" . $question['id'] . " class='ui-state-default ui-sortable-handle'>" . $question['id'] . ". " . $question['question'] . "<a class='btn btn-danger btn-xs remove-row pull-right'>x</a></li>";
-        }
-        $response['error'] = false;
-        $response['language_id'] = $language_id;
-        $response['questions_list'] = $html;
-    } else {
-//        $html .= "<li id='' class='ui-state-default ui-sortable-handle'>There are no questions added today<a class='btn btn-danger btn-xs remove-row pull-right'>x</a></li>";
-        $response['error'] = false;
-        $response['questions_list'] = $html;
-        $response['language_id'] = '';
-    }
-    print_r(json_encode($response));
 }
 
 // 34. add_contest()
@@ -1360,7 +1412,7 @@ if (isset($_POST['update_id']) && isset($_POST['update_contest_status'])) {
     $res = $db->getResult();
 
     if (!empty($res)) {
-        $sql = "Update `contest` set `status`='" . $status . "' WHERE `id`=" . $id;
+        $sql = "UPDATE `contest` SET `status`='" . $status . "' WHERE `id`=" . $id;
         $db->sql($sql);
         echo "<p class='alert alert-success'>Status updated successfully!</p>";
     } else {
@@ -1431,7 +1483,7 @@ if (isset($_POST['question']) && isset($_POST['add_contest_question'])) {
     $b = $db->escapeString($_POST['b']);
     $c = ($question_type == 1) ? $db->escapeString($_POST['c']) : "";
     $d = ($question_type == 1) ? $db->escapeString($_POST['d']) : "";
-    $e = ($fn->is_option_e_mode_enabled()) ? $db->escapeString($_POST['e']) : "";
+    $e = ($fn->is_option_e_mode_enabled()) ? (($question_type == 1) ? $db->escapeString($_POST['e']) : "") : "";
     $answer = $db->escapeString($_POST['answer']);
     $note = $db->escapeString($_POST['note']);
 
@@ -1644,13 +1696,268 @@ if (isset($_POST['web_firebase_settings']) && isset($_POST['databaseURL'])) {
     echo "<p class='alert alert-success'>Settings Saved!</p>";
 }
 
-// 46. update_system()
+// 46. add_learning
+if (isset($_POST['title']) && isset($_POST['add_learning'])) {
+    $language_id = ($fn->is_language_mode_enabled()) ? $db->escapeString($_POST['language_id']) : 0;
+    $category = $db->escapeString($_POST['category']);
+    $title = $db->escapeString($_POST['title']);
+    $detail = $db->escapeString($_POST['detail']);
+
+    $sql = "INSERT INTO `tbl_learning` ( `category`, `language_id`, `title`, `detail`, `status`) VALUES ('" . $category . "','" . $language_id . "','" . $title . "','" . $detail . "','0')";
+    $db->sql($sql);
+    $res = $db->getResult();
+    echo '<label class="alert alert-success">Learning created successfully!</label>';
+}
+
+// 47. update_question
+if (isset($_POST['learning_id']) && isset($_POST['update_learning'])) {
+    if (!checkadmin($auth_username)) {
+        echo "<label class='alert alert-danger'>Access denied - You are not authorized to access this page.</label>";
+        return false;
+    }
+    $id = $_POST['learning_id'];
+
+    $language_id = ($fn->is_language_mode_enabled()) ? $db->escapeString($_POST['language_id']) : 0;
+    $category = $db->escapeString($_POST['category']);
+    $title = $db->escapeString($_POST['title']);
+    $detail = $db->escapeString($_POST['detail']);
+
+    $sql = "Update `tbl_learning` set `category`='" . $category . "', `title`='" . $title . "', `detail`='" . $detail . "'";
+    $sql .= ($fn->is_language_mode_enabled()) ? ", `language_id`=" . $language_id : "";
+    $sql .= " where `id`=" . $id;
+    $db->sql($sql);
+
+    echo "<p class='alert alert-success'>Learning updated successfully!</p>";
+}
+
+// 48. update_learning_status
+if (isset($_POST['learning_status_id']) && isset($_POST['update_learning_status'])) {
+    if (!checkadmin($auth_username)) {
+        echo "<label class='alert alert-danger'>Access denied - You are not authorized to access this page.</label>";
+        return false;
+    }
+    $id = $_POST['learning_status_id'];
+    $status = $db->escapeString($_POST['status']);
+    if ($status == 1 || $status == '1') {
+        $sql = 'SELECT id FROM `tbl_learning_question` WHERE `learning_id`=' . $id;
+        $db->sql($sql);
+        $res = $db->getResult();
+        if (empty($res)) {
+            echo "<p class='alert alert-danger'>No enought question for active Learning!</p>";
+        } else {
+            $sql = "Update `tbl_learning` set `status`='" . $status . "' where `id`=" . $id;
+            $db->sql($sql);
+            echo "<p class='alert alert-success'>Learning status updated successfully!</p>";
+        }
+    } else {
+        $sql = "Update `tbl_learning` set `status`='" . $status . "' where `id`=" . $id;
+        $db->sql($sql);
+        echo "<p class='alert alert-success'>Learning status updated successfully!</p>";
+    }
+}
+
+// 49. delete_question
+if (isset($_GET['delete_learning']) && $_GET['delete_learning'] != '') {
+    if (!checkadmin($auth_username)) {
+        echo "<label class='alert alert-danger'>Access denied - You are not authorized to access this page.</label>";
+        return false;
+    }
+    $id = $_GET['id'];
+
+    $sql = 'DELETE FROM `tbl_learning` WHERE `id`=' . $id;
+    if ($db->sql($sql)) {
+        $sql = 'DELETE FROM `tbl_learning_question` WHERE `learning_id`=' . $id;
+        $db->sql($sql);
+        echo 1;
+    } else {
+        echo 0;
+    }
+}
+
+// 50. add_learning_question
+if (isset($_POST['question']) && isset($_POST['add_learning_question'])) {
+    $question = $db->escapeString($_POST['question']);
+    $learning_id = $db->escapeString($_POST['learning_id']);
+
+    $question_type = $db->escapeString($_POST['question_type']);
+
+    $a = $db->escapeString($_POST['a']);
+    $b = $db->escapeString($_POST['b']);
+    $c = ($question_type == 1) ? $db->escapeString($_POST['c']) : "";
+    $d = ($question_type == 1) ? $db->escapeString($_POST['d']) : "";
+    $e = ($fn->is_option_e_mode_enabled()) ? (($question_type == 1) ? $db->escapeString($_POST['e']) : "") : "";
+    $answer = $db->escapeString($_POST['answer']);
+
+    $sql = "INSERT INTO `tbl_learning_question`(`learning_id`, `question`, `question_type`, `optiona`, `optionb`, `optionc`, `optiond`, `optione`, `answer`) VALUES 
+	('" . $learning_id . "','" . $question . "','" . $question_type . "','" . $a . "','" . $b . "','" . $c . "','" . $d . "','" . $e . "','" . $answer . "')";
+
+    $db->sql($sql);
+    $res = $db->getResult();
+    echo '<label class="alert alert-success">Question created successfully!</label>';
+}
+
+// 51. update_learning_question
+if (isset($_POST['question_id']) && isset($_POST['update_learning_question'])) {
+    if (!checkadmin($auth_username)) {
+        echo "<label class='alert alert-danger'>Access denied - You are not authorized to access this page.</label>";
+        return false;
+    }
+    $id = $_POST['question_id'];
+    $question = $db->escapeString($_POST['question']);
+    $question_type = $db->escapeString($_POST['edit_question_type']);
+
+    $a = $db->escapeString($_POST['a']);
+    $b = $db->escapeString($_POST['b']);
+    $c = ($question_type == 1) ? $db->escapeString($_POST['c']) : "";
+    $d = ($question_type == 1) ? $db->escapeString($_POST['d']) : "";
+    if ($fn->is_option_e_mode_enabled()) {
+        $e = ($question_type == 1) ? $db->escapeString($_POST['e']) : "";
+    }
+    $answer = $db->escapeString($_POST['answer']);
+    $sql = "UPDATE `tbl_learning_question` set `question`='" . $question . "',`question_type`='" . $question_type . "',`optiona`='" . $a . "',`optionb`='" . $b . "' ,`optionc`='" . $c . "' ,`optiond`='" . $d . "', `answer`='" . $answer . "'";
+    $sql .= ($fn->is_option_e_mode_enabled()) ? ",`optione`='" . $e . "'" : "";
+    $sql .= " WHERE `id`=" . $id;
+    $db->sql($sql);
+
+    echo "<p class='alert alert-success'>Question updated successfully!</p>";
+}
+
+// 52. delete_learning_question
+if (isset($_GET['delete_learning_question']) && $_GET['delete_learning_question'] != '') {
+    if (!checkadmin($auth_username)) {
+        echo "<label class='alert alert-danger'>Access denied - You are not authorized to access this page.</label>";
+        return false;
+    }
+    $id = $_GET['id'];
+
+    $sql = 'DELETE FROM `tbl_learning_question` WHERE `id`=' . $id;
+    if ($db->sql($sql)) {
+        echo 1;
+    } else {
+        echo 0;
+    }
+}
+
+// 53. add_maths_question()
+if (isset($_POST['question']) && isset($_POST['add_maths_question'])) {
+    $question = $db->escapeString($_POST['question']);
+
+    $language_id = ($fn->is_language_mode_enabled()) ? $db->escapeString($_POST['language_id']) : 0;
+    $category = $db->escapeString($_POST['category']);
+    $subcategory = (empty($_POST['subcategory'])) ? 0 : $db->escapeString($_POST['subcategory']);
+
+    $question_type = $db->escapeString($_POST['question_type']);
+
+    $a = $db->escapeString($_POST['a']);
+    $b = $db->escapeString($_POST['b']);
+    $c = ($question_type == 1) ? $db->escapeString($_POST['c']) : "";
+    $d = ($question_type == 1) ? $db->escapeString($_POST['d']) : "";
+    $e = ($fn->is_option_e_mode_enabled()) ? (($question_type == 1) ? $db->escapeString($_POST['e']) : "") : "";
+    $answer = $db->escapeString($_POST['answer']);
+    $note = $db->escapeString($_POST['note']);
+
+    $filename = $full_path = '';
+
+    if (isset($_POST['question_id'])) {
+        $id = $_POST['question_id'];
+
+        if ($_FILES['image']['size'] != 0 && $_FILES['image']['error'] == 0) {
+            $target_path = 'images/maths-question/';
+            if (!is_dir($target_path)) {
+                mkdir($target_path, 0777, true);
+            }
+
+            //image isn't empty and update the image
+            $image_url = $db->escapeString($_POST['image_url']);
+
+            // common image file extensions
+            $extension = pathinfo($_FILES["image"]["name"])['extension'];
+            if (!(in_array($extension, $allowedExts))) {
+                echo '<p class="alert alert-danger">Image type is invalid</p>';
+                return false;
+            }
+            $filename = microtime(true) . '.' . strtolower($extension);
+            $full_path = $target_path . "" . $filename;
+            if (!move_uploaded_file($_FILES["image"]["tmp_name"], $full_path)) {
+                echo '<p class="alert alert-danger">Image type is invalid</p>';
+                return false;
+            }
+            if (!empty($image_url) && file_exists($image_url)) {
+                unlink($image_url);
+            }
+            $sql = "UPDATE `tbl_maths_question` SET `image`='" . $filename . "' WHERE `id`=" . $id;
+            $db->sql($sql);
+        }
+        $sql = "UPDATE `tbl_maths_question` SET `question`='" . $question . "', `category`='" . $category . "', `subcategory`='" . $subcategory . "',`question_type`='" . $question_type . "',`optiona`='" . $a . "',`optionb`='" . $b . "' ,`optionc`='" . $c . "' ,`optiond`='" . $d . "', `answer`='" . $answer . "', `note`='" . $note . "'";
+        $sql .= ($fn->is_option_e_mode_enabled()) ? ",`optione`='" . $e . "'" : "";
+        $sql .= ($fn->is_language_mode_enabled()) ? ", `language_id`=" . $language_id : "";
+        $sql .= " WHERE `id`=" . $id;
+        $db->sql($sql);
+        header("location:maths-questions-view.php");
+    } else {
+        // common image file extensions
+        if ($_FILES['image']['error'] == 0 && $_FILES['image']['size'] > 0) {
+            $target_path = 'images/maths-question/';
+            if (!is_dir($target_path)) {
+                mkdir($target_path, 0777, true);
+            }
+
+            $extension = pathinfo($_FILES["image"]["name"])['extension'];
+            if (!(in_array($extension, $allowedExts))) {
+                $response['error'] = true;
+                $response['message'] = 'Image type is invalid';
+                echo json_encode($response);
+                return false;
+            }
+
+            $filename = microtime(true) . '.' . strtolower($extension);
+            $full_path = $target_path . "" . $filename;
+            if (!move_uploaded_file($_FILES["image"]["tmp_name"], $full_path)) {
+                $response['error'] = true;
+                $response['message'] = 'Image type is invalid';
+                echo json_encode($response);
+                return false;
+            }
+        }
+
+        $sql = "INSERT INTO `tbl_maths_question` (`category`, `subcategory`, `language_id`, `image`, `question`, `question_type`, `optiona`, `optionb`, `optionc`, `optiond`, `optione`, `answer`, `note`) VALUES 
+        ('" . $category . "','" . $subcategory . "','" . $language_id . "','" . $filename . "','" . $question . "','" . $question_type . "','" . $a . "','" . $b . "','" . $c . "','" . $d . "','" . $e . "','" . $answer . "','" . $note . "')";
+
+        $db->sql($sql);
+        $res = $db->getResult();
+        header("location:maths-questions.php");
+    }
+    // echo $sql;
+    // echo '<label class="alert alert-success">Question created successfully!</label>';
+}
+
+// 54. delete_maths_question
+if (isset($_GET['delete_maths_question']) && $_GET['delete_maths_question'] != '') {
+    if (!checkadmin($auth_username)) {
+        echo "<label class='alert alert-danger'>Access denied - You are not authorized to access this page.</label>";
+        return false;
+    }
+    $id = $_GET['id'];
+    $image = $_GET['image'];
+
+    $sql = 'DELETE FROM `tbl_maths_question` WHERE `id`=' . $id;
+    if ($db->sql($sql)) {
+        if (!empty($image) && file_exists($image)) {
+            unlink($image);
+        }
+        echo 1;
+    } else {
+        echo 0;
+    }
+}
+
+// 53. update_system()
 if (isset($_POST['update_system'])) {
 
     if (isset($_POST['purchase_code']) && isset($_POST['quiz_url'])) {
         if (!empty($_POST['purchase_code']) && !empty($_POST['quiz_url'])) {
             $purchase_code = $db->escapeString($_POST['purchase_code']);
-            $quiz_url = $_SERVER['HTTP_HOST'].str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+            $quiz_url = $_SERVER['HTTP_HOST'] . str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
             $curl = curl_init();
             curl_setopt_array($curl, array(
                 CURLOPT_URL => 'https://wrteam.in/validator/quiz_online_validator?purchase_code=' . $purchase_code . '&domain_url=' . $quiz_url,
@@ -1787,5 +2094,3 @@ function DeleteDir($dir) {
         rmdir($dir);
     }
 }
-
-?>

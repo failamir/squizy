@@ -5,7 +5,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
     return false;
     exit();
 }
-$type = '1';
+$type = '3';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,19 +27,6 @@ $type = '1';
             }
 
             #sortable-row li.ui-state-highlight {
-                height: 1.0em;
-                background-color: #F0F0F0;
-                border: #ccc 2px dotted;
-            }
-
-            #sortable-row-2 li {
-                margin-bottom: 4px;
-                padding: 10px;
-                background-color: #ededed;
-                cursor: move;
-            }
-
-            #sortable-row-2 li.ui-state-highlight {
                 height: 1.0em;
                 background-color: #F0F0F0;
                 border: #ccc 2px dotted;
@@ -118,57 +105,6 @@ $type = '1';
                                         </div>
                                     </form>
                                 </div>
-
-                                <?php
-                                $db->sql("SET NAMES 'utf8'");
-                                $sql = "SELECT s.* FROM subcategory s JOIN category c ON c.id=s.maincat_id WHERE c.type=" . $type . " ORDER BY CAST(s.row_order as unsigned) ASC";
-
-                                $db->sql($sql);
-                                $res = $db->getResult();
-                                ?>
-                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                    <div class="row">
-                                        <div class='col-md-12'>
-                                            <select id='filter_category' class='form-control' required>
-                                                <option value=''>Select Main Category</option>
-                                                <?php foreach ($cat as $row) { ?>
-                                                    <option value='<?= $row['id'] ?>'><?= $row['category_name'] ?></option>
-                                                <?php } ?>
-                                            </select>
-                                        </div>
-
-                                    </div>
-                                    <h2>Sub Category</h2>
-                                    <hr>
-                                    <form id="subcategory_form" method="POST" action="db_operations.php" data-parsley-validate class="form-horizontal form-label-left">
-                                        <input type="hidden" id="update_subcategory_order" name="update_subcategory_order" required value='1' />
-                                        <div class="form-group" style="overflow-y:scroll;height:400px;">
-                                            <input type="hidden" name="row_order_2" id="row_order_2" required readonly />
-                                            <ol id="sortable-row-2">
-                                                <?php foreach ($res as $category) { ?>
-                                                    <li id=<?php echo $category["id"]; ?>>
-                                                        <?php
-                                                        if (!empty($category["image"])) {
-                                                            echo "<big>" . $category["row_order"] . ".</big> &nbsp;<img src='images/subcategory/$category[image]' height=30 > " . $category["subcategory_name"];
-                                                        } else {
-                                                            echo "<big>" . $category["row_order"] . ".</big> &nbsp;<img src='images/logo-half.png' height=30 > " . $category["subcategory_name"];
-                                                        }
-                                                        ?>
-                                                    </li>
-                                                <?php } ?>
-                                            </ol>
-                                        </div>
-                                        <div class="ln_solid"></div>
-                                        <div class="form-group">
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <button type="submit" id="submit_btn_2" class="btn btn-success">Save Order</button>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div style="display:none;" id="result_2"></div>
-                                        </div>
-                                    </form>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -185,9 +121,6 @@ $type = '1';
         <script>
             $(function () {
                 $("#sortable-row").sortable({
-                    placeholder: "ui-state-highlight"
-                });
-                $("#sortable-row-2").sortable({
                     placeholder: "ui-state-highlight"
                 });
             });
@@ -220,35 +153,7 @@ $type = '1';
                     });
                 }
             });
-            $('#subcategory_form').on('submit', function (e) {
-                e.preventDefault();
-                var selectedLanguage = new Array();
-                $('ol#sortable-row-2 li').each(function () {
-                    selectedLanguage.push($(this).attr("id"));
-                });
-                $("#row_order_2").val(selectedLanguage);
-                var formData = new FormData(this);
-                if ($("#subcategory_form").validate().form()) {
-                    $.ajax({
-                        type: 'POST',
-                        url: $(this).attr('action'),
-                        data: formData,
-                        beforeSend: function () {
-                            $('#submit_btn_2').html('Please wait..');
-                        },
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        success: function (result) {
-                            alert("SubCategory order updated!");
-                            //    						$('#result').html(result);
-                            //    						$('#result').show().delay(5000).fadeOut();
-                            $('#submit_btn').html('Save Order');
-                            window.location = "";
-                        }
-                    });
-                }
-            });
+
         </script>
         <script>
             var type =<?= $type ?>;
@@ -260,20 +165,6 @@ $type = '1';
                     data: 'get_categories_of_language=1&sortable=sortable&language_id=' + lang_id + '&type=' + type,
                     success: function (result) {
                         $('#sortable-row').html(result);
-                    }
-                });
-            });
-        </script>
-
-        <script>
-            $('#filter_category').on('change', function (e) {
-                var category_id = $('#filter_category').val();
-                $.ajax({
-                    type: 'POST',
-                    url: "db_operations.php",
-                    data: 'get_subcategories_of_category=1&sortable=sortable&category_id=' + category_id,
-                    success: function (result) {
-                        $('#sortable-row-2').html(result);
                     }
                 });
             });
