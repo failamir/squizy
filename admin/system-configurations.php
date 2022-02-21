@@ -223,8 +223,27 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                             </div> 
                                         </div>
                                         <div class="row">
-
                                             <div class="col-md-2 col-xs-12">
+                                                <div class="form-group">
+                                                    <label for="fix_question">Fix Question in Level</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="checkbox" id="fix_question_btn" class="js-switch" <?php
+                                                    if (!empty($data['fix_question']) && $data['fix_question'] == '1') {
+                                                        echo 'checked';
+                                                    }
+                                                    ?>>
+                                                    <input type="hidden" id="fix_question" name="fix_question" value="<?= (!empty($data['fix_question'])) ? $data['fix_question'] : 0; ?>">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-xs-12" id="fix_que">
+                                                <div class="form-group">
+                                                    <label class="" for="question">Total Question per Level</label>
+                                                    <input type="number" min="1" id="total_question" name="total_question" required class="form-control" 
+                                                           value="<?php echo ($data['total_question']) ? $data['total_question'] : '0' ?>">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-xs-12">
                                                 <div class="form-group">
                                                     <label for="battle_category_mode">Battle Random Category Mode</label>
                                                 </div>
@@ -237,7 +256,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                                     <input type="hidden" id="battle_random_category_mode" name="battle_random_category_mode" value="<?= (!empty($data['battle_random_category_mode'])) ? $data['battle_random_category_mode'] : 0; ?>">
                                                 </div>
                                             </div>
-                                            <div class="col-md-2 col-xs-12">
+                                            <div class="col-md-3 col-xs-12">
                                                 <div class="form-group">
                                                     <label for="battle_group_category_mode">Battle Group Category Mode</label>
                                                 </div>
@@ -263,54 +282,8 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                                     <input type="hidden" id="in_app_purchase_mode" name="in_app_purchase_mode" value="<?= (!empty($data['in_app_purchase_mode'])) ? $data['in_app_purchase_mode'] : 0; ?>">
                                                 </div>
                                             </div>
-                                            <div class="col-md-2 col-xs-12">
-                                                <div class="form-group">
-                                                    <label for="learning_zone_mode">Learning Zone Mode</label>
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="checkbox" id="learning_zone_mode_btn" class="js-switch" <?php
-                                                    if (!empty($data['learning_zone_mode']) && $data['learning_zone_mode'] == '1') {
-                                                        echo 'checked';
-                                                    }
-                                                    ?>>
-                                                    <input type="hidden" id="learning_zone_mode" name="learning_zone_mode" value="<?= (!empty($data['learning_zone_mode'])) ? $data['learning_zone_mode'] : 0; ?>">
-                                                </div>
-                                            </div> 
-                                            <div class="col-md-2 col-xs-12">
-                                                <div class="form-group">
-                                                    <label for="maths_quiz_mode">Maths Quiz Mode</label>
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="checkbox" id="maths_quiz_mode_btn" class="js-switch" <?php
-                                                    if (!empty($data['maths_quiz_mode']) && $data['maths_quiz_mode'] == '1') {
-                                                        echo 'checked';
-                                                    }
-                                                    ?>>
-                                                    <input type="hidden" id="maths_quiz_mode" name="maths_quiz_mode" value="<?= (!empty($data['maths_quiz_mode'])) ? $data['maths_quiz_mode'] : 0; ?>">
-                                                </div>
-                                            </div> 
                                         </div>
-                                        <div class="row">    
-                                            <div class="col-md-2 col-xs-12">
-                                                <div class="form-group">
-                                                    <label for="fix_question">Fix Question in Level</label>
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="checkbox" id="fix_question_btn" class="js-switch" <?php
-                                                    if (!empty($data['fix_question']) && $data['fix_question'] == '1') {
-                                                        echo 'checked';
-                                                    }
-                                                    ?>>
-                                                    <input type="hidden" id="fix_question" name="fix_question" value="<?= (!empty($data['fix_question'])) ? $data['fix_question'] : 0; ?>">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 col-xs-12" id="fix_que">
-                                                <div class="form-group">
-                                                    <label class="" for="question">Total Question per Level</label>
-                                                    <input type="number" min="1" id="total_question" name="total_question" required class="form-control" 
-                                                           value="<?php echo ($data['total_question']) ? $data['total_question'] : '0' ?>">
-                                                </div>
-                                            </div>                                        
+                                        <div class="row">                                            
                                             <div class="col-md-6 col-xs-12">
                                                 <div class="form-group">
                                                     <label class="" for="shareapp_text">Shareapp Text</label>
@@ -429,95 +402,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr/>
-                                        <div class="mt-20">                                            
-                                            <h2>System Settings for iOS Ads.</h2>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-2 col-xs-12">
-                                                <div class="form-group">
-                                                    <label for="ios_in_app_ads_mode">In App Ads.</label>
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="checkbox" id="ios_in_app_ads_mode_btn" class="js-switch" <?php
-                                                    if (!empty($data['ios_in_app_ads_mode']) && $data['ios_in_app_ads_mode'] == '1') {
-                                                        echo 'checked';
-                                                    }
-                                                    ?>>
-                                                    <input type="hidden" id="ios_in_app_ads_mode" name="ios_in_app_ads_mode" value="<?= (!empty($data['ios_in_app_ads_mode'])) ? $data['ios_in_app_ads_mode'] : 0; ?>">
-                                                </div>
-                                            </div> 
-                                            <div class="col-md-4 col-xs-12 iOSadsHide">
-                                                <div class="form-group">
-                                                    <label>&nbsp;</label>
-                                                </div>
-                                                <div id="status" class="btn-group">
-                                                    <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                        <input type="radio" name="ios_ads_type" value="1" <?php
-                                                        if (!empty($data['ios_ads_type']) && $data['ios_ads_type'] == '1') {
-                                                            echo 'checked';
-                                                        }
-                                                        ?>> Google AdMob 
-                                                    </label>
-                                                    <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                        <input type="radio" name="ios_ads_type" value="2" <?php
-                                                        if (!empty($data['ios_ads_type']) && $data['ios_ads_type'] == '2') {
-                                                            echo 'checked';
-                                                        }
-                                                        ?>> Facebook Ads.
-                                                    </label>                                                        
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row iOSadsgoogle">
-                                            <div class="col-md-6 col-xs-12">
-                                                <div class="form-group">
-                                                    <label for="ios_admob_Rewarded_Video_Ads">Rewarded Video Ads</label>
-                                                    <input type="text" id="ios_admob_Rewarded_Video_Ads" name="ios_admob_Rewarded_Video_Ads" class="form-control iOSgoogleAtt" value="<?php echo (!empty($data['ios_admob_Rewarded_Video_Ads'])) ? $data['ios_admob_Rewarded_Video_Ads'] : "" ?>">
-                                                </div>
-                                            </div>                                         
 
-                                            <div class="col-md-6 col-xs-12">
-                                                <div class="form-group">
-                                                    <label for="ios_admob_interstitial_id">Interstitial Id</label>
-                                                    <input type="text" id="ios_admob_interstitial_id" name="ios_admob_interstitial_id" class="form-control iOSgoogleAtt" value="<?php echo (!empty($data['ios_admob_interstitial_id'])) ? $data['ios_admob_interstitial_id'] : "" ?>">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-xs-12">
-                                                <div class="form-group">
-                                                    <label for="ios_admob_banner_id">Banner Id</label>
-                                                    <input type="text" id="ios_admob_banner_id" name="ios_admob_banner_id" class="form-control iOSgoogleAtt" 
-                                                           value="<?php echo (!empty($data['ios_admob_banner_id'])) ? $data['ios_admob_banner_id'] : "" ?>">
-                                                </div>
-                                            </div> 
-                                            <div class="col-md-6 col-xs-12">
-                                                <div class="form-group">
-                                                    <label for="ios_admob_openads_id">Open Ads_id</label>
-                                                    <input type="text" id="ios_admob_openads_id" name="ios_admob_openads_id" class="form-control iOSgoogleAtt" value="<?php echo (!empty($data['ios_admob_openads_id'])) ? $data['ios_admob_openads_id'] : "" ?>">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row iOSadsfacebook">
-                                            <div class="col-md-4 col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="" for="ios_fb_interstitial_id">Facebook Interstitial id</label>
-                                                    <input type="text" id="ios_fb_interstitial_id" name="ios_fb_interstitial_id" class="form-control iOSfacebookAtt" value="<?= (!empty($data['ios_fb_interstitial_id'])) ? $data['ios_fb_interstitial_id'] : ''; ?>">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="" for="ios_fb_banner_id">Facebook Banner id</label>
-                                                    <input type="text" id="ios_fb_banner_id" name="ios_fb_banner_id" class="form-control iOSfacebookAtt" value="<?= (!empty($data['ios_fb_banner_id'])) ? $data['ios_fb_banner_id'] : ''; ?>">
-                                                </div>
-                                            </div>  
-                                            <div class="col-md-4 col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="" for="ios_fb_rewarded_video_ads">Facebook Rewarded Video Ads</label>
-                                                    <input type="text" id="ios_fb_rewarded_video_ads" name="ios_fb_rewarded_video_ads" class="form-control iOSfacebookAtt" value="<?= (!empty($data['ios_fb_rewarded_video_ads'])) ? $data['ios_fb_rewarded_video_ads'] : ''; ?>">
-                                                </div>
-                                            </div>
-                                        </div>
                                         <hr/>
                                         <div class="mt-20">
                                             <h2>Social Media Links</h2>
@@ -633,16 +518,16 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
         <!-- jQuery -->
         <script>
             $(document).ready(function () {
+                $('.adsHide').hide();
+                $('.adsgoogle').hide();
+                $('.adsfacebook').hide();
                 var que = $('#fix_question').val();
                 if (que == '1') {
                     $('#fix_que').show();
                 } else {
                     $('#fix_que').hide();
                 }
-                
-                $('.adsHide').hide();
-                $('.adsgoogle').hide();
-                $('.adsfacebook').hide();
+
                 var ads = $('#in_app_ads_mode').val();
                 if (ads === '1' || ads === 1) {
                     $('.adsHide').show();
@@ -650,35 +535,16 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                     if (ads_type == undefined) {
                         $("input[name=ads_type][value=1]").prop('checked', true);
                     }
-                    var ads_type = $("input:radio[name=ads_type]:checked").val();
-                    ads_type_manage(ads_type);
                 } else {
                     $('.adsHide').hide();
-                    $('.adsgoogle').hide();
-                    $('.googleAtt').removeAttr('required');
                     $('.adsfacebook').hide();
                     $('.facebookAtt').removeAttr('required');
+                    $('.adsgoogle').hide();
+                    $('.googleAtt').removeAttr('required');
                 }
-                
-                $('.iOSadsHide').hide();
-                $('.iOSadsgoogle').hide();
-                $('.iOSadsfacebook').hide();   
-                var ads = $('#ios_in_app_ads_mode').val();
-                if (ads === '1' || ads === 1) {
-                    $('.iOSadsHide').show();
-                    var ios_ads_type = $("input:radio[name=ios_ads_type]:checked").val();
-                    if (ios_ads_type == undefined) {
-                        $("input[name=ios_ads_type][value=1]").prop('checked', true);
-                    }
-                    var ios_ads_type = $("input:radio[name=ios_ads_type]:checked").val();
-                    ios_ads_type_manage(ios_ads_type);
-                } else {
-                    $('.iOSadsHide').hide();
-                    $('.iOSadsgoogle').hide();
-                    $('.iOSgoogleAtt').removeAttr('required');
-                    $('.iOSadsfacebook').hide();
-                    $('.iOSfacebookAtt').removeAttr('required');
-                }
+
+                var ads_type = $("input:radio[name=ads_type]:checked").val();
+                ads_type_manage(ads_type);
             });
 
             function ads_type_manage(ads_type) {
@@ -705,32 +571,6 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                 var ads_type = $(this).val();
                 ads_type_manage(ads_type);
             });
-            
-            function ios_ads_type_manage(ios_ads_type) {
-                if (ios_ads_type === '1' || ios_ads_type === 1) {
-                    $('.iOSadsgoogle').show();
-                    $('.iOSgoogleAtt').attr('required', 'required');
-                    $('.iOSadsfacebook').hide();
-                    $('.iOSfacebookAtt').removeAttr('required');
-                } else if (ios_ads_type === '2' || ios_ads_type === 2) {
-                    $('.iOSadsgoogle').hide();
-                    $('.iOSgoogleAtt').removeAttr('required');
-                    $('.iOSadsfacebook').show();
-                    $('.iOSfacebookAtt').attr('required', 'required');
-                } else {
-                    $('.iOSadsHide').hide();
-                    $('.iOSadsfacebook').hide();
-                    $('.iOSfacebookAtt').removeAttr('required');
-                    $('.iOSadsgoogle').hide();
-                    $('.iOSgoogleAtt').removeAttr('required');
-                }
-            }
-
-            $(document).on('click', 'input[name="ios_ads_type"]', function () {
-                var ios_ads_type = $(this).val();
-                ios_ads_type_manage(ios_ads_type);
-            });
-
 
             /* on change of language mode btn - switchery js */
             var changeCheckbox = document.querySelector('#language_mode_btn');
@@ -832,40 +672,6 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                     $('#in_app_ads_mode').val(0);
                     $('.adsHide').hide();
                     ads_type_manage(0);
-                }
-            };
-
-            /* on change of in learning zone mode btn - switchery js */
-            var changeCheckbox11 = document.querySelector('#learning_zone_mode_btn');
-            changeCheckbox11.onchange = function () {
-                if (changeCheckbox11.checked)
-                    $('#learning_zone_mode').val(1);
-                else
-                    $('#learning_zone_mode').val(0);
-            };
-
-            /* on change of in maths quiz mode btn - switchery js */
-            var changeCheckbox12 = document.querySelector('#maths_quiz_mode_btn');
-            changeCheckbox12.onchange = function () {
-                if (changeCheckbox12.checked)
-                    $('#maths_quiz_mode').val(1);
-                else
-                    $('#maths_quiz_mode').val(0);
-            };
-            
-             /* on change of ios in app ads mode btn - switchery js */
-            var changeCheckbox13 = document.querySelector('#ios_in_app_ads_mode_btn');
-            changeCheckbox13.onchange = function () {
-                if (changeCheckbox13.checked) {
-                    $('#ios_in_app_ads_mode').val(1);
-                    $('.iOSadsHide').show();
-                    $("input[name=ios_ads_type][value=1]").prop('checked', true);
-                    var ios_ads_type = $("input:radio[name=ios_ads_type]:checked").val();
-                    ios_ads_type_manage(ios_ads_type);
-                } else {
-                    $('#ios_in_app_ads_mode').val(0);
-                    $('.iOSadsHide').hide();
-                    ios_ads_type_manage(0);
                 }
             };
 

@@ -1,7 +1,7 @@
 <?php
 
 /*
-  API v7.0.5
+  API v7.0.3
   Quiz Online - WRTeam.in
   WRTeam Developers
  */
@@ -101,10 +101,6 @@ $toDateTime = date('Y-m-d H:i:s');
   46. get_public_room()
   47. invite_friend()
   48. get_firebase_settings()
-  49. get_learning()
-  50. get_questions_by_learning()
-  51. delete_user_account()
-  52. get_maths_questions()
 
   functions
   ------------------------------------
@@ -154,7 +150,6 @@ if (isset($_POST['access_key']) && isset($_POST['get_categories_by_language'])) 
       access_key:6808
       get_categories_by_language:1
       language_id:1
-      type:2  //2-learning zone , 1-quiz zone
      */
     if (!verify_token()) {
         return false;
@@ -167,40 +162,18 @@ if (isset($_POST['access_key']) && isset($_POST['get_categories_by_language'])) 
     }
     if (isset($_POST['language_id']) && !empty($_POST['language_id'])) {
         $language_id = $db->escapeString($_POST['language_id']);
-
-        if (isset($_POST['type'])) {
-            $type = $db->escapeString($_POST['type']);
-        } else {
-            $type = 1;
-        }
-
-        if ($type == 1 || $type == '1') {
-            $sql = "SELECT *,(select count(id) from question where question.category=c.id ) as no_of_que,
-            (SELECT @no_of_subcategories := count(*) from subcategory s WHERE s.maincat_id = c.id and s.status = 1 ) as no_of, 
+        $sql = "SELECT *,(select count(id) from question where question.category=c.id ) as no_of_que,
+                        (SELECT @no_of_subcategories := count(*) from subcategory s WHERE s.maincat_id = c.id and s.status = 1 ) as no_of, 
 			(select `language` from `languages` l where l.id = c.language_id ) as language,
 			if(@no_of_subcategories = 0, (SELECT @maxlevel := MAX(`level`) from question q WHERE c.id = q.category ),@maxlevel := 0) as `maxlevel` 
-			FROM `category` c where `language_id` = " . $language_id . " AND c.type=" . $type . " ORDER By CAST(c.row_order as unsigned) ASC";
-        }
-        if ($type == 2 || $type == '2') {
-            $sql = "SELECT *, (SELECT count(id) FROM tbl_learning where tbl_learning.category=c.id ) as no_of,
-			(select `language` from `languages` l where l.id = c.language_id ) as language
-			FROM `category` c where `language_id` = " . $language_id . " AND c.type=" . $type . " ORDER By CAST(c.row_order as unsigned) ASC";
-        }
-        if ($type == 3 || $type == '3') {
-            $sql = "SELECT *, (SELECT count(id) FROM tbl_maths_question where tbl_maths_question.category=c.id ) as no_of_que,
-            (SELECT @no_of_subcategories := count(`id`) from subcategory s WHERE s.maincat_id = c.id and s.status = 1 ) as no_of,
-			(select `language` from `languages` l where l.id = c.language_id ) as language
-			FROM `category` c where `language_id` = " . $language_id . " AND c.type=" . $type . " ORDER By CAST(c.row_order as unsigned) ASC";
-        }
+			FROM `category` c where `language_id` = " . $language_id . " ORDER By CAST(c.row_order as unsigned) ASC";
         $db->sql($sql);
         $result = $db->getResult();
 
         if (!empty($result)) {
             for ($i = 0; $i < count($result); $i++) {
                 $result[$i]['image'] = (!empty($result[$i]['image'])) ? DOMAIN_URL . 'images/category/' . $result[$i]['image'] : '';
-                if ($type == 1 || $type == '1') {
-                    $result[0]['maxlevel'] = ($result[0]['maxlevel'] == '' || $result[0]['maxlevel'] == null ) ? '0' : $result[0]['maxlevel'];
-                }
+                $result[0]['maxlevel'] = ($result[0]['maxlevel'] == '' || $result[0]['maxlevel'] == null ) ? '0' : $result[0]['maxlevel'];
             }
             $response['error'] = "false";
             $response['data'] = $result;
@@ -221,7 +194,6 @@ if (isset($_POST['access_key']) && isset($_POST['get_categories'])) {
       access_key:6808
       get_categories:1
       id:31 //{optional}
-      type:2  //2-learning zone , 1-quiz zone
      */
     if (!verify_token()) {
         return false;
@@ -232,31 +204,14 @@ if (isset($_POST['access_key']) && isset($_POST['get_categories'])) {
         print_r(json_encode($response));
         return false;
     }
-    if (isset($_POST['type'])) {
-        $type = $db->escapeString($_POST['type']);
-    } else {
-        $type = 1;
-    }
     if (isset($_POST['id'])) {
-
         $id = $db->escapeString($_POST['id']);
-        // $sql = "SELECT *,(select count(id) from question where question.category=c.id ) as no_of_que, (SELECT @no_of_subcategories := count(`id`) from subcategory s WHERE s.maincat_id = c.id and s.status = 1 ) as no_of, if(@no_of_subcategories = 0, (SELECT @maxlevel := MAX(`level`+0) from question q WHERE c.id = q.category ),@maxlevel := 0) as `maxlevel` FROM `category` c WHERE c.id = $id ORDER By CAST(c.row_order as unsigned) ASC";
-        if ($type == 1 || $type == '1') {
-            $sql = "SELECT *,(select count(id) from question where question.category=c.id ) as no_of_que, (SELECT @no_of_subcategories := count(`id`) from subcategory s WHERE s.maincat_id = c.id and s.status = 1 ) as no_of, if(@no_of_subcategories = 0, (SELECT @maxlevel := MAX(`level`+0) from question q WHERE c.id = q.category ),@maxlevel := 0) as `maxlevel` FROM `category` c WHERE c.id = $id AND c.type=" . $type . " ORDER By CAST(c.row_order as unsigned) ASC";
-        }
-        if ($type == 2 || $type == '2') {
-            $sql = "SELECT *, (SELECT count(id) FROM tbl_learning where tbl_learning.category=c.id ) as no_of FROM `category` c WHERE c.id = $id AND c.type=" . $type . " ORDER BY CAST(c.row_order as unsigned) ASC";
-        }
-        if ($type == 3 || $type == '3') {
-            $sql = "SELECT *, (SELECT count(id) FROM tbl_maths_question where tbl_maths_question.category=c.id ) as no_of_que, (SELECT @no_of_subcategories := count(`id`) from subcategory s WHERE s.maincat_id = c.id and s.status = 1 ) as no_of FROM `category` c WHERE c.id = $id AND c.type=" . $type . " ORDER BY CAST(c.row_order as unsigned) ASC";
-        }
+        $sql = "SELECT *,(select count(id) from question where question.category=c.id ) as no_of_que, (SELECT @no_of_subcategories := count(`id`) from subcategory s WHERE s.maincat_id = c.id and s.status = 1 ) as no_of, if(@no_of_subcategories = 0, (SELECT @maxlevel := MAX(`level`+0) from question q WHERE c.id = q.category ),@maxlevel := 0) as `maxlevel` FROM `category` c WHERE c.id = $id ORDER By CAST(c.row_order as unsigned) ASC";
         $db->sql($sql);
         $result = $db->getResult();
         if (!empty($result)) {
             $result[0]['image'] = (!empty($result[0]['image'])) ? DOMAIN_URL . 'images/category/' . $result[0]['image'] : '';
-            if ($type == 1 || $type == '1') {
-                $result[0]['maxlevel'] = ($result[0]['maxlevel'] == '' || $result[0]['maxlevel'] == null ) ? '0' : $result[0]['maxlevel'];
-            }
+            $result[0]['maxlevel'] = ($result[0]['maxlevel'] == '' || $result[0]['maxlevel'] == null ) ? '0' : $result[0]['maxlevel'];
             $response['error'] = "false";
             $response['data'] = $result[0];
         } else {
@@ -264,23 +219,13 @@ if (isset($_POST['access_key']) && isset($_POST['get_categories'])) {
             $response['message'] = "No data found!";
         }
     } else {
-        if ($type == 1 || $type == '1') {
-            $sql = "SELECT *,(select count(id) from question where question.category=c.id ) as no_of_que, (SELECT @no_of_subcategories := count(`id`) from subcategory s WHERE s.maincat_id = c.id and s.status = 1 ) as no_of, if(@no_of_subcategories = 0, (SELECT @maxlevel := MAX(`level`+0) from question q WHERE c.id = q.category ),@maxlevel := 0) as `maxlevel` FROM `category` c WHERE c.type=" . $type . " ORDER By CAST(c.row_order as unsigned) ASC";
-        }
-        if ($type == 2 || $type == '2') {
-            $sql = "SELECT *, (SELECT count(id) FROM tbl_learning where tbl_learning.category=c.id ) as no_of FROM `category` c WHERE c.type=" . $type . " ORDER BY CAST(c.row_order as unsigned) ASC";
-        }
-        if ($type == 3 || $type == '3') {
-            $sql = "SELECT *, (SELECT count(id) FROM tbl_maths_question where tbl_maths_question.category=c.id ) as no_of_que, (SELECT @no_of_subcategories := count(`id`) from subcategory s WHERE s.maincat_id = c.id and s.status = 1 ) as no_of FROM `category` c WHERE c.type=" . $type . " ORDER BY CAST(c.row_order as unsigned) ASC";
-        }
+        $sql = "SELECT *,(select count(id) from question where question.category=c.id ) as no_of_que,(SELECT @no_of_subcategories := count(`id`) from subcategory s WHERE s.maincat_id = c.id and s.status = 1 ) as no_of, if(@no_of_subcategories = 0, (SELECT @maxlevel := MAX(`level`+0) from question q WHERE c.id = q.category ),@maxlevel := 0) as `maxlevel` FROM `category` c ORDER By CAST(c.row_order as unsigned) ASC";
         $db->sql($sql);
         $result = $db->getResult();
         if (!empty($result)) {
             for ($i = 0; $i < count($result); $i++) {
                 $result[$i]['image'] = (!empty($result[$i]['image'])) ? DOMAIN_URL . 'images/category/' . $result[$i]['image'] : '';
-                if ($type == 1 || $type == '1') {
-                    $result[$i]['maxlevel'] = ($result[$i]['maxlevel'] == '' || $result[$i]['maxlevel'] == null ) ? '0' : $result[$i]['maxlevel'];
-                }
+                $result[$i]['maxlevel'] = ($result[$i]['maxlevel'] == '' || $result[$i]['maxlevel'] == null ) ? '0' : $result[$i]['maxlevel'];
             }
             $response['error'] = "false";
             $response['data'] = $result;
@@ -310,35 +255,14 @@ if (isset($_POST['access_key']) && isset($_POST['get_subcategory_by_maincategory
     }
     if (isset($_POST['main_id'])) {
         $id = $db->escapeString($_POST['main_id']);
-        $sql = "SELECT * FROM `category` WHERE `id`=" . $id;
-        $db->sql($sql);
-        $res = $db->getResult();
-        if (!empty($res)) {
-            $type = $res[0]['type'];
-        } else {
-            $type = 1;
-        }
-
-        if ($type == 1 || $type == '1') {
-            $no_of = ", (SELECT max(`level` + 0) from question where question.subcategory=subcategory.id ) as maxlevel,(select count(id) from question where question.subcategory=subcategory.id ) as no_of";
-        }
-        // if ($type == 2 || $type == '2') {
-        //     $no_of = ", (SELECT count(id) FROM tbl_learning WHERE tbl_learning.subcategory = subcategory.id ) as no_of";
-        // }
-        if ($type == 3 || $type == '3') {
-            $no_of = ", (SELECT count(id) FROM tbl_maths_question WHERE tbl_maths_question.subcategory = subcategory.id ) as no_of";
-        }
-
-        $sql = "SELECT * " . $no_of . " FROM `subcategory` WHERE `maincat_id`='$id' and `status`=1 ORDER BY CAST(row_order as unsigned) ASC";
+        $sql = "SELECT *,(select max(`level` + 0) from question where question.subcategory=subcategory.id ) as maxlevel,(select count(id) from question where question.subcategory=subcategory.id ) as no_of FROM `subcategory` WHERE `maincat_id`='$id' and `status`=1 ORDER BY CAST(row_order as unsigned) ASC";
         $db->sql($sql);
         $result = $db->getResult();
 
         if (!empty($result)) {
             for ($i = 0; $i < count($result); $i++) {
                 $result[$i]['image'] = (!empty($result[$i]['image'])) ? DOMAIN_URL . 'images/subcategory/' . $result[$i]['image'] : '';
-                if ($type == 1 || $type == '1') {
-                    $result[$i]['maxlevel'] = ($result[$i]['maxlevel'] == '' || $result[$i]['maxlevel'] == null ) ? '0' : $result[$i]['maxlevel'];
-                }
+                $result[$i]['maxlevel'] = ($result[$i]['maxlevel'] == '' || $result[$i]['maxlevel'] == null ) ? '0' : $result[$i]['maxlevel'];
             }
             $response['error'] = "false";
             $response['data'] = $result;
@@ -2510,7 +2434,7 @@ if (isset($_POST['access_key']) && isset($_POST['get_questions_by_contest'])) {
     print_r(json_encode($response));
 }
 
-// 41. contest_update_score() 
+// 41. contest_update_score() - set the score of the user after he plays the contest
 if (isset($_POST['access_key']) && isset($_POST['contest_update_score'])) {
     /* Parameters to be passed
       access_key:6808
@@ -2562,7 +2486,7 @@ if (isset($_POST['access_key']) && isset($_POST['contest_update_score'])) {
     print_r(json_encode($response));
 }
 
-// 42. get_contest_leaderboard()
+// 42. get_contest_leaderboard() - get the top 15 players list for a contest
 if (isset($_POST['access_key']) && isset($_POST['get_contest_leaderboard'])) {
     /* Parameters to be passed
       access_key:6808
@@ -2657,7 +2581,7 @@ if (isset($_POST['access_key']) && isset($_POST['create_room'])) {
         if (isset($_POST['category']) && !empty($_POST['category'])) {
             $category = $db->escapeString($_POST['category']);
         } else {
-            $category = 0;
+            $category = '';
         }
 
         $sql1 = "SELECT * FROM `tbl_rooms` where room_id='$room_id'";
@@ -2924,193 +2848,6 @@ if (isset($_POST['access_key']) && isset($_POST['get_firebase_settings'])) {
         $response['error'] = "true";
         $response['message'] = "No data found!";
     }
-    print_r(json_encode($response));
-}
-
-// 49. get_learning()
-if (isset($_POST['access_key']) && isset($_POST['get_learning'])) {
-    /* Parameters to be passed
-      access_key:6808
-      get_learning:1
-      category:1
-     */
-    if (!verify_token()) {
-        return false;
-    }
-    if ($access_key != $_POST['access_key']) {
-        $response['error'] = "true";
-        $response['message'] = "Invalid Access Key";
-        print_r(json_encode($response));
-        return false;
-    }
-    if (isset($_POST['category'])) {
-        $category = $db->escapeString($_POST['category']);
-        $where = '';
-        if (isset($_POST['id'])) {
-            $id = $db->escapeString($_POST['id']);
-            $where = ' AND `id` =' . $id;
-        }
-        $sql = "SELECT *, (SELECT COUNT(id) FROM tbl_learning_question WHERE tbl_learning_question.learning_id=tbl_learning.id ) as no_of FROM tbl_learning WHERE status=1 AND category=" . $category . " " . $where . " ORDER BY id DESC";
-        $db->sql($sql);
-        $result = $db->getResult();
-        if (!empty($result)) {
-            $response['error'] = "false";
-            $response['data'] = $result;
-        } else {
-            $response['error'] = "true";
-            $response['message'] = "No data found!";
-        }
-    } else {
-        $response['error'] = "true";
-        $response['message'] = "Please pass all the fields";
-    }
-    print_r(json_encode($response));
-}
-
-// 50. get_questions_by_learning()
-if (isset($_POST['access_key']) && isset($_POST['get_questions_by_learning'])) {
-    /* Parameters to be passed
-      access_key:6808
-      get_questions_by_learning:1
-      learning_id:1
-     */
-    if (!verify_token()) {
-        return false;
-    }
-    if ($access_key != $_POST['access_key']) {
-        $response['error'] = "true";
-        $response['message'] = "Invalid Access Key";
-        print_r(json_encode($response));
-        return false;
-    }
-    if (isset($_POST['learning_id'])) {
-        $id = $db->escapeString($_POST['learning_id']);
-        $sql = "SELECT * FROM `tbl_learning_question` WHERE learning_id=" . $id . " ORDER BY id DESC";
-        $db->sql($sql);
-        $result = $db->getResult();
-
-        if (!empty($result)) {
-            for ($i = 0; $i < count($result); $i++) {
-                $result[$i]['optione'] = ($fn->is_option_e_mode_enabled() && $result[$i]['optione'] != null) ? trim($result[$i]['optione']) : '';
-                $result[$i]['optiona'] = trim($result[$i]['optiona']);
-                $result[$i]['optionb'] = trim($result[$i]['optionb']);
-                $result[$i]['optionc'] = trim($result[$i]['optionc']);
-                $result[$i]['optiond'] = trim($result[$i]['optiond']);
-            }
-            $response['error'] = "false";
-            $response['data'] = $result;
-        } else {
-            $response['error'] = "true";
-            $response['message'] = "No data found!";
-        }
-    } else {
-        $response['error'] = "true";
-        $response['message'] = "Please pass all the fields";
-    }
-    print_r(json_encode($response));
-}
-
-// 51. delete_user_account()
-if (isset($_POST['access_key']) && isset($_POST['delete_user_account'])) {
-    /* Parameters to be passed
-      access_key:6808
-      delete_user_account:1
-      user_id:1
-     */
-    if (!verify_token()) {
-        return false;
-    }
-    if ($access_key != $_POST['access_key']) {
-        $response['error'] = "true";
-        $response['message'] = "Invalid Access Key";
-        print_r(json_encode($response));
-        return false;
-    }
-    if (isset($_POST['user_id'])) {
-        $id = $db->escapeString($_POST['user_id']);
-
-        $tables = [
-            'contest_leaderboard',
-            'daily_leaderboard',
-            'daily_quiz_user',
-            'monthly_leaderboard',
-            'question_reports',
-            'tbl_bookmark',
-            'tbl_level',
-            'tbl_tracker',
-            'users_statistics'
-        ];
-        foreach ($tables as $row) {
-            $sql = 'DELETE FROM ' . $row . ' WHERE `user_id`=' . $id;
-            $db->sql($sql);
-        }
-
-        $sql1 = 'DELETE FROM `battle_statistics` WHERE `user_id1`=' . $id;
-        $db->sql($sql1);
-
-        $sql2 = 'DELETE FROM `battle_statistics` WHERE `user_id2`=' . $id;
-        $db->sql($sql2);
-
-        $sql3 = 'DELETE FROM `users` WHERE `id`=' . $id;
-        $db->sql($sql3);
-
-        $response['error'] = "false";
-        $response['message'] = "data reset successfully!";
-    } else {
-        $response['error'] = "true";
-        $response['message'] = "Please Pass all the fields!";
-    }
-    print_r(json_encode($response));
-}
-
-// 52. get_maths_questions()
-if (isset($_POST['access_key']) && isset($_POST['get_maths_questions'])) {
-    /* Parameters to be passed
-      access_key:6808
-      get_questions_by_learning:1
-      learning_id:1
-     */
-    if (!verify_token()) {
-        return false;
-    }
-    if ($access_key != $_POST['access_key']) {
-        $response['error'] = "true";
-        $response['message'] = "Invalid Access Key";
-        print_r(json_encode($response));
-        return false;
-    }
-    if ((isset($_POST['category']) || isset($_POST['subcategory']))) {
-        $language_id = (isset($_POST['language_id']) && is_numeric($_POST['language_id'])) ? $db->escapeString($_POST['language_id']) : '';
-        $id = (isset($_POST['category'])) ? $db->escapeString($_POST['category']) : $db->escapeString($_POST['subcategory']);
-
-        $sql = "SELECT * FROM `tbl_maths_question` ";
-        $sql .= (isset($_POST['category'])) ? " WHERE `category`=" . $id : " WHERE `subcategory`=" . $id;
-        $sql .= (!empty($language_id)) ? " AND `language_id`=" . $language_id : "";
-        $sql .= " ORDER BY rand() DESC";
-        $db->sql($sql);
-        $result = $db->getResult();
-
-        if (!empty($result)) {
-            for ($i = 0; $i < count($result); $i++) {
-                $result[$i]['image'] = (!empty($result[$i]['image'])) ? DOMAIN_URL . 'images/maths-question/' . $result[$i]['image'] : '';
-                $result[$i]['optione'] = ($fn->is_option_e_mode_enabled() && $result[$i]['optione'] != null) ? trim($result[$i]['optione']) : '';
-                $result[$i]['optiona'] = trim($result[$i]['optiona']);
-                $result[$i]['optionb'] = trim($result[$i]['optionb']);
-                $result[$i]['optionc'] = trim($result[$i]['optionc']);
-                $result[$i]['optiond'] = trim($result[$i]['optiond']);
-            }
-            $response['error'] = "false";
-            $response['data'] = $result;
-        } else {
-            $response['error'] = "true";
-            $response['message'] = "No data found!";
-        }
-    } else {
-        $response['error'] = "true";
-        $response['message'] = "Please pass all the fields";
-    }
-    // $response = stripcslashes(json_encode($response));
-    // print_r($response);
     print_r(json_encode($response));
 }
 

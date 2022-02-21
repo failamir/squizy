@@ -1,0 +1,1328 @@
+[16-Dec-2021 16:11:35 Asia/Jakarta] PHP Notice:  Undefined variable: MyPHPStringVar in /home/kokngodi/squizy.kokngoding.id/admin/main-category.php on line 202
+[16-Dec-2021 16:12:12 Asia/Jakarta] PHP Notice:  Undefined variable: MyPHPStringVar in /home/kokngodi/squizy.kokngoding.id/admin/main-category.php on line 202
+[16-Dec-2021 09:14:17 UTC] PHP Notice:  Undefined index: id in /home/kokngodi/squizy.kokngoding.id/admin/check_login.php on line 25
+[16-Dec-2021 16:14:20 Asia/Jakarta] PHP Notice:  Undefined variable: MyPHPStringVar in /home/kokngodi/squizy.kokngoding.id/admin/main-category.php on line 202
+[16-Dec-2021 16:15:50 Asia/Jakarta] PHP Notice:  Undefined variable: MyPHPStringVar in /home/kokngodi/squizy.kokngoding.id/admin/main-category.php on line 202
+[16-Dec-2021 13:23:23 UTC] PHP Notice:  Undefined variable: db in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 7
+[16-Dec-2021 13:23:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function sql() on null in /home/kokngodi/squizy.kokngoding.id/admin/magic.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 7
+[16-Dec-2021 21:05:10 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 72
+[16-Dec-2021 21:05:10 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 82
+[16-Dec-2021 21:05:10 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(82): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:07:02 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 121
+[16-Dec-2021 14:07:03 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 121
+[16-Dec-2021 14:07:27 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 121
+[16-Dec-2021 14:07:27 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 121
+[16-Dec-2021 14:07:27 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 121
+[16-Dec-2021 14:08:59 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:00 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:05 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:06 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:10 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:14 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:14 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:15 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:15 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:15 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:15 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:15 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:16 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:16 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:09:16 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 122
+[16-Dec-2021 14:11:09 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 123
+[16-Dec-2021 14:11:10 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 123
+[16-Dec-2021 14:11:36 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 14:11:37 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 14:11:37 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 14:11:37 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 14:11:38 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 14:11:38 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 14:11:38 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 14:11:38 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 14:11:49 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 14:11:49 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 14:11:49 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 14:12:18 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 14:12:19 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 14:12:19 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 14:12:19 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 14:12:20 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 14:12:20 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 14:12:20 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 14:12:20 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 14:12:20 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 14:12:21 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 14:12:21 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 14:12:21 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 125
+[16-Dec-2021 21:13:20 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 76
+[16-Dec-2021 21:13:20 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 86
+[16-Dec-2021 21:13:20 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(86): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:14:06 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:06 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:06 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(12): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:14:08 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:08 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:08 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(12): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:14:09 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:09 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:09 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(12): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:14:20 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:20 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:20 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(12): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:14:20 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:20 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:20 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(12): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:14:21 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:21 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:21 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(12): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:14:21 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:21 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 12
+[16-Dec-2021 14:14:21 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(12): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:15:17 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 14
+[16-Dec-2021 14:15:17 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 14
+[16-Dec-2021 14:15:17 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(14): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:15:18 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 14
+[16-Dec-2021 14:15:18 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 14
+[16-Dec-2021 14:15:18 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(14): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:15:42 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:15:42 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:15:42 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(15): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:15:57 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:15:57 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:15:57 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(15): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:15:57 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:15:57 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:15:58 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(15): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:16:05 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:16:05 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:16:05 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(15): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:16:06 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:16:06 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:16:06 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(15): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:16:30 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:16:30 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:16:30 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(15): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:16:31 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:16:31 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:16:31 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(15): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:16:38 UTC] PHP Warning:  require(/home/kokngodi/squizy.kokngoding.id/admin/../vendor/autolsoad.php): failed to open stream: No such file or directory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 3
+[16-Dec-2021 14:16:38 UTC] PHP Fatal error:  require(): Failed opening required '/home/kokngodi/squizy.kokngoding.id/admin/../vendor/autolsoad.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 3
+[16-Dec-2021 14:16:42 UTC] PHP Notice:  Undefined variable: source in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:16:42 UTC] PHP Notice:  Undefined variable: target in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:16:42 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<html lang=en><...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(15): Statickidz\GoogleTranslate::translate(NULL, NULL, 'aku suka dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:17:43 UTC] PHP Fatal error:  Uncaught Error: Class 'GoogleTranslate' not found in /home/kokngodi/squizy.kokngoding.id/admin/magic.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:17:44 UTC] PHP Fatal error:  Uncaught Error: Class 'GoogleTranslate' not found in /home/kokngodi/squizy.kokngoding.id/admin/magic.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:17:44 UTC] PHP Fatal error:  Uncaught Error: Class 'GoogleTranslate' not found in /home/kokngodi/squizy.kokngoding.id/admin/magic.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:17:44 UTC] PHP Fatal error:  Uncaught Error: Class 'GoogleTranslate' not found in /home/kokngodi/squizy.kokngoding.id/admin/magic.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:17:44 UTC] PHP Fatal error:  Uncaught Error: Class 'GoogleTranslate' not found in /home/kokngodi/squizy.kokngoding.id/admin/magic.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:17:45 UTC] PHP Fatal error:  Uncaught Error: Class 'GoogleTranslate' not found in /home/kokngodi/squizy.kokngoding.id/admin/magic.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 15
+[16-Dec-2021 14:18:29 UTC] PHP Fatal error:  Uncaught Error: Class 'GoogleTranslate' not found in /home/kokngodi/squizy.kokngoding.id/admin/magic.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 16
+[16-Dec-2021 14:18:30 UTC] PHP Fatal error:  Uncaught Error: Class 'GoogleTranslate' not found in /home/kokngodi/squizy.kokngoding.id/admin/magic.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 16
+[16-Dec-2021 14:18:32 UTC] PHP Fatal error:  Uncaught Error: Class 'GoogleTranslate' not found in /home/kokngodi/squizy.kokngoding.id/admin/magic.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 16
+[16-Dec-2021 21:20:19 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 95
+[16-Dec-2021 21:20:19 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 105
+[16-Dec-2021 21:20:19 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(105): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:36 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:36 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:36 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:37 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:37 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:37 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:38 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:38 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:38 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:38 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:38 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:38 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:39 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:39 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:39 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:39 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:39 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:39 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:39 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:39 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:39 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:40 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:41 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:41 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:41 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:41 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:41 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:41 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:41 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:41 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:41 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:41 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:42 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:42 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:42 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:42 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:42 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:42 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:43 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:43 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:43 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:43 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:43 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:43 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:20:43 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:20:43 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 104
+[16-Dec-2021 21:20:43 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('[null,null,"id"...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(104): Statickidz\GoogleTranslate::translate('id', 'en', NULL)
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:21:47 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:21:47 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 101
+[16-Dec-2021 21:22:02 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:22:02 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 102
+[16-Dec-2021 21:22:17 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:22:17 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 102
+[16-Dec-2021 21:22:54 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:22:54 Asia/Jakarta] PHP Notice:  Undefined variable: qu in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 101
+[16-Dec-2021 21:22:54 Asia/Jakarta] PHP Notice:  Undefined variable: qu in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 102
+[16-Dec-2021 21:22:54 Asia/Jakarta] PHP Notice:  Undefined variable: qu in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 103
+[16-Dec-2021 21:22:54 Asia/Jakarta] PHP Notice:  Trying to get property 'question' of non-object in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 103
+[16-Dec-2021 21:23:06 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:23:11 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 92
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 116
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 121
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 126
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 131
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 136
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 116
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 121
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 126
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 131
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 136
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 116
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 121
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 126
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 131
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 136
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:17 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 116
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 121
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 126
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 131
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 136
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 116
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 121
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 126
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 131
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 136
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:19 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 116
+[16-Dec-2021 21:23:19 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 121
+[16-Dec-2021 21:23:19 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 126
+[16-Dec-2021 21:23:19 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 131
+[16-Dec-2021 21:23:19 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 136
+[16-Dec-2021 21:23:19 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:19 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:19 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:19 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:19 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:23:19 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 142
+[16-Dec-2021 21:31:07 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 93
+[16-Dec-2021 21:31:07 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(112): Statickidz\GoogleTranslate::translate('id', 'en', 'How many Pillar...')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:31:27 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 93
+[16-Dec-2021 21:31:28 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(112): Statickidz\GoogleTranslate::translate('id', 'en', 'How many Pillar...')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:31:29 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 93
+[16-Dec-2021 21:31:29 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(112): Statickidz\GoogleTranslate::translate('id', 'en', 'How many Pillar...')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:31:30 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 93
+[16-Dec-2021 21:31:31 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(112): Statickidz\GoogleTranslate::translate('id', 'en', 'How many Pillar...')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:32:54 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 94
+[16-Dec-2021 21:32:54 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(113): Statickidz\GoogleTranslate::translate('id', 'en', 'How many Pillar...')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:32:57 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 94
+[16-Dec-2021 21:32:57 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(113): Statickidz\GoogleTranslate::translate('id', 'en', 'How many Pillar...')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:33:18 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(18): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:33:19 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(18): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:33:20 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(18): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:33:21 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(18): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:33:22 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(18): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:33:24 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(18): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:33:53 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(19): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:34:39 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(19): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:34:40 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(19): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:35:50 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:36:54 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:36:57 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:36:58 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:37:08 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:37:09 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:37:11 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:37:12 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:37:12 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:37:13 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:37:14 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:37:15 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:37:15 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:37:16 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:37:36 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:38:23 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(20): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 21:39:05 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON(false)
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(108): Statickidz\GoogleTranslate::translate('id', 'en', 'Islam berasal d...')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:39:24 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:39:43 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:39:44 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:39:45 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:39:46 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:39:46 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:39:47 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:39:49 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<!DOCTYPE html ...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:40:32 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:40:34 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:40:37 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:40:41 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:40:44 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:40:46 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:40:47 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:40:48 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('es', 'en', 'buenos d\xC3\xADas')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:41:09 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:41:12 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:41:30 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:41:31 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:41:33 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(21): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:43:16 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(25): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:43:20 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(25): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:43:22 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(25): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:43:23 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(25): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:43:24 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(25): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:45:20 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(25): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:45:21 UTC] PHP Fatal error:  Uncaught Exception: Google detected unusual traffic from your computer network, try again later (2 - 48 hours) in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php:123
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php(46): Statickidz\GoogleTranslate::getSentencesFromJSON('<HTML><HEAD><me...')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(25): Statickidz\GoogleTranslate::translate('id', 'en', 'siapa dia')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/statickidz/php-google-translate-free/src/GoogleTranslate.php on line 123
+[16-Dec-2021 14:48:59 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=en&tl=ka&q=Hello+again&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=589066.970356` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello again')
+#1 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(218): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello again')
+#2 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(28): Stichoza\GoogleTranslate\GoogleTrans in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:50:03 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=en&tl=ka&q=Hello+again&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=589066.970356` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello again')
+#1 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(218): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello again')
+#2 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(25): Stichoza\GoogleTranslate\GoogleTrans in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:50:05 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=en&tl=ka&q=Hello+again&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=589066.970356` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello again')
+#1 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(218): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello again')
+#2 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(25): Stichoza\GoogleTranslate\GoogleTrans in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:50:07 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=en&tl=ka&q=Hello+again&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=589066.970356` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello again')
+#1 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(218): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello again')
+#2 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(25): Stichoza\GoogleTranslate\GoogleTrans in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:51:17 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(30): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:51:19 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(30): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:52:21 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(31): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:52:24 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(31): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:52:49 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(31): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:52:51 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(31): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:52:52 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(31): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:52:53 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(31): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:52:54 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(31): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:53:47 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(31): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:53:48 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(31): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:54:02 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(31): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 14:55:16 UTC] PHP Fatal error:  Uncaught ErrorException: Client error: `GET https://translate.google.com/translate_a/single?client=gtx&hl=en&dt=t&dt=bd&dt=at&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&sl=auto&tl=ka&q=Hello+World%21&ie=UTF-8&oe=UTF-8&multires=1&otf=0&pc=1&trs=1&ssel=0&tsel=0&kc=1&tk=644029.1040579` resulted in a `429 Too Many Requests` response:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="content-type" content="te (truncated...)
+ in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php:323
+Stack trace:
+#0 /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php(240): Stichoza\GoogleTranslate\GoogleTranslate->getResponse('Hello World!')
+#1 /home/kokngodi/squizy.kokngoding.id/admin/magic.php(40): Stichoza\GoogleTranslate\GoogleTranslate->translate('Hello World!')
+#2 {main}
+  thrown in /home/kokngodi/squizy.kokngoding.id/vendor/stichoza/google-translate-php/src/GoogleTranslate.php on line 323
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 151
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 156
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 161
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 166
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 171
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:30 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 151
+[16-Dec-2021 21:59:30 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 156
+[16-Dec-2021 21:59:30 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 161
+[16-Dec-2021 21:59:30 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 166
+[16-Dec-2021 21:59:30 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 171
+[16-Dec-2021 21:59:30 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:30 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:30 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:30 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:30 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:30 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:41 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 151
+[16-Dec-2021 21:59:41 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 156
+[16-Dec-2021 21:59:41 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 161
+[16-Dec-2021 21:59:41 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 166
+[16-Dec-2021 21:59:41 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 171
+[16-Dec-2021 21:59:41 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:41 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:41 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:41 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:41 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:41 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:51 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 151
+[16-Dec-2021 21:59:51 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 156
+[16-Dec-2021 21:59:51 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 161
+[16-Dec-2021 21:59:51 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 166
+[16-Dec-2021 21:59:51 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 171
+[16-Dec-2021 21:59:51 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:51 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:51 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:51 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:51 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 21:59:51 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 151
+[16-Dec-2021 22:00:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 156
+[16-Dec-2021 22:00:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 161
+[16-Dec-2021 22:00:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 166
+[16-Dec-2021 22:00:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 171
+[16-Dec-2021 22:00:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:12 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 151
+[16-Dec-2021 22:00:12 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 156
+[16-Dec-2021 22:00:12 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 161
+[16-Dec-2021 22:00:12 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 166
+[16-Dec-2021 22:00:12 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 171
+[16-Dec-2021 22:00:12 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:12 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:12 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:12 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:12 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:00:12 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 177
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 152
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 157
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 162
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 167
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 172
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:32:28 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:33:28 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:33:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 152
+[16-Dec-2021 22:33:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 157
+[16-Dec-2021 22:33:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 162
+[16-Dec-2021 22:33:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 167
+[16-Dec-2021 22:33:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 172
+[16-Dec-2021 22:33:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:33:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:33:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:33:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:33:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:33:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 178
+[16-Dec-2021 22:35:03 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 152
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 153
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 158
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 163
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 168
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 173
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 179
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$a in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 179
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$b in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 179
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$c in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 179
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$d in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 179
+[16-Dec-2021 22:35:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$e in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 179
+[16-Dec-2021 22:35:28 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:37:29 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:37:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:37:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:37:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:40:48 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:40:48 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:40:48 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:40:48 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:41:01 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:41:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:41:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:41:02 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:41:15 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:41:15 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:41:15 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:41:15 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:41:29 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:41:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:41:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:41:29 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:41:43 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:41:43 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:41:43 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:41:43 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:41:54 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:41:54 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:41:55 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:41:55 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:42:03 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:42:03 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:42:03 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:42:03 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:42:10 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:42:11 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:42:11 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:42:11 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:42:18 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:42:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:42:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:42:18 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:42:25 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:42:25 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:42:26 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:42:26 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:42:33 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[16-Dec-2021 22:42:33 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[16-Dec-2021 22:42:34 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:42:34 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[16-Dec-2021 22:42:43 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:29:14 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:29:15 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 147
+[17-Dec-2021 02:29:15 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[17-Dec-2021 02:29:15 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 180
+[17-Dec-2021 02:30:32 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:30:32 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 148
+[17-Dec-2021 02:30:32 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:30:32 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:32:47 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:32:47 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 148
+[17-Dec-2021 02:32:48 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:32:48 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:33:04 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:33:05 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:33:05 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:33:07 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:33:14 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:33:22 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:33:22 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 148
+[17-Dec-2021 02:33:22 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:33:22 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:36:20 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:36:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 148
+[17-Dec-2021 02:36:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:36:20 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:36:52 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:36:52 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 148
+[17-Dec-2021 02:36:53 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:36:53 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:38:03 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:38:03 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 148
+[17-Dec-2021 02:38:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:38:04 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:42:24 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:42:24 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 148
+[17-Dec-2021 02:42:24 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:42:24 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:43:57 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:43:57 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 148
+[17-Dec-2021 02:43:57 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:43:57 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:43:57 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 148
+[17-Dec-2021 02:43:58 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:43:58 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:45:52 Asia/Jakarta] PHP Notice:  Undefined variable: result in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 124
+[17-Dec-2021 02:45:52 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 148
+[17-Dec-2021 02:45:53 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:45:53 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:45:53 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optionanswer in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 148
+[17-Dec-2021 02:45:53 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$optioncategory in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[17-Dec-2021 02:45:53 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$filename in /home/kokngodi/squizy.kokngoding.id/admin/magic.php on line 181
+[20-Dec-2021 12:27:36 UTC] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/daily-quiz.php on line 14
+[20-Dec-2021 19:27:36 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 32
+[20-Dec-2021 19:27:36 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 70
+[20-Dec-2021 19:27:36 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 150
+[20-Dec-2021 19:27:36 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/footer.php on line 3
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 5 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 766
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 6 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 767
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 7 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 768
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 8 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 769
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 9 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 770
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 10 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 771
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 11 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 772
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 12 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 773
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 4 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 765
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 5 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 766
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 6 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 767
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 7 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 768
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 8 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 769
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 9 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 770
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 10 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 771
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 11 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 772
+[21-Dec-2021 06:05:26 Asia/Jakarta] PHP Notice:  Undefined offset: 12 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 773
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 5 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 766
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 6 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 767
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 7 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 768
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 8 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 769
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 9 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 770
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 10 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 771
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 11 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 772
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 12 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 773
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 5 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 766
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 6 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 767
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 7 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 768
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 8 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 769
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 9 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 770
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 10 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 771
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 11 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 772
+[21-Dec-2021 06:27:49 Asia/Jakarta] PHP Notice:  Undefined offset: 12 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 773
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 5 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 766
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 6 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 767
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 7 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 768
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 8 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 769
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 9 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 770
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 10 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 771
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 11 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 772
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 12 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 773
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 4 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 765
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 5 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 766
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 6 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 767
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 7 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 768
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 8 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 769
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 9 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 770
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 10 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 771
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 11 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 772
+[21-Dec-2021 06:50:55 Asia/Jakarta] PHP Notice:  Undefined offset: 12 in /home/kokngodi/squizy.kokngoding.id/admin/db_operations.php on line 773
+[21-Dec-2021 09:08:18 UTC] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/daily-quiz.php on line 14
+[21-Dec-2021 16:08:18 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 32
+[21-Dec-2021 16:08:18 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 70
+[21-Dec-2021 16:08:18 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 150
+[21-Dec-2021 16:08:18 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/footer.php on line 3
+[21-Dec-2021 13:31:29 UTC] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/daily-quiz.php on line 14
+[21-Dec-2021 20:31:29 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 32
+[21-Dec-2021 20:31:29 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 70
+[21-Dec-2021 20:31:29 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 150
+[21-Dec-2021 20:31:29 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/footer.php on line 3
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'image' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 406
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Cannot assign an empty string to a string offset in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 406
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'optione' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 407
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'optione' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 407
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'optione' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 407
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'optiona' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 408
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'optiona' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 408
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'optionb' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 409
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'optionb' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 409
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'optionc' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 410
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'optionc' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 410
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'optiond' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 411
+[19-Feb-2022 01:58:04 Asia/Jakarta] PHP Warning:  Illegal string offset 'optiond' in /home/kokngodi/squizy.kokngoding.id/admin/api-v2.php on line 411
+[19-Feb-2022 10:48:42 UTC] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/daily-quiz.php on line 14
+[19-Feb-2022 17:48:42 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 32
+[19-Feb-2022 17:48:42 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 70
+[19-Feb-2022 17:48:42 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 150
+[19-Feb-2022 17:48:42 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/footer.php on line 3
+[19-Feb-2022 10:48:43 UTC] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/daily-quiz.php on line 14
+[19-Feb-2022 17:48:43 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 32
+[19-Feb-2022 17:48:43 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 70
+[19-Feb-2022 17:48:43 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 150
+[19-Feb-2022 17:48:43 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/footer.php on line 3
+[19-Feb-2022 10:48:44 UTC] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/daily-quiz.php on line 14
+[19-Feb-2022 17:48:44 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 32
+[19-Feb-2022 17:48:44 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 70
+[19-Feb-2022 17:48:44 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 150
+[19-Feb-2022 17:48:44 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/footer.php on line 3
+[19-Feb-2022 10:48:45 UTC] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/daily-quiz.php on line 14
+[19-Feb-2022 17:48:45 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 32
+[19-Feb-2022 17:48:45 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 70
+[19-Feb-2022 17:48:45 Asia/Jakarta] PHP Notice:  Undefined index: username in /home/kokngodi/squizy.kokngoding.id/admin/sidebar.php on line 150
+[19-Feb-2022 17:48:45 Asia/Jakarta] PHP Notice:  Undefined index: company_name in /home/kokngodi/squizy.kokngoding.id/admin/footer.php on line 3

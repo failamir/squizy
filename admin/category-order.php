@@ -5,11 +5,9 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
     return false;
     exit();
 }
-$type = '1';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Meta, title, CSS, favicons, etc. -->
@@ -19,34 +17,12 @@ $type = '1';
         <title>Category Order | <?= ucwords($_SESSION['company_name']) ?> Admin Panel</title>
         <?php include 'include-css.php'; ?>
         <style>
-            #sortable-row li {
-                margin-bottom: 4px;
-                padding: 10px;
-                background-color: #ededed;
-                cursor: move;
-            }
-
-            #sortable-row li.ui-state-highlight {
-                height: 1.0em;
-                background-color: #F0F0F0;
-                border: #ccc 2px dotted;
-            }
-
-            #sortable-row-2 li {
-                margin-bottom: 4px;
-                padding: 10px;
-                background-color: #ededed;
-                cursor: move;
-            }
-
-            #sortable-row-2 li.ui-state-highlight {
-                height: 1.0em;
-                background-color: #F0F0F0;
-                border: #ccc 2px dotted;
-            }
+            #sortable-row li { margin-bottom:4px; padding:10px; background-color:#ededed;cursor:move;} 
+            #sortable-row li.ui-state-highlight { height: 1.0em; background-color:#F0F0F0;border:#ccc 2px dotted;}
+            #sortable-row-2 li { margin-bottom:4px; padding:10px; background-color:#ededed;cursor:move;} 
+            #sortable-row-2 li.ui-state-highlight { height: 1.0em; background-color:#F0F0F0;border:#ccc 2px dotted;}
         </style>
     </head>
-
     <body class="nav-md">
         <div class="container body">
             <div class="main_container">
@@ -65,19 +41,18 @@ $type = '1';
                             <div class="x_content">
                                 <?php
                                 $db->sql("SET NAMES 'utf8'");
-                                $sql = "SELECT * FROM category WHERE type=" . $type . " ORDER BY CAST(row_order as unsigned) ASC";
+                                $sql = "SELECT * FROM category ORDER BY row_order + 0 ASC";
                                 $db->sql($sql);
                                 $cat = $db->getResult();
+
+                                $sql = "SELECT * FROM `languages` ORDER BY id DESC";
+                                $db->sql($sql);
+                                $languages = $db->getResult();
                                 ?>
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     <?php if ($fn->is_language_mode_enabled()) { ?>
                                         <div class="row">
                                             <div class='col-md-12'>
-                                                <?php
-                                                $sql = "SELECT * FROM `languages` ORDER BY id DESC";
-                                                $db->sql($sql);
-                                                $languages = $db->getResult();
-                                                ?>
                                                 <select id='filter_language' class='form-control' required>
                                                     <option value="">Select language</option>
                                                     <?php foreach ($languages as $language) { ?>
@@ -85,14 +60,14 @@ $type = '1';
                                                     <?php } ?>
                                                 </select>
                                             </div>
+
                                         </div>
                                     <?php } ?>
-                                    <h2>Main Category</h2>
-                                    <hr>
-                                    <form id="category_form" method="POST" action="db_operations.php" data-parsley-validate class="form-horizontal form-label-left">
-                                        <input type="hidden" id="update_category_order" name="update_category_order" required value='1' />
+                                    <h2>Main Category</h2><hr>
+                                    <form id="category_form"  method="POST" action="db_operations.php"data-parsley-validate class="form-horizontal form-label-left">
+                                        <input type="hidden" id="update_category_order" name="update_category_order" required value='1'/>
                                         <div class="form-group" style="overflow-y:scroll;height:400px;">
-                                            <input type="hidden" name="row_order" id="row_order" required readonly />
+                                            <input type = "hidden" name="row_order" id="row_order" required readonly/> 
                                             <ol id="sortable-row">
                                                 <?php foreach ($cat as $category) { ?>
                                                     <li id=<?php echo $category["id"]; ?>>
@@ -114,15 +89,14 @@ $type = '1';
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div style="display:none;" id="result"></div>
+                                            <div style ="display:none;" id="result"></div>
                                         </div>
                                     </form>
                                 </div>
 
                                 <?php
                                 $db->sql("SET NAMES 'utf8'");
-                                $sql = "SELECT s.* FROM subcategory s JOIN category c ON c.id=s.maincat_id WHERE c.type=" . $type . " ORDER BY CAST(s.row_order as unsigned) ASC";
-
+                                $sql = "SELECT * FROM subcategory ORDER BY row_order + 0 ASC";
                                 $db->sql($sql);
                                 $res = $db->getResult();
                                 ?>
@@ -138,12 +112,11 @@ $type = '1';
                                         </div>
 
                                     </div>
-                                    <h2>Sub Category</h2>
-                                    <hr>
-                                    <form id="subcategory_form" method="POST" action="db_operations.php" data-parsley-validate class="form-horizontal form-label-left">
-                                        <input type="hidden" id="update_subcategory_order" name="update_subcategory_order" required value='1' />
+                                    <h2>Sub Category</h2><hr>
+                                    <form id="subcategory_form"  method="POST" action="db_operations.php"data-parsley-validate class="form-horizontal form-label-left">
+                                        <input type="hidden" id="update_subcategory_order" name="update_subcategory_order" required value='1'/>
                                         <div class="form-group" style="overflow-y:scroll;height:400px;">
-                                            <input type="hidden" name="row_order_2" id="row_order_2" required readonly />
+                                            <input type = "hidden" name="row_order_2" id="row_order_2" required readonly/> 
                                             <ol id="sortable-row-2">
                                                 <?php foreach ($res as $category) { ?>
                                                     <li id=<?php echo $category["id"]; ?>>
@@ -165,7 +138,7 @@ $type = '1';
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div style="display:none;" id="result_2"></div>
+                                            <div style ="display:none;" id="result_2"></div>
                                         </div>
                                     </form>
                                 </div>
@@ -212,8 +185,8 @@ $type = '1';
                         processData: false,
                         success: function (result) {
                             alert("Category order updated!");
-                            //    						$('#result').html(result);
-                            //    						$('#result').show().delay(5000).fadeOut();
+//    						$('#result').html(result);
+//    						$('#result').show().delay(5000).fadeOut();
                             $('#submit_btn').html('Save Order');
                             window.location = "";
                         }
@@ -241,8 +214,8 @@ $type = '1';
                         processData: false,
                         success: function (result) {
                             alert("SubCategory order updated!");
-                            //    						$('#result').html(result);
-                            //    						$('#result').show().delay(5000).fadeOut();
+//    						$('#result').html(result);
+//    						$('#result').show().delay(5000).fadeOut();
                             $('#submit_btn').html('Save Order');
                             window.location = "";
                         }
@@ -251,13 +224,12 @@ $type = '1';
             });
         </script>
         <script>
-            var type =<?= $type ?>;
             $('#filter_language').on('change', function (e) {
                 var lang_id = $('#filter_language').val();
                 $.ajax({
                     type: 'POST',
                     url: "db_operations.php",
-                    data: 'get_categories_of_language=1&sortable=sortable&language_id=' + lang_id + '&type=' + type,
+                    data: 'get_categories_of_language=1&sortable=sortable&language_id=' + lang_id,
                     success: function (result) {
                         $('#sortable-row').html(result);
                     }
@@ -279,5 +251,4 @@ $type = '1';
             });
         </script>
     </body>
-
 </html>

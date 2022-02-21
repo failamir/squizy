@@ -136,9 +136,9 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
         </script>
         <!-- jQuery -->
         <script>
-            //  var role = "<?php Print($_SESSION['role']); ?>";
+            var role = "<?php Print($_SESSION['role']); ?>";
             $(document).on('click', '.delete-report', function () {
-                // if(role == 'admin'){
+                if(role == 'admin'){
                 if (confirm('Are you sure? Want to delete report')) {
                     id = $(this).data("id");
                     $.ajax({
@@ -152,10 +152,9 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                 alert('Error! Report could not be deleted');
                         }
                     });
-            //          }}else{
-            //     alert('Error! Just Admin can delete data');
-            // }
-                }
+                }}else{
+                alert('Error! Just Admin can delete data');
+            }
             });
         </script>
     </body>

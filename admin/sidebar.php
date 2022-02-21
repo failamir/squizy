@@ -11,7 +11,6 @@
         } else {
             date_default_timezone_set('Asia/Kolkata');
         }
-
         if (isset($config['system_timezone_gmt']) && !empty($config['system_timezone_gmt'])) {
             $db->sql("SET `time_zone` = '" . $config['system_timezone_gmt'] . "'");
         } else {
@@ -95,33 +94,15 @@
                             }
                             ?>
                             <li>
-                                <a><em class="fas fa-book"></em> Quiz Zone<span class="fas fa-caret-down"></span></a>
+                                <a><em class="fas fa-gift"></em> Categories<span class="fas fa-caret-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="main-category.php">Main Category</a></li>
                                     <li><a href="sub-category.php">Sub Category</a></li>
                                     <li><a href="category-order.php">Category Order</a></li>
-                                    <li><a href="questions.php">Questions</a></li>
                                 </ul>
                             </li>
-                            <li><a href="daily-quiz.php"><em class="fas fa-question"></em> Daily Quiz</a></li>                          
-                            <li>
-                                <a><em class="fas fa-book"></em> Learning Zone<span class="fas fa-caret-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="learning-category.php">Category</a></li>
-                                    <li><a href="learning-category-order.php">Category Order</a></li>
-                                    <li><a href="learning.php"> Manage Learning</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a><em class="fas fa-book-open"></em> Maths Quiz<span class="fas fa-caret-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="maths-category.php">Category</a></li>
-                                    <li><a href="maths-subcategory.php">Sub Category</a></li>
-                                    <li><a href="maths-category-order.php">Category Order</a></li>
-                                    <li><a href="maths-questions.php">Create Questions</a></li>
-                                    <li><a href="maths-questions-view.php">View Questions</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="questions.php"><em class="fas fa-trophy"></em> Questions</a></li>
+                            <li><a href="daily-quiz.php"><em class="fas fa-question"></em> Daily Quiz</a></li>
                             <li>
                                 <a><i class="fas fa-gift"></i> Contests<span class="fas fa-caret-down"></span></a>
                                 <ul class="nav child_menu">
@@ -149,7 +130,7 @@
                                         <li><a href="web-firebase-settings.php">Web Firebase Settings</a></li>                                       
                                     </ul>
                                 </li>
-                                <li><a href="system-update.php"><em class="fas fa-cloud-download-alt"></em> System Update</a></li>
+                                 <li><a href="system-update.php"><em class="fas fa-cloud-download-alt"></em> System Update</a></li>
                             <?php } ?>
                         </ul>
                     </div>

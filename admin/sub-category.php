@@ -5,7 +5,6 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
     return false;
     exit();
 }
-$type = '1';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +39,7 @@ $type = '1';
                                                 <input type="hidden" id="add_subcategory" name="add_subcategory" required="" value="1" aria-required="true">
                                                 <?php
                                                 $db->sql("SET NAMES 'utf8'");
-                                                $sql = "SELECT * FROM category WHERE type=" . $type . " ORDER BY id DESC";
+                                                $sql = "select * from category order by id DESC";
                                                 $db->sql($sql);
                                                 $categories = $db->getResult();
                                                 if ($fn->is_language_mode_enabled()) {
@@ -104,18 +103,21 @@ $type = '1';
                                             </form>
                                             <div class="col-md-12"><hr></div>
                                         </div>
+                                        <?php
+                                        $sql = "SELECT * FROM `languages` ORDER BY id DESC";
+                                        $db->sql($sql);
+                                        $languages = $db->getResult();
 
+                                        $sql = "select id,`category_name` from `category` order by id desc";
+                                        $db->sql($sql);
+                                        $categories = $db->getResult();
+                                        ?>
                                         <div class='row'>
                                             <div class='col-md-12'>
                                                 <h2>Subcategories of Category <small>View / Update / Delete</small></h2>
                                             </div>
                                             <?php if ($fn->is_language_mode_enabled()) { ?>
                                                 <div class='col-md-4'>
-                                                    <?php
-                                                    $sql = "SELECT * FROM `languages` ORDER BY id DESC";
-                                                    $db->sql($sql);
-                                                    $languages = $db->getResult();
-                                                    ?>
                                                     <select id='filter_language' class='form-control' required>
                                                         <option value="">Select language</option>
                                                         <?php foreach ($languages as $language) { ?>
@@ -130,11 +132,6 @@ $type = '1';
                                                 </div>
                                             <?php } else { ?>
                                                 <div class='col-md-4'>
-                                                    <?php
-                                                    $sql = "SELECT id,`category_name` FROM `category` WHERE type=" . $type . " ORDER BY id desc";
-                                                    $db->sql($sql);
-                                                    $categories = $db->getResult();
-                                                    ?>
                                                     <select id='filter_category' class='form-control' required>
                                                         <option value=''>Select Main Category</option>
                                                         <?php foreach ($categories as $row) { ?>
@@ -155,14 +152,19 @@ $type = '1';
                                                 </div>                                                
                                             </div>
                                             <table  aria-describedby="mydesc" class='table-striped' id='category_list'
-                                                    data-toggle="table" data-url="get-list.php?table=subcategory"
-                                                    data-click-to-select="true" data-side-pagination="server"
-                                                    data-pagination="true" data-page-list="[5, 10, 20, 50, 100, 200]"
+                                                    data-toggle="table"
+                                                    data-url="get-list.php?table=subcategory"
+                                                    data-click-to-select="true"
+                                                    data-side-pagination="server"
+                                                    data-pagination="true"
+                                                    data-page-list="[5, 10, 20, 50, 100, 200]"
                                                     data-search="true" data-show-columns="true"
                                                     data-show-refresh="true" data-trim-on-search="false"
                                                     data-sort-name="row_order" data-sort-order="asc"
-                                                    data-toolbar="#toolbar" data-mobile-responsive="true" data-maintain-selected="true"    
-                                                    data-show-export="false" data-export-types='["txt","excel"]'
+                                                    data-mobile-responsive="true"
+                                                    data-toolbar="#toolbar" data-show-export="false"
+                                                    data-maintain-selected="true"
+                                                    data-export-types='["txt","excel"]'
                                                     data-export-options='{
                                                     "fileName": "subcategory-list-<?= date('d-m-y') ?>",
                                                     "ignoreColumn": ["state"]	
@@ -219,6 +221,7 @@ $type = '1';
                                         </select>
                                     </div>
                                 <?php } ?>
+
                                 <label class="" for="update_maincat_id">Main Category</label>
                                 <select id="update_maincat_id" name="maincat_id" required class="form-control">
                                     <option value=''>Select Options</option>
@@ -266,208 +269,11 @@ $type = '1';
         </div>
 
         <!-- jQuery -->
-        <script>
-            window.actionEvents = {
-                'click .edit-subcategory': function (e, value, row, index) {
-                    // alert('You click remove icon, row: ' + JSON.stringify(row));
-                    var regex = /<img.*?src="(.*?)"/;
-                    var src = regex.exec(row.image)[1];
-                    $("input[name=status][value=1]").prop('checked', true);
-                    if ($(row.status).text() == 'Deactive')
-                        $("input[name=status][value=0]").prop('checked', true);
 
-                    $('#subcategory_id').val(row.id);
-<?php if ($fn->is_language_mode_enabled()) { ?>
-                        if (row.language_id == 0) {
-                            $('#update_language_id').val(row.language_id);
-                            $('#update_maincat_id').html(category_options);
-                            $('#update_maincat_id').val(row.maincat_id);
-                        } else {
-                            $('#update_language_id').val(row.language_id).trigger("change", [row.language_id, row.maincat_id]);
-                        }
-<?php } else { ?>
-                        $('#update_maincat_id').val(row.maincat_id);
-<?php } ?>
-                    $('#update_name').val(row.subcategory_name);
-                    $('#image_url').val(src);
-                }
-            };
-        </script>
-
-
-        <script>
-            var type =<?= $type ?>;
-<?php if ($fn->is_language_mode_enabled()) { ?>
-                $('#language_id').on('change', function (e) {
-                    var language_id = $('#language_id').val();
-                    $.ajax({
-                        type: 'POST',
-                        url: "db_operations.php",
-                        data: 'get_categories_of_language=1&language_id=' + language_id + '&type=' + type,
-                        beforeSend: function () {
-                            $('#maincat_id').html('Please wait..');
-                        },
-                        success: function (result) {
-                            // alert(result);
-                            $('#maincat_id').html(result);
-                        }
-                    });
-                });
-                $('#update_language_id').on('change', function (e, row_language_id, row_category) {
-                    var language_id = $('#update_language_id').val();
-                    $.ajax({
-                        type: 'POST',
-                        url: "db_operations.php",
-                        data: 'get_categories_of_language=1&language_id=' + language_id + '&type=' + type,
-                        beforeSend: function () {
-                            $('#update_maincat_id').html('Please wait..');
-                        },
-                        success: function (result) {
-                            $('#update_maincat_id').html(result).trigger("change");
-                            //alert(row_language_id);
-                            if (language_id == row_language_id && row_category != 0)
-                                $('#update_maincat_id').val(row_category).trigger("change", [row_category]);
-                        }
-                    });
-                });
-                $('#filter_language').on('change', function (e) {
-                    var language_id = $('#filter_language').val();
-                    $.ajax({
-                        type: 'POST',
-                        url: "db_operations.php",
-                        data: 'get_categories_of_language=1&language_id=' + language_id + '&type=' + type,
-                        beforeSend: function () {
-                            $('#filter_category').html('<option>Please wait..</option>');
-                        },
-                        success: function (result) {
-                            $('#filter_category').html(result);
-                        }
-                    });
-                });
-                category_options = '';
-    <?php
-    $category_options = "<option value=''>Select Options</option>";
-    foreach ($categories as $category) {
-        $category_options .= "<option value='" . $category['id'] . "'>" . $category['category_name'] . "</option>";
-    }
-    ?>
-                category_options = "<?= $category_options; ?>";
-
-<?php } ?>
-        </script>
-        <script>
-            $(document).on('click', '.delete-subcategory', function () {
-                if (confirm('Are you sure? Want to delete sub category? All related questions will also be deleted')) {
-                    id = $(this).data("id");
-                    image = $(this).data("image");
-                    $.ajax({
-                        url: 'db_operations.php',
-                        type: "get",
-                        data: 'id=' + id + '&image=' + image + '&delete_subcategory=1',
-                        success: function (result) {
-                            if (result == 1) {
-                                $('#category_list').bootstrapTable('refresh');
-                            } else
-                                alert('Error! Category could not be deleted');
-                        }
-                    });
-                }
-            });
-        </script>
-        <script>
-            var $table = $('#category_list');
-            $('#toolbar').find('select').change(function () {
-                $table.bootstrapTable('refreshOptions', {
-                    exportDataType: $(this).val()
-                });
-            });
-        </script>
-        <script>
-            function queryParams(p) {
-                return {
-                    "language": $('#filter_language').val(),
-                    "category": $('#filter_category').val(),
-                    type:<?= $type ?>,
-                    limit: p.limit,
-                    sort: p.sort,
-                    order: p.order,
-                    offset: p.offset,
-                    search: p.search
-                };
-            }
-        </script>
         <script>
             $('#filter_btn').on('click', function (e) {
                 $('#category_list').bootstrapTable('refresh');
             });
-        </script>
-        <script>
-            $('#category_form').validate({
-                rules: {
-                    name: "required",
-                    maincat_id: "required"
-                }
-            });
-        </script>
-        <script>
-            $('#category_form').on('submit', function (e) {
-                e.preventDefault();
-                var formData = new FormData(this);
-                if ($("#category_form").validate().form()) {
-                    if (confirm('Are you sure? Want to create Sub-Category')) {
-                        $.ajax({
-                            type: 'POST',
-                            url: $(this).attr('action'),
-                            data: formData,
-                            beforeSend: function () {
-                                $('#submit_btn').html('Please wait..');
-                            },
-                            cache: false,
-                            contentType: false,
-                            processData: false,
-                            success: function (result) {
-                                $('#result').html(result);
-                                $('#result').show().delay(4000).fadeOut();
-                                $('#submit_btn').html('Submit');
-                                $('#category_form')[0].reset();
-                                $('#category_list').bootstrapTable('refresh');
-                            }
-                        });
-                    }
-                }
-            });
-        </script>
-
-        <script>
-            $('#update_form').on('submit', function (e) {
-                e.preventDefault();
-                var formData = new FormData(this);
-                if ($("#update_form").validate().form()) {
-                    $.ajax({
-                        type: 'POST',
-                        url: $(this).attr('action'),
-                        data: formData,
-                        beforeSend: function () {
-                            $('#update_btn').html('Please wait..');
-                        },
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        success: function (result) {
-                            $('#update_result').html(result);
-                            $('#update_result').show().delay(3000).fadeOut();
-                            $('#update_btn').html('Update');
-                            $('#update_image').val('');
-                            $('#category_list').bootstrapTable('refresh');
-                            setTimeout(function () {
-                                $('#editCategoryModal').modal('hide');
-                            }, 4000);
-                        }
-                    });
-                }
-            });
-        </script>
-        <script>
             $('#delete_multiple_subcategories').on('click', function (e) {
                 sec = 'subcategory';
                 is_image = 1;
@@ -507,6 +313,208 @@ $type = '1';
                 }
             });
         </script>
+        <script>
+            var $table = $('#category_list');
+            $('#toolbar').find('select').change(function () {
+                $table.bootstrapTable('refreshOptions', {
+                    exportDataType: $(this).val()
+                });
+            });
+        </script>
 
+        <script>
+<?php if ($fn->is_language_mode_enabled()) { ?>
+                $('#language_id').on('change', function (e) {
+                    var language_id = $('#language_id').val();
+                    $.ajax({
+                        type: 'POST',
+                        url: "db_operations.php",
+                        data: 'get_categories_of_language=1&language_id=' + language_id,
+                        beforeSend: function () {
+                            $('#maincat_id').html('Please wait..');
+                        },
+                        success: function (result) {
+                            // alert(result);
+                            $('#maincat_id').html(result);
+                        }
+                    });
+                });
+                $('#update_language_id').on('change', function (e, row_language_id, row_category) {
+                    var language_id = $('#update_language_id').val();
+                    $.ajax({
+                        type: 'POST',
+                        url: "db_operations.php",
+                        data: 'get_categories_of_language=1&language_id=' + language_id,
+                        beforeSend: function () {
+                            $('#update_maincat_id').html('Please wait..');
+                        },
+                        success: function (result) {
+                            $('#update_maincat_id').html(result).trigger("change");
+                            //alert(row_language_id);
+                            if (language_id == row_language_id && row_category != 0)
+                                $('#update_maincat_id').val(row_category).trigger("change", [row_category]);
+                        }
+                    });
+                });
+                category_options = '';
+    <?php
+    $category_options = "<option value=''>Select Options</option>";
+    foreach ($categories as $category) {
+        $category_options .= "<option value='" . $category['id'] . "'>" . $category['category_name'] . "</option>";
+    }
+    ?>
+                category_options = "<?= $category_options; ?>";
+
+<?php } ?>
+            window.actionEvents = {
+                'click .edit-subcategory': function (e, value, row, index) {
+                    // alert('You click remove icon, row: ' + JSON.stringify(row));
+                    var regex = /<img.*?src="(.*?)"/;
+                    var src = regex.exec(row.image)[1];
+                    $("input[name=status][value=1]").prop('checked', true);
+                    if ($(row.status).text() == 'Deactive')
+                        $("input[name=status][value=0]").prop('checked', true);
+
+                    $('#subcategory_id').val(row.id);
+<?php if ($fn->is_language_mode_enabled()) { ?>
+                        if (row.language_id == 0) {
+                            $('#update_language_id').val(row.language_id);
+                            $('#update_maincat_id').html(category_options);
+                            $('#update_maincat_id').val(row.maincat_id);
+                        } else {
+                            $('#update_language_id').val(row.language_id).trigger("change", [row.language_id, row.maincat_id]);
+                        }
+<?php } else { ?>
+                        $('#update_maincat_id').val(row.maincat_id);
+<?php } ?>
+                    $('#update_name').val(row.subcategory_name);
+                    $('#image_url').val(src);
+                }
+            };
+        </script>
+        <script>
+            $('#update_form').on('submit', function (e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+                if ($("#update_form").validate().form()) {
+                    $.ajax({
+                        type: 'POST',
+                        url: $(this).attr('action'),
+                        data: formData,
+                        beforeSend: function () {
+                            $('#update_btn').html('Please wait..');
+                        },
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        success: function (result) {
+                            $('#update_result').html(result);
+                            $('#update_result').show().delay(3000).fadeOut();
+                            $('#update_btn').html('Update');
+                            $('#update_image').val('');
+                            $('#category_list').bootstrapTable('refresh');
+                            setTimeout(function () {
+                                $('#editCategoryModal').modal('hide');
+                            }, 4000);
+                        }
+                    });
+                }
+            });
+        </script>
+        <script>
+            function queryParams(p) {
+                return {
+                    "language": $('#filter_language').val(),
+                    "category": $('#filter_category').val(),
+                    limit: p.limit,
+                    sort: p.sort,
+                    order: p.order,
+                    offset: p.offset,
+                    search: p.search
+                };
+            }
+        </script>
+        <script>
+            $('#category_form').validate({
+                rules: {
+                    name: "required",
+                    maincat_id: "required"
+                }
+            });
+        </script>
+        <script>
+            $('#category_form').on('submit', function (e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+                if ($("#category_form").validate().form()) {
+                    if (confirm('Are you sure? Want to create Sub-Category')) {
+                        $.ajax({
+                            type: 'POST',
+                            url: $(this).attr('action'),
+                            data: formData,
+                            beforeSend: function () {
+                                $('#submit_btn').html('Please wait..');
+                            },
+                            cache: false,
+                            contentType: false,
+                            processData: false,
+                            success: function (result) {
+                                $('#result').html(result);
+                                $('#result').show().delay(4000).fadeOut();
+                                $('#submit_btn').html('Submit');
+                                $('#category_form')[0].reset();
+                                $('#category_list').bootstrapTable('refresh');
+                            }
+                        });
+                    }
+                }
+            });
+        </script>
+        <script>
+            var role = "<?php Print($_SESSION['role']); ?>";
+            $(document).on('click', '.delete-subcategory', function () {
+                if(role == 'admin'){
+                if (confirm('Are you sure? Want to delete sub category? All related questions will also be deleted')) {
+                    id = $(this).data("id");
+                    image = $(this).data("image");
+                    $.ajax({
+                        url: 'db_operations.php',
+                        type: "get",
+                        data: 'id=' + id + '&image=' + image + '&delete_subcategory=1',
+                        success: function (result) {
+                            if (result == 1) {
+                                $('#category_list').bootstrapTable('refresh');
+                            } else
+                                alert('Error! Category could not be deleted');
+                        }
+                    });
+                }}else{
+                alert('Error! Just Admin can delete data');
+            }
+            });
+        </script>
+        <script>
+            $('#filter_btn').on('click', function (e) {
+                $('#category_list').bootstrapTable('refresh');
+            });
+        </script>
+        <?php if ($fn->is_language_mode_enabled()) { ?>
+            <script>
+                $('#filter_language').on('change', function (e) {
+                    var language_id = $('#filter_language').val();
+                    $.ajax({
+                        type: 'POST',
+                        url: "db_operations.php",
+                        data: 'get_categories_of_language=1&language_id=' + language_id,
+                        beforeSend: function () {
+                            $('#filter_category').html('<option>Please wait..</option>');
+                        },
+                        success: function (result) {
+                            $('#filter_category').html(result);
+                        }
+                    });
+                });
+            </script>
+        <?php } ?>
     </body>
 </html>

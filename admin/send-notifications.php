@@ -106,25 +106,25 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                                 </form>
                                             </div>
                                             <table  aria-describedby="mydesc" class='table-striped' id='users_list'
-                                                    data-toggle="table"
-                                                    data-url="get-list.php?table=users"
-                                                    data-click-to-select="true"
-                                                    data-side-pagination="server"
-                                                    data-pagination="true"
-                                                    data-page-list="[5, 10, 20, 50, 100, 200]"
-                                                    data-search="true" data-show-columns="true"
-                                                    data-show-refresh="true" data-trim-on-search="false"
-                                                    data-sort-name="id" data-sort-order="desc"
-                                                    data-mobile-responsive="true"
-                                                    data-toolbar="#toolbar" 
-                                                    data-maintain-selected="true"
-                                                    data-show-export="false" data-export-types='["txt","excel"]'
-                                                    data-export-options='{
-                                                    "fileName": "users-list-<?= date('d-m-y') ?>",
-                                                    "ignoreColumn": ["state"]	
-                                                    }'
-                                                    data-query-params="queryParams_1"
-                                                    >
+                                                   data-toggle="table"
+                                                   data-url="get-list.php?table=users"
+                                                   data-click-to-select="true"
+                                                   data-side-pagination="server"
+                                                   data-pagination="true"
+                                                   data-page-list="[5, 10, 20, 50, 100, 200]"
+                                                   data-search="true" data-show-columns="true"
+                                                   data-show-refresh="true" data-trim-on-search="false"
+                                                   data-sort-name="id" data-sort-order="desc"
+                                                   data-mobile-responsive="true"
+                                                   data-toolbar="#toolbar" 
+                                                   data-maintain-selected="true"
+                                                   data-show-export="false" data-export-types='["txt","excel"]'
+                                                   data-export-options='{
+                                                   "fileName": "users-list-<?= date('d-m-y') ?>",
+                                                   "ignoreColumn": ["state"]	
+                                                   }'
+                                                   data-query-params="queryParams_1"
+                                                   >
                                                 <thead>
                                                     <tr>
                                                         <th scope="col" data-field="state" data-checkbox="true"></th>
@@ -144,25 +144,25 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                                 </div>
                                             </div>
                                             <table  aria-describedby="mydesc" class='table-striped' id='notification_list'
-                                                    data-toggle="table"
-                                                    data-url="get-list.php?table=notifications"
-                                                    data-click-to-select="true"
-                                                    data-side-pagination="server"
-                                                    data-pagination="true"
-                                                    data-page-list="[5, 10, 20, 50, 100, 200]"
-                                                    data-search="true" data-show-columns="true"
-                                                    data-show-refresh="true" data-trim-on-search="false"
-                                                    data-sort-name="id" data-sort-order="desc"
-                                                    data-mobile-responsive="true"
-                                                    data-toolbar="#toolbar-1" 
-                                                    data-maintain-selected="true"
-                                                    data-show-export="false" data-export-types='["txt","excel"]'
-                                                    data-export-options='{
-                                                    "fileName": "notifications-list-<?= date('d-m-y') ?>",
-                                                    "ignoreColumn": ["state"]	
-                                                    }'
-                                                    data-query-params="queryParams"
-                                                    >
+                                                   data-toggle="table"
+                                                   data-url="get-list.php?table=notifications"
+                                                   data-click-to-select="true"
+                                                   data-side-pagination="server"
+                                                   data-pagination="true"
+                                                   data-page-list="[5, 10, 20, 50, 100, 200]"
+                                                   data-search="true" data-show-columns="true"
+                                                   data-show-refresh="true" data-trim-on-search="false"
+                                                   data-sort-name="id" data-sort-order="desc"
+                                                   data-mobile-responsive="true"
+                                                   data-toolbar="#toolbar-1" 
+                                                   data-maintain-selected="true"
+                                                   data-show-export="false" data-export-types='["txt","excel"]'
+                                                   data-export-options='{
+                                                   "fileName": "notifications-list-<?= date('d-m-y') ?>",
+                                                   "ignoreColumn": ["state"]	
+                                                   }'
+                                                   data-query-params="queryParams"
+                                                   >
                                                 <thead>
                                                     <tr>
                                                         <th scope="col" data-field="state" data-checkbox="true"></th>

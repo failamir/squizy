@@ -6,8 +6,6 @@
  * @Version 1.0
  * @Package Database
  */
-// define('DOMAIN_URL', 'http://yourdomain.com/');
-// define('JWT_SECRET_KEY', 'set_your_strong_jwt_secret_key');
 define('DOMAIN_URL', 'https://squizy.kokngoding.id/admin/');
 define('JWT_SECRET_KEY', 'Bismillah-4111');
 
@@ -20,9 +18,6 @@ class Database {
      */
 
     private $db_host = "localhost";  // Change as required
-    // private $db_user = "databaseuser";  // Change as required
-    // private $db_pass = "databasepassword";  // Change as required 
-    // private $db_name = "databasename"; // Change as required
     private $db_user = "kokngodi_all";  // Change as required
     private $db_pass = "@dmin.1618";  // Change as required 
     private $db_name = "kokngodi_squizy"; // Change as required

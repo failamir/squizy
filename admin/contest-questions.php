@@ -41,7 +41,6 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                                 <label class="control-label col-md-1 col-sm-3 col-xs-12" for="contest_id">Contest</label>
                                                 <div class="col-md-10 col-sm-6 col-xs-12">
                                                     <?php
-                                                    $db->sql("SET NAMES 'utf8'");
                                                     $sql = "SELECT id, name FROM contest WHERE prize_status=0 order by id desc";
                                                     $db->sql($sql);
                                                     $res = $db->getResult();
@@ -579,5 +578,4 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
         });
     </script>
 </body>
-
 </html>

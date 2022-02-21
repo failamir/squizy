@@ -56,9 +56,6 @@ $db->sql("SET NAMES 'utf8'");
   14. contest_prize
   15. contest_questions
   16. contest_leaderboard
-  17. learning_zone
-  18. learnning_question
-  19. maths_question
  */
 
 // 1. category
@@ -82,27 +79,16 @@ if (isset($_GET['table']) && $_GET['table'] == 'category') {
     if (isset($_GET['order']))
         $order = $_GET['order'];
 
-    if (isset($_GET['type']) && !empty($_GET['type'])) {
-        $type = $_GET['type'];
-        $where = ' WHERE `type` = ' . $type;
-        if ($type == 1 || $type == '1') {
-            $total_question = ", (SELECT count(id) FROM question WHERE question.category = c.id ) as no_of_que";
-        }
-        if ($type == 2 || $type == '2') {
-            $total_question = ", (SELECT count(id) FROM tbl_learning WHERE tbl_learning.category = c.id ) as no_of_que";
-        }
-        if ($type == 3 || $type == '3') {
-            $total_question = ", (SELECT count(id) FROM tbl_maths_question WHERE tbl_maths_question.category = c.id ) as no_of_que";
-        }
-    }
-
     if (isset($_GET['language']) && !empty($_GET['language'])) {
-        $where .= ' AND `language_id` = ' . $_GET['language'];
+        $where = ' WHERE `language_id` = ' . $_GET['language'];
     }
 
     if (isset($_GET['search'])) {
         $search = $_GET['search'];
-        $where .= " AND ( c.`id` like '%" . $search . "%' OR c.`category_name` like '%" . $search . "%' OR l.`language` like '%" . $search . "%' )";
+        $where = " WHERE ( c.`id` like '%" . $search . "%' OR c.`category_name` like '%" . $search . "%' OR l.`language` like '%" . $search . "%' )";
+        if (isset($_GET['language']) && !empty($_GET['language'])) {
+            $where .= ' AND `language_id` = ' . $_GET['language'];
+        }
     }
 
     $left_join = " LEFT JOIN languages l on l.id = c.language_id ";
@@ -114,7 +100,7 @@ if (isset($_GET['table']) && $_GET['table'] == 'category') {
         $total = $row['total'];
     }
 
-    $sql = "SELECT c.*, l.language as language " . $total_question . " FROM `category` c " . $left_join . " " . $where . " ORDER BY " . $sort . " " . $order . " LIMIT " . $offset . ", " . $limit;
+    $sql = "SELECT c.*,l.language as language, (select count(id) from question where question.category = c.id ) as no_of_que FROM `category` c " . $left_join . " " . $where . " ORDER BY " . $sort . " " . $order . " LIMIT " . $offset . ", " . $limit;
     $db->sql($sql);
     $res = $db->getResult();
 
@@ -164,33 +150,29 @@ if (isset($_GET['table']) && $_GET['table'] == 'subcategory') {
     if (isset($_GET['order']))
         $order = $_GET['order'];
 
-    if (isset($_GET['type']) && !empty($_GET['type'])) {
-        $type = $_GET['type'];
-        $where = ' WHERE c.type = ' . $type;
-        if ($type == 1 || $type == '1') {
-            $total_question = ", (SELECT count(id) FROM question WHERE question.subcategory=s.id ) as no_of_que";
-        }
-        if ($type == 3 || $type == '3') {
-            $total_question = ", (SELECT count(id) FROM tbl_maths_question WHERE tbl_maths_question.subcategory = s.id ) as no_of_que";
-        }
-    }
-
     if (isset($_GET['language']) && !empty($_GET['language'])) {
-        $where .= ' AND s.`language_id` = ' . $_GET['language'];
+        $where = ' WHERE s.`language_id` = ' . $_GET['language'];
         if (isset($_GET['category']) && !empty($_GET['category'])) {
             $where .= ' AND `maincat_id`=' . $_GET['category'];
         }
     } elseif (isset($_GET['category']) && !empty($_GET['category'])) {
-        $where .= ' AND `maincat_id`=' . $_GET['category'];
+        $where .= ' WHERE `maincat_id`=' . $_GET['category'];
     }
 
     if (isset($_GET['search'])) {
         $search = $_GET['search'];
-        $where .= " AND (s.`id` like '%" . $search . "%' OR s.`maincat_id` like '%" . $search . "%' OR s.`subcategory_name` like '%" . $search . "%' OR l.`language` like '%" . $search . "%' OR c.`category_name` like '%" . $search . "%' )";
+        $where = " WHERE (s.`id` like '%" . $search . "%' OR s.`maincat_id` like '%" . $search . "%' OR s.`subcategory_name` like '%" . $search . "%' OR l.`language` like '%" . $search . "%' OR c.`category_name` like '%" . $search . "%' )";
+        if (isset($_GET['language']) && !empty($_GET['language'])) {
+            $where .= ' AND s.`language_id` = ' . $_GET['language'];
+            if (isset($_GET['category']) && !empty($_GET['category'])) {
+                $where .= ' AND `maincat_id`=' . $_GET['category'];
+            }
+        } elseif (isset($_GET['category']) && !empty($_GET['category'])) {
+            $where .= ' AND `maincat_id`=' . $_GET['category'];
+        }
     }
 
-    $left_join = " LEFT JOIN languages l on l.id = s.language_id ";
-    $left_join .= " LEFT JOIN category c ON c.id = s.maincat_id ";
+    $left_join = " LEFT JOIN languages l on l.id = s.language_id LEFT JOIN category c ON c.id = s.maincat_id ";
 
     $sql = "SELECT COUNT(s.id) as total FROM `subcategory` s " . $left_join . " " . $where;
     $db->sql($sql);
@@ -199,7 +181,7 @@ if (isset($_GET['table']) && $_GET['table'] == 'subcategory') {
         $total = $row['total'];
     }
 
-    $sql = "SELECT s.*, l.language, c.`category_name` " . $total_question . " FROM `subcategory` s " . $left_join . " " . $where . " ORDER BY " . $sort . " " . $order . " LIMIT " . $offset . ", " . $limit;
+    $sql = "SELECT s.*,l.language,c.`category_name`,(select count(id) from question where question.subcategory=s.id ) as no_of_que FROM `subcategory` s " . $left_join . " " . $where . " ORDER BY " . $sort . " " . $order . " LIMIT " . $offset . ", " . $limit;
 
     $db->sql($sql);
     $res = $db->getResult();
@@ -1220,283 +1202,6 @@ if (isset($_GET['table']) && $_GET['table'] == 'contest_leaderboard') {
         $tempRow['user_rank'] = $row['user_rank'];
         $tempRow['last_modified'] = $row['last_modified'];
         $tempRow['date_created'] = $row['date_created'];
-        $rows[] = $tempRow;
-    }
-
-    $bulkData['rows'] = $rows;
-    print_r(json_encode($bulkData));
-}
-
-// 17. learning_zone
-if (isset($_GET['table']) && $_GET['table'] == 'learning_zone') {
-    $offset = 0;
-    $limit = 10;
-    $sort = 'q.id';
-    $order = 'DESC';
-    $where = '';
-    $table = $_GET['table'];
-
-    if (isset($_POST['id']))
-        $id = $_POST['id'];
-    if (isset($_GET['offset']))
-        $offset = $_GET['offset'];
-    if (isset($_GET['limit']))
-        $limit = $_GET['limit'];
-
-    if (isset($_GET['sort'])) {
-        $sort = ($_GET['sort'] == 'id') ? "q." . $_GET['sort'] : $_GET['sort'];
-    }
-
-    if (isset($_GET['order']))
-        $order = $_GET['order'];
-
-    if (isset($_GET['language']) && !empty($_GET['language'])) {
-        $where = 'where `language_id` = ' . $_GET['language'];
-        if (isset($_GET['category']) && !empty($_GET['category'])) {
-            $where .= ' and `category`=' . $_GET['category'];
-        }
-    } elseif (isset($_GET['category']) && !empty($_GET['category'])) {
-        $where = 'where `category` = ' . $_GET['category'];
-    }
-
-    if (isset($_GET['search'])) {
-        $search = $_GET['search'];
-        $where = " WHERE (q.id like '%" . $search . "%' OR q.title like '%" . $search . "%' OR l.language like '%" . $search . "%' )";
-        if (isset($_GET['language']) && !empty($_GET['language'])) {
-            $where .= ' and `language_id` = ' . $_GET['language'];
-            if (isset($_GET['category']) && !empty($_GET['category'])) {
-                $where .= ' and `category`=' . $_GET['category'];
-            }
-        } elseif (isset($_GET['category']) && !empty($_GET['category'])) {
-            $where .= ' and `category` = ' . $_GET['category'];
-        }
-    }
-
-    $left_join = " LEFT JOIN languages l on l.id = q.language_id ";
-
-    $sql = "SELECT COUNT(q.id) as total FROM `tbl_learning` q " . $left_join . " " . $where;
-    $db->sql($sql);
-    $res = $db->getResult();
-    foreach ($res as $row) {
-        $total = $row['total'];
-    }
-
-    $sql = "SELECT q.*, l.language FROM `tbl_learning` q " . $left_join . " " . $where . " ORDER BY " . $sort . " " . $order . " LIMIT " . $offset . ", " . $limit;
-
-    $db->sql($sql);
-    $res = $db->getResult();
-
-    $bulkData = array();
-    $bulkData['total'] = $total;
-    $rows = array();
-    $tempRow = array();
-
-    foreach ($res as $row) {
-        $operate = "<a class='btn btn-xs btn-warning' href='learning-questions.php?id=" . $row['id'] . "' title='Add question'><i class='fas fa-plus'></i></a>";
-        $operate .= "<a class='btn btn-xs btn-primary edit-data' data-id='" . $row['id'] . "' data-toggle='modal' data-target='#editDataModal' title='Edit'><i class='fas fa-edit'></i></a>";
-        $operate .= "<a class='btn btn-xs btn-success edit-status' data-id='" . $row['id'] . "' data-toggle='modal' data-target='#editStatusModal' title='Edit Status'><i class='fas fa-edit'></i></a>";
-        $operate .= "<a class='btn btn-xs btn-danger delete-data' data-id='" . $row['id'] . "' title='Delete'><i class='fas fa-trash'></i></a>";
-
-        $tempRow['id'] = $row['id'];
-        $tempRow['category'] = $row['category'];
-        $tempRow['language_id'] = $row['language_id'];
-        $tempRow['language'] = $row['language'];
-        $tempRow['title'] = $row['title'];
-        $tempRow['detail'] = $row['detail'];
-        $tempRow['status'] = ($row['status']) ? "<label class='label label-success'>Active</label>" : "<label class='label label-danger'>Deactive</label>";
-        ;
-        $tempRow['operate'] = $operate;
-        $rows[] = $tempRow;
-    }
-
-    $bulkData['rows'] = $rows;
-    print_r(json_encode($bulkData));
-}
-
-// 18. learnning_question
-if (isset($_GET['table']) && $_GET['table'] == 'learnning_question') {
-    $offset = 0;
-    $limit = 10;
-    $sort = 'q.id';
-    $order = 'DESC';
-    $where = '';
-    $table = $_GET['table'];
-
-    if (isset($_POST['id']))
-        $id = $_POST['id'];
-    if (isset($_GET['offset']))
-        $offset = $_GET['offset'];
-    if (isset($_GET['limit']))
-        $limit = $_GET['limit'];
-
-    if (isset($_GET['sort'])) {
-        $sort = ($_GET['sort'] == 'id') ? "q." . $_GET['sort'] : $_GET['sort'];
-    }
-
-    if (isset($_GET['order']))
-        $order = $_GET['order'];
-
-
-    if (isset($_GET['learning_id'])) {
-        $learning_id = $_GET['learning_id'];
-        $where = " WHERE learning_id=" . $learning_id;
-    }
-
-    if (isset($_GET['search'])) {
-        $search = $_GET['search'];
-        $where .= " AND (q.`id` like '%" . $search . "%' OR `question` like '%" . $search . "%' OR `optiona` like '%" . $search . "%' OR `optionb` like '%" . $search . "%' OR `optionc` like '%" . $search . "%' OR `optiond` like '%" . $search . "%' OR `answer` like '%" . $search . "%' )";
-    }
-
-    $sql = "SELECT COUNT(q.id) as total FROM `tbl_learning_question` q " . $where;
-    $db->sql($sql);
-    $res = $db->getResult();
-    foreach ($res as $row) {
-        $total = $row['total'];
-    }
-
-    $sql = "SELECT q.* FROM `tbl_learning_question` q " . $where . " ORDER BY " . $sort . " " . $order . " LIMIT " . $offset . ", " . $limit;
-
-    $db->sql($sql);
-    $res = $db->getResult();
-
-    $bulkData = array();
-    $bulkData['total'] = $total;
-    $rows = array();
-    $tempRow = array();
-
-    foreach ($res as $row) {
-        $operate = "<a class='btn btn-xs btn-primary edit-question' data-id='" . $row['id'] . "' data-toggle='modal' data-target='#editQuestionModal' title='Edit'><i class='fas fa-edit'></i></a>";
-        $operate .= "<a class='btn btn-xs btn-danger delete-question' data-id='" . $row['id'] . "' title='Delete'><i class='fas fa-trash'></i></a>";
-
-        $tempRow['id'] = $row['id'];
-        $tempRow['question'] = $row['question'];
-        $tempRow['question_type'] = $row['question_type'];
-        $tempRow['optiona'] = $row['optiona'];
-        $tempRow['optionb'] = $row['optionb'];
-        $tempRow['optionc'] = $row['optionc'];
-        $tempRow['optiond'] = $row['optiond'];
-        $tempRow['optione'] = $row['optione'];
-        $tempRow['answer'] = $row['answer'];
-        $tempRow['operate'] = $operate;
-        $rows[] = $tempRow;
-    }
-
-    $bulkData['rows'] = $rows;
-    print_r(json_encode($bulkData));
-}
-
-// 19. maths_question
-if (isset($_GET['table']) && $_GET['table'] == 'maths_question') {
-    $offset = 0;
-    $limit = 10;
-    $sort = 'q.id';
-    $order = 'DESC';
-    $where = '';
-    $table = $_GET['table'];
-
-    if (isset($_POST['id']))
-        $id = $_POST['id'];
-    if (isset($_GET['offset']))
-        $offset = $_GET['offset'];
-    if (isset($_GET['limit']))
-        $limit = $_GET['limit'];
-
-    if (isset($_GET['sort'])) {
-        $sort = ($_GET['sort'] == 'id') ? "q." . $_GET['sort'] : $_GET['sort'];
-    }
-
-    if (isset($_GET['order']))
-        $order = $_GET['order'];
-
-    if (isset($_GET['language']) && !empty($_GET['language'])) {
-        $where = 'where `language_id` = ' . $_GET['language'];
-        if (isset($_GET['category']) && !empty($_GET['category'])) {
-            $where .= ' and `category`=' . $_GET['category'];
-            if (isset($_GET['subcategory']) && !empty($_GET['subcategory'])) {
-                $where .= ' and `subcategory`=' . $_GET['subcategory'];
-            }
-        }
-    } elseif (isset($_GET['category']) && !empty($_GET['category'])) {
-        $where = 'where `category` = ' . $_GET['category'];
-        if (isset($_GET['subcategory']) && !empty($_GET['subcategory'])) {
-            $where .= ' and `subcategory`=' . $_GET['subcategory'];
-        }
-    }
-
-    if (isset($_GET['search'])) {
-        $search = $_GET['search'];
-        $where = " where (q.`id` like '%" . $search . "%' OR `question` like '%" . $search . "%' OR `optiona` like '%" . $search . "%' OR `optionb` like '%" . $search . "%' OR `optionc` like '%" . $search . "%' OR `optiond` like '%" . $search . "%' OR `answer` like '%" . $search . "%' )";
-        if (isset($_GET['language']) && !empty($_GET['language'])) {
-            $where .= ' and `language_id` = ' . $_GET['language'];
-            if (isset($_GET['category']) && !empty($_GET['category'])) {
-                $where .= ' and `category`=' . $_GET['category'];
-                if (isset($_GET['subcategory']) && !empty($_GET['subcategory'])) {
-                    $where .= ' and `subcategory`=' . $_GET['subcategory'];
-                }
-            }
-        } elseif (isset($_GET['category']) && !empty($_GET['category'])) {
-            $where .= ' and `category` = ' . $_GET['category'];
-            if (isset($_GET['subcategory']) && !empty($_GET['subcategory'])) {
-                $where .= ' and `subcategory`=' . $_GET['subcategory'];
-            }
-        }
-    }
-
-    $left_join = " LEFT JOIN languages l on l.id = q.language_id ";
-
-    $sql = "SELECT COUNT(q.id) as total FROM `tbl_maths_question` q " . $left_join . " " . $where;
-    $db->sql($sql);
-    $res = $db->getResult();
-    foreach ($res as $row) {
-        $total = $row['total'];
-    }
-
-    $sql = "SELECT q.*, l.language FROM `tbl_maths_question` q " . $left_join . " " . $where . " ORDER BY " . $sort . " " . $order . " LIMIT " . $offset . ", " . $limit;
-
-    $db->sql($sql);
-    $res = $db->getResult();
-
-    $bulkData = array();
-    $bulkData['total'] = $total;
-    $rows = array();
-    $tempRow = array();
-
-    foreach ($res as $row) {
-        $image = (!empty($row['image'])) ? 'images/maths-question/' . $row['image'] : '';
-        $operate = "<a class='btn btn-xs btn-primary edit-question' href='maths-questions.php?id=" . $row['id'] . "' data-id='" . $row['id'] . "' title='Edit'><i class='fas fa-edit'></i></a>";
-        $operate .= "<a class='btn btn-xs btn-danger delete-question' data-id='" . $row['id'] . "' data-image='" . $image . "' title='Delete'><i class='fas fa-trash'></i></a>";
-
-        $tempRow['id'] = $row['id'];
-        $tempRow['category'] = $row['category'];
-        $tempRow['subcategory'] = $row['subcategory'];
-        $tempRow['language_id'] = $row['language_id'];
-        $tempRow['language'] = $row['language'];
-        $tempRow['image'] = (!empty($row['image'])) ? '<a data-lightbox="Question-Image" href="' . $image . '" data-caption="maths-image"><img src="' . $image . '" height=30 ></a>' : 'No image';
-        $tempRow['answer'] = $row['answer'];
-
-        $tempRow['question'] = "<textarea id='q" . $row['id'] . "' class='form-control'>" . $row['question'] . "</textarea> 
-        <script type='text/javascript'>CKEDITOR.replace('q" . $row['id'] . "', { extraPlugins: 'mathjax', mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML', readOnly:true, });</script>";
-        $tempRow['question_type'] = $row['question_type'];
-
-        $tempRow['optiona'] = "<textarea id='optiona" . $row['id'] . "' class='form-control'>" . $row['optiona'] . "</textarea> 
-        <script type='text/javascript'>CKEDITOR.replace('optiona" . $row['id'] . "', { extraPlugins: 'mathjax', mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML', readOnly:true, });</script>";
-
-        $tempRow['optionb'] = "<textarea id='optionb" . $row['id'] . "' class='form-control'>" . $row['optionb'] . "</textarea> 
-        <script type='text/javascript'>CKEDITOR.replace('optionb" . $row['id'] . "', { extraPlugins: 'mathjax', mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML', readOnly:true, });</script>";
-
-        $tempRow['optionc'] = "<textarea id='optionc" . $row['id'] . "' class='form-control'>" . $row['optionc'] . "</textarea> 
-        <script type='text/javascript'>CKEDITOR.replace('optionc" . $row['id'] . "', { extraPlugins: 'mathjax', mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML', readOnly:true, });</script>";
-
-        $tempRow['optiond'] = "<textarea id='optiond" . $row['id'] . "' class='form-control'>" . $row['optiond'] . "</textarea> 
-        <script type='text/javascript'>CKEDITOR.replace('optiond" . $row['id'] . "', { extraPlugins: 'mathjax', mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML', readOnly:true, });</script>";
-
-        $tempRow['optione'] = "<textarea id='optione" . $row['id'] . "' class='form-control'>" . $row['optione'] . "</textarea> 
-        <script type='text/javascript'>CKEDITOR.replace('optione" . $row['id'] . "', { extraPlugins: 'mathjax', mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML', readOnly:true, });</script>";
-
-        $tempRow['note'] = "<textarea id='note" . $row['id'] . "' class='form-control'>" . $row['note'] . "</textarea> 
-        <script type='text/javascript'>CKEDITOR.replace('note" . $row['id'] . "', { extraPlugins: 'mathjax', mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML', readOnly:true, });</script>";
-
-        $tempRow['operate'] = $operate;
         $rows[] = $tempRow;
     }
 
