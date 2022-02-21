@@ -1,4 +1,6 @@
 "use strict"
+// const DOMAIN_URL = "https://yourdomain.com/"; //admin panel url
+// const JWT_KEY = "set_your_strong_jwt_secret_key";
 const DOMAIN_URL = "https://squizy.kokngoding.id/admin/"; //admin panel url
 const JWT_KEY = "Bismillah-4111";
 

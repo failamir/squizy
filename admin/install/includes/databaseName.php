@@ -6,10 +6,8 @@
  * @Version 1.0
  * @Package Database
  */
-// define('DOMAIN_URL', 'http://yourdomain.com/');
-// define('JWT_SECRET_KEY', 'set_your_strong_jwt_secret_key');
-define('DOMAIN_URL', 'https://squizy.kokngoding.id/admin/');
-define('JWT_SECRET_KEY', 'Bismillah-4111');
+define('DOMAIN_URL', '%DOMAIN_URL%');
+define('JWT_SECRET_KEY', '%JWT_SECRET_KEY%');
 
 class Database {
     /*
@@ -19,13 +17,10 @@ class Database {
      * Database class
      */
 
-    private $db_host = "localhost";  // Change as required
-    // private $db_user = "databaseuser";  // Change as required
-    // private $db_pass = "databasepassword";  // Change as required 
-    // private $db_name = "databasename"; // Change as required
-    private $db_user = "kokngodi_all";  // Change as required
-    private $db_pass = "@dmin.1618";  // Change as required 
-    private $db_name = "kokngodi_squizy"; // Change as required
+    private $db_host = "%HOSTNAME%";  // Change as required
+    private $db_user = "%USERNAME%";  // Change as required
+    private $db_pass = "%PASSWORD%";  // Change as required 
+    private $db_name = "%DATABASE%"; // Change as required
 
     /*
      * Extra variables that are required by other function such as boolean con variable

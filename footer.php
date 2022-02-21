@@ -24,7 +24,7 @@
                     </div>            
                     <div class="col-md-4">
                         <h5 class="text-capitalized">Downloads</h5>
-                        <small>Online Quiz for Android or IOS</small>
+                        <small>SQuizy for Android or IOS</small>
                         <div class="footer-download-section-style"> 
                             <a class="app_link" target="_blank">
                                 <img alt="android" src="assets/images/google-downloader@2x.png" width="132px">

@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Online Quiz</title>
+        <title>SQuizy</title>
         <?php include('include-css.php'); ?>   
     </head>
     <body class="bg-content-color">
@@ -22,7 +22,7 @@ session_start();
                     <div class="row wow fadeInLeft top-margin1">  
                         <div class="col-md-6 col-sm-12 text-left pt-100 text-white">                  
                             <span class="lobster-font top-header-title-1">Want to Make Your Own Quiz</span><br>  
-                            <p class="text-justify">Make the perfect online quiz for any subject! Get the flexibility you need to get the answers you want. The Quiz Online power by WRteam Maker makes it easy for you to see what people know.</p>
+                            <p class="text-justify">Make the perfect SQuizy for any subject! Get the flexibility you need to get the answers you want. The Quiz Online power by WRteam Maker makes it easy for you to see what people know.</p>
 
                             <div class="footer-download-section-style">   
                                 <a class="text-decoration-none app_link" target="_blank">
@@ -95,7 +95,7 @@ session_start();
                         </div>
                         <div class="col-md-6 col-sm-12 py-4">
                             <p class="text-bold">Play Quiz</p>
-                            <h2 class="text-bold">Online Quiz is an amazing trivia game</h2>
+                            <h2 class="text-bold">SQuizy is an amazing trivia game</h2>
                             <div class="text-justify">
                                 <p>Many other games, General Knowledge Quiz gives you unlimited time to answer each question.</p>
                                 <p>With the super database of questions and always adding more, General Knowledge Quiz will test your Knowledge to the fullest.</p>
