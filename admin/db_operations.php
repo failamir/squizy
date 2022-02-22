@@ -442,8 +442,8 @@ if (isset($_POST['question']) && isset($_POST['add_question'])) {
         }
     }
 
-    $sql = "INSERT INTO `question`(`category`, `subcategory`, `language_id`, `image`, `question`, `question_type`, `optiona`, `optionb`, `optionc`, `optiond`, `optione`, `level`, `answer`, `note`,`hero_id`,`username`) VALUES 
-	('" . $category . "','" . $subcategory . "','" . $language_id . "','" . $filename . "','" . $question . "','" . $question_type . "','" . $a . "','" . $b . "','" . $c . "','" . $d . "','" . $e . "','" . $level . "','" . $answer . "','" . $note . "','" . $_SESSION['id'] . "','" . $_SESSION['username'] . "')";
+    $sql = "INSERT INTO `question`(`category`, `subcategory`, `language_id`, `image`, `question`, `question_type`, `optiona`, `optionb`, `optionc`, `optiond`, `optione`, `level`, `answer`, `note`,`hero_id`,`username`,`edit_hero_id`) VALUES 
+	('" . $category . "','" . $subcategory . "','" . $language_id . "','" . $filename . "','" . $question . "','" . $question_type . "','" . $a . "','" . $b . "','" . $c . "','" . $d . "','" . $e . "','" . $level . "','" . $answer . "','" . $note . "','" . $_SESSION['id'] . "','" . $_SESSION['username'] . "','0')";
 
     $db->sql($sql);
     $res = $db->getResult();
@@ -452,10 +452,10 @@ if (isset($_POST['question']) && isset($_POST['add_question'])) {
 
 //9. update_question
 if (isset($_POST['question_id']) && isset($_POST['update_question'])) {
-    if (!checkadmin($auth_username)) {
-        echo "<label class='alert alert-danger'>Access denied - You are not authorized to access this page.</label>";
-        return false;
-    }
+    // if (!checkadmin($auth_username)) {
+    //     echo "<label class='alert alert-danger'>Access denied - You are not authorized to access this page.</label>";
+    //     return false;
+    // }
     $id = $_POST['question_id'];
 
     if ($_FILES['image']['size'] != 0 && $_FILES['image']['error'] == 0) {
@@ -504,7 +504,7 @@ if (isset($_POST['question_id']) && isset($_POST['update_question'])) {
     $answer = $db->escapeString($_POST['answer']);
     $note = $db->escapeString($_POST['note']);
 
-    $sql = "Update `question` set `question`='" . $question . "', `category`='" . $category . "', `subcategory`='" . $subcategory . "',`question_type`='" . $question_type . "',`optiona`='" . $a . "',`optionb`='" . $b . "' ,`optionc`='" . $c . "' ,`optiond`='" . $d . "', `answer`='" . $answer . "' ,`level`='" . $level . "',`note`='" . $note . "'";
+    $sql = "Update `question` set `question`='" . $question . "', `category`='" . $category . "', `subcategory`='" . $subcategory . "',`question_type`='" . $question_type . "',`optiona`='" . $a . "',`optionb`='" . $b . "' ,`optionc`='" . $c . "' ,`optiond`='" . $d . "', `answer`='" . $answer . "' ,`level`='" . $level . "',`note`='" . $note . "',`edit_hero_id`='" . $_SESSION['id'] . "'";
     $sql .= ($fn->is_option_e_mode_enabled()) ? ",`optione`='" . $e . "'" : "";
     $sql .= ($fn->is_language_mode_enabled()) ? ", `language_id`=" . $language_id : "";
     $sql .= " where `id`=" . $id;

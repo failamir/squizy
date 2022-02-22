@@ -808,9 +808,9 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
             });
         </script>
         <script>
-            var role = "<?php Print($_SESSION['role']); ?>";
+            // var role = "<?php Print($_SESSION['role']); ?>";
             $(document).on('click', '.delete-question', function () {
-                if(role == 'admin'){
+                // if(role == 'admin'){
                 if (confirm('Are you sure? Want to delete question')) {
                     id = $(this).data("id");
                     image = $(this).data("image");
@@ -825,8 +825,8 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                                 alert('Error! Question could not be deleted');
                         }
                     });
-                }}else{
-                alert('Error! Just Admin can delete data');
+                // }}else{
+                // alert('Error! Just Admin can delete data');
             }
             });
         </script>
