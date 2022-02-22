@@ -442,8 +442,8 @@ if (isset($_POST['question']) && isset($_POST['add_question'])) {
         }
     }
 
-    $sql = "INSERT INTO `question`(`category`, `subcategory`, `language_id`, `image`, `question`, `question_type`, `optiona`, `optionb`, `optionc`, `optiond`, `optione`, `level`, `answer`, `note`) VALUES 
-	('" . $category . "','" . $subcategory . "','" . $language_id . "','" . $filename . "','" . $question . "','" . $question_type . "','" . $a . "','" . $b . "','" . $c . "','" . $d . "','" . $e . "','" . $level . "','" . $answer . "','" . $note . "')";
+    $sql = "INSERT INTO `question`(`category`, `subcategory`, `language_id`, `image`, `question`, `question_type`, `optiona`, `optionb`, `optionc`, `optiond`, `optione`, `level`, `answer`, `note`,`hero_id`,`username`) VALUES 
+	('" . $category . "','" . $subcategory . "','" . $language_id . "','" . $filename . "','" . $question . "','" . $question_type . "','" . $a . "','" . $b . "','" . $c . "','" . $d . "','" . $e . "','" . $level . "','" . $answer . "','" . $note . "','" . $_SESSION['id'] . "','" . $_SESSION['username'] . "')";
 
     $db->sql($sql);
     $res = $db->getResult();
