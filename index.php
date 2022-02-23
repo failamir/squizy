@@ -46,7 +46,7 @@ session_start();
                     <div class="row wow fadeInLeft top-margin1">  
                         <div class="col-md-6 col-sm-12 text-left pt-100 text-white">                  
                             <span class="lobster-font top-header-title-1">Want to Make Your Own Quiz</span><br>  
-                            <p class="text-justify">Make the perfect online quiz for any subject! Get the flexibility you need to get the answers you want. The Quiz Online power by WRteam Maker makes it easy for you to see what people know.</p>
+                            <p class="text-justify">Make the perfect online quiz for any subject! Get the flexibility you need to get the answers you want. The Quiz Online power by Kukode.in Maker makes it easy for you to see what people know.</p>
 
                             <div class="footer-download-section-style">   
                                 <a class="text-decoration-none app_link" target="_blank">

@@ -8,10 +8,10 @@
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0"> 
 
-        <meta name="author" content="WRTeam">
-        <meta name="copyright" content="WRTeam.in">
+        <meta name="author" content="Kukode">
+        <meta name="copyright" content="Kukode.in">
         <meta name="keywords" content="Quiz online, Web Quiz">
-        <meta name="description" content="Make the perfect online quiz for any subject! Get the flexibility you need to get the answers you want. The Quiz Online power by WRteam Maker makes it easy for you to see what people know.">
+        <meta name="description" content="Make the perfect online quiz for any subject! Get the flexibility you need to get the answers you want. The Quiz Online power by Kukode.in Maker makes it easy for you to see what people know.">
 
         <link href="assets/images/icon.png" rel="shortcut icon"/>
         <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css"/> 

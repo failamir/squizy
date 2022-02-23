@@ -1,6 +1,6 @@
 <footer>
                 <div class="pull-right">
-                    <?= ucwords($_SESSION['company_name']) ?> Administrator Panel by <a href="https://wrteam.in" target='_blank' rel="noopener noreferrer">&copy WRTeam</a>
+                    <?= ucwords($_SESSION['company_name']) ?> Administrator Panel by <a href="https://Kukode.in" target='_blank' rel="noopener noreferrer">&copy Kukode.in</a>
                 </div>
                 <div class="clearfix"></div>
             </footer>

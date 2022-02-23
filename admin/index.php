@@ -46,7 +46,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                                 <div class="clearfix"></div>
                                 <br>
                                 <img src="images/logo-460x114.png" alt="QUIZ" width='300'>
-                                <p class="text-center"><br>© <?= date('Y') ?> WRTeam</p>
+                                <p class="text-center"><br>© <?= date('Y') ?> Kukode.in</p>
                             </div>
                         </form>
                     </section>

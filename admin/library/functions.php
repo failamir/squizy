@@ -2,8 +2,8 @@
 
 /*
   API v5.6
-  Quiz Online - WRTeam.in
-  WRTeam Developers
+  Quiz Online - Kukode.in
+  Kukode.in Developers
  */
 require_once 'crud.php';
 

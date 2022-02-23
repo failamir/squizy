@@ -8,8 +8,8 @@
                             Time Square Empire,SH 42<br>      
                             Mirjapar Highway, Bhuj - Kutch
                         </p>
-                        <p>Website: <a href="https://wrteam.in/" target="_blank" rel="noopener noreferrer">wrteam.in</a><br>
-                            Email:<email data-user="info" data-domain="wrteam.in"></email><br>      
+                        <p>Website: <a href="https://kukode.in/" target="_blank" rel="noopener noreferrer">kukode.in</a><br>
+                            Email:<email data-user="info" data-domain="Kukode.in"></email><br>      
                         Phone: +919033646589
                         </p>      
                     </div>
@@ -41,7 +41,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <a href="index.php"><img alt="quiz" src="assets/images/quizlogo.png" width="100"></a>
-                            © <?= date('Y') ?> WRTeam. All Right Reserved  
+                            © <?= date('Y') ?> Kukode.in All Right Reserved  
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <div class="float-right SocialMedia">

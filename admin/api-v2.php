@@ -2,8 +2,8 @@
 
 /*
   API v7.0.3
-  Quiz Online - WRTeam.in
-  WRTeam Developers
+  Quiz Online - Kukode.in
+  Kukode.in Developers
  */
 session_start();
 header("Content-Type: application/json");

@@ -2,8 +2,8 @@
 
 /*
   API v5.6
-  Quiz Online - WRTeam.in
-  WRTeam Developers
+  Quiz Online - Kukode.in
+  Kukode.in Developers
  */
 session_start();
 if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
