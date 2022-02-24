@@ -6,7 +6,7 @@
  * @Version 1.0
  * @Package Database
  */
-define('DOMAIN_URL', 'http://localhost:8000/admin/');
+define('DOMAIN_URL', 'https://squizy.kokngoding.id/admin/');
 define('JWT_SECRET_KEY', 'Bismillah-4111');
 
 class Database {
@@ -17,7 +17,7 @@ class Database {
      * Database class
      */
 
-    private $db_host = "103.145.227.164";  // Change as required
+    private $db_host = "localhost";  // Change as required
     private $db_user = "kokngodi_all";  // Change as required
     private $db_pass = "@dmin.1618";  // Change as required 
     private $db_name = "kokngodi_squizy"; // Change as required
