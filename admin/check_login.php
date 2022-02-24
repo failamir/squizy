@@ -26,7 +26,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                         $_SESSION['role'] = $row["role"];
                         $_SESSION['username'] = $row["auth_username"];
                         $_SESSION['company_name'] = 'SQuizy';
-                        $q = "SELECT * FROM question WHERE username='$username'";
+                        $q = "SELECT * FROM question WHERE auth_username='$username'";
                         $sql = $db->sql($q);
                         $result = $db->getResult();
                         $num_rows = mysqli_num_rows($result);
