@@ -22,9 +22,17 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             if (!empty($result)) {
                 if (strcmp($result[0]["auth_username"], $username) == 0) {
                     foreach ($result as $row) {
+                        $_SESSION['id'] = $row["ID"];
                         $_SESSION['role'] = $row["role"];
                         $_SESSION['username'] = $row["auth_username"];
                         $_SESSION['company_name'] = 'SQuizy';
+                        $q = "SELECT * FROM question WHERE username='$username'";
+                        $sql = $db->sql($q);
+                        $result = $db->getResult();
+                        $num_rows = mysqli_num_rows($result);
+                        // var_dump($num_rows); die;
+                        $sql = "Update `authenticate` set `contribute`='" . $num_rows . "' where `auth_username`='" . $username . "'";
+                        $db->sql($sql);
                     }
                     echo "1";
                 } else {
