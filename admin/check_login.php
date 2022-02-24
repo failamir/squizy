@@ -26,11 +26,14 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                         $_SESSION['role'] = $row["role"];
                         $_SESSION['username'] = $row["auth_username"];
                         $_SESSION['company_name'] = 'SQuizy';
-                        $q = "SELECT * FROM question WHERE auth_username='$username'";
+                        $q = "SELECT * FROM question WHERE username='$username'";
                         $sql = $db->sql($q);
                         $result = $db->getResult();
-                        $num_rows = mysqli_num_rows($result);
-                        var_dump($num_rows); die;
+                        $num_rows = count($result);
+                        // var_dump($q);
+                        // var_dump($result);
+                        // var_dump($num_rows); 
+                        // die;
                         $sql = "Update `authenticate` set `contribute`='" . $num_rows . "' where `auth_username`='" . $username . "'";
                         $db->sql($sql);
                     }
