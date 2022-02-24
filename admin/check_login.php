@@ -30,7 +30,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                         $sql = $db->sql($q);
                         $result = $db->getResult();
                         $num_rows = mysqli_num_rows($result);
-                        // var_dump($num_rows); die;
+                        var_dump($num_rows); die;
                         $sql = "Update `authenticate` set `contribute`='" . $num_rows . "' where `auth_username`='" . $username . "'";
                         $db->sql($sql);
                     }
