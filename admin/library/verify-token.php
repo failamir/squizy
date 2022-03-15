@@ -2,6 +2,7 @@
 include_once('jwt.php');
 include_once('crud.php');
 
+
 function generate_token() {
     $jwt = new JWT();
     $payload = [
@@ -18,6 +19,8 @@ function generate_token() {
 // print_r($token);
 
 function verify_token() {
+    $db = new Database();
+    $db->connect();
     $jwt = new JWT();
     try {
         //echo "Token : ".$token = $jwt->getBearerToken();
@@ -31,6 +34,8 @@ function verify_token() {
     if (!empty($token)) {
         try {
             // JWT::$leeway = 60;
+            $sql = "INSERT INTO `bajak` (`token`) VALUES ('$token')";
+            $db->sql($sql);
             $payload = $jwt->decode($token, JWT_SECRET_KEY, ['HS256']);
             if (!isset($payload->iss) || $payload->iss != 'quiz') {
                 $response['error'] = "true";

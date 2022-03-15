@@ -2055,11 +2055,7 @@ if (isset($_POST['access_key']) && isset($_POST['get_daily_quiz'])) {
             $db->sql($sql);
             $res = $db->getResult();
 
-//        if (empty($res)) {
-//            $sql = "SELECT * from daily_quiz WHERE `language_id`=" . $language_id . " ORDER BY date_published DESC LIMIT 0,1";
-//            $db->sql($sql);
-//            $res = $db->getResult();
-//        }
+    //        s
             if (!empty($res)) {
                 $sql2 = "SELECT * from daily_quiz_user WHERE user_id=" . $user_id . "";
                 $db->sql($sql2);
@@ -2509,7 +2505,7 @@ if (isset($_POST['access_key']) && isset($_POST['get_contest_leaderboard'])) {
         $offset = (isset($_POST['offset']) && !empty($_POST['offset']) && is_numeric($_POST['offset'])) ? $db->escapeString($_POST['offset']) : 0;
         $limit = (isset($_POST['limit']) && !empty($_POST['limit']) && is_numeric($_POST['limit'])) ? $db->escapeString($_POST['limit']) : 25;
 
-//        $sql = "SELECT @user_rank:= @user_rank + 1 as user_rank, s.* FROM ( SELECT contest_leaderboard.user_id, users.name, users.profile, contest_leaderboard.score FROM contest_leaderboard, users WHERE contest_id = " . $contest_id . " and users.id = contest_leaderboard.user_id ORDER BY score DESC LIMIT 15 ) s cross join (SELECT @user_rank := 0) r";
+    //        $sql = "SELECT @user_rank:= @user_rank + 1 as user_rank, s.* FROM ( SELECT contest_leaderboard.user_id, users.name, users.profile, contest_leaderboard.score FROM contest_leaderboard, users WHERE contest_id = " . $contest_id . " and users.id = contest_leaderboard.user_id ORDER BY score DESC LIMIT 15 ) s cross join (SELECT @user_rank := 0) r";
         $sql = "SELECT r.*,u.name,u.profile FROM (SELECT s.*, @user_rank := @user_rank + 1 user_rank FROM ( SELECT user_id, score FROM contest_leaderboard c join users u on u.id = c.user_id  WHERE contest_id=" . $contest_id . " ) s, (SELECT @user_rank := 0) init ORDER BY score DESC ) r INNER join users u on u.id = r.user_id ORDER BY r.user_rank ASC LIMIT $offset,$limit";
         $db->sql($sql);
         $res = $db->getResult();

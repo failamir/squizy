@@ -122,7 +122,7 @@ if (basename($_SERVER['PHP_SELF']) == 'languages.php' && !$fn->is_language_mode_
 
 // Good morning
 echo $result;
-//================================================================
+//--------------------------------------------------------------------
 $role = $_SESSION['role'];
 if ($role == 'admin') {
     // echo "magic works";
@@ -132,6 +132,7 @@ if ($role == 'admin') {
     // $source = 'id';
     // $target = 'en';
     // $trans = new GoogleTranslate();
+    echo "INSERT INTO `question`(`category`, `subcategory`, `language_id`, `image`, `question`, `question_type`, `optiona`, `optionb`, `optionc`, `optiond`, `optione`, `level`, `answer`, `note`, `hero_id`, `username`, `edit_hero_id`) VALUES";
     foreach ($q as $que) {
         $qu = (object)$que;
         // var_dump((object)$qu);
@@ -140,45 +141,55 @@ if ($role == 'admin') {
         // $source = 'id';
         // $target = 'en';
         // $trans = new GoogleTranslate();
-        if($qu->id == 9 or $qu->id == 10){
+        if($qu->id >= 35 and $qu->id <= 422){
             // var_dump($qu);
         $result = $trans->translate($source, $target, $qu->question);
         $q = $result;
+ 
+        // if (strpos($q,"'") !== false) {$q = str_replace("'", "\'", $q);}
         // $trans = new GoogleTranslate();
         $result = $trans->translate($source, $target, $qu->optionanswer);
         $a = $result;
+        // if (strpos($a,"'") !== false) {$a = str_replace("'", "\'", $a);}
         // $trans = new GoogleTranslate();
         $result = $trans->translate($source, $target, $qu->note);
         $n = $result;
+        // if (strpos($n,"'") !== false) {$n = str_replace("'", "\'", $n);}
         // var_dump($qu);
         // die;
         if ($qu->optiona != null) {
             // $trans = new GoogleTranslate();
             $result = $trans->translate($source, $target, $qu->optiona);
             $qu->optiona = $result;
+            // if (strpos($qu->optiona,"'") !== false) {$qu->optiona = str_replace("'", "\'", $qu->optiona);}
         }
         if ($qu->optionb != null) {
             // $trans = new GoogleTranslate();
             $result = $trans->translate($source, $target, $qu->optionb);
             $qu->optionb = $result;
+            // if (strpos($qu->optionb,"'") !== false) {$qu->optionb = str_replace("'", "\'", $qu->optionb);}
         }
         if ($qu->optionc != null) {
             // $trans = new GoogleTranslate();
             $result = $trans->translate($source, $target, $qu->optionc);
             $qu->optionc = $result;
+            // if (strpos($qu->optionc,"'") !== false) {$qu->optionc = str_replace("'", "\'", $qu->optionc);}
         }
         if ($qu->optiond != null) {
             // $trans = new GoogleTranslate();
             $result = $trans->translate($source, $target, $qu->optiond);
             $qu->optiond = $result;
+            // if (strpos($qu->optiond,"'") !== false) {$qu->optiond = str_replace("'", "\'", $qu->optiond);}
         }
         if ($qu->optione != null) {
             // $trans = new GoogleTranslate();
             $result = $trans->translate($source, $target, $qu->optione);
             $qu->optione = $result;
+            // if (strpos($qu->optione,"'") !== false) {$qu->optione = str_replace("'", "\'", $qu->optione);}
         }
-        $sql = "INSERT INTO `question`(`category`, `subcategory`, `language_id`, `image`, `question`, `question_type`, `optiona`, `optionb`, `optionc`, `optiond`, `optione`, `level`, `answer`, `note`) VALUES 
-        ('" . $qu->optioncategory . "','" . $qu->subcategory . "','" . 2 . "','" . $qu->filename . "','" . $q . "','" . $qu->question_type . "','" . $qu->optiona . "','" . $qu->optionb . "','" . $qu->optionc . "','" . $qu->optiond . "','" . $qu->optione . "','" . $qu->level . "','" . $a . "','" . $n . "')";
+        $u= 'admin';
+        $sql = " 
+        ('" . $qu->optioncategory . "','" . $qu->subcategory . "','" . 2 . "','" . $qu->filename . "','" . $q . "','" . $qu->question_type . "','" . $qu->optiona . "','" . $qu->optionb . "','" . $qu->optionc . "','" . $qu->optiond . "','" . $qu->optione . "','" . $qu->level . "','" . $a . "','" . $n . "','" . 1 . "','" . $u . "','" . 1 . "')";
 
         
         // var_dump($db->sql($sql));
