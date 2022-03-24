@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g data-name="Ellipse 8" style="stroke:#2d83d0;fill:none">
+        <circle cx="8" cy="8" r="8" style="stroke:none"/>
+        <circle cx="8" cy="8" r="7.5" style="fill:none"/>
+    </g>
+    <circle data-name="Ellipse 9" cx="6" cy="6" r="6" transform="translate(2 2)" style="fill:#2d83d0"/>
+</svg>

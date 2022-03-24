@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "675405804514",
+    "firebase_url": "https://squizy-f2eed-default-rtdb.firebaseio.com",
+    "project_id": "squizy-f2eed",
+    "storage_bucket": "squizy-f2eed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675405804514:android:a0dbc2882e98a607ecbfbb",
+        "android_client_info": {
+          "package_name": "com.kokngoding.squizy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675405804514-7jerplia5um1ekbe80qcl961dc6rh4iu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUaZnGVtdF-6KH-ZXO7iVDAFfBw55ABvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675405804514-7jerplia5um1ekbe80qcl961dc6rh4iu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

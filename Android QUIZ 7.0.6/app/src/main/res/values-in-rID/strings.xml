@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SQuizy</string>
+    <string name="drawer_open">Buka Navigasi</string>
+    <string name="drawer_close">Tutup Navigasi</string>
+    <string name="answer">jawaban</string>
+    <string name="answerbookmark">Jawaban :</string>
+    <string name="cancel">Batal</string>
+    <string name="submit">Kirim</string>
+    <string name="result">Hasil</string>
+    <string name="review">Lihat</string>
+    <string name="true_ans">Jawaban Benar:</string>
+    <string name="zero">0</string>
+    <string name="loading">Memulai...</string>
+    <string name="login">Masuk</string>
+    <string name="logout" >Keluar</string>
+    <string name="signup">Buat Akun</string>
+    <string name="select_language">Pilih Bahasa</string>
+    <string name="skip">Skip</string>
+    <string name="correct">Benar</string>
+    <string name="incorrect">Salah</string>
+    <string name="about_us">Tentang Kami</string>
+    <string name="leave_msg_1">Kamu Yakin?</string>
+    <string name="completed">Selamat!!</string>
+    <string name="congratulations">Selamat!!</string>
+    <string name="select_level">Pilih Level</string>
+    <string name="select_category">Pilih Kategori</string>
+    <string name="select_sub_category">Pilih Sub Kategori</string>
+    <string name="true_false" >Benar/Salah</string>
+    <string name="practice" >Praktik</string>
+    <string name="self_challenge" >Uji Diri Kamu</string>
+    <string name="daily_quiz">Quiz Harian</string>
+    <string name="random_quiz">Quiz Acak</string>
+    <string name="sound">Suara</string>
+    <string name="apply">Terapkan</string>
+    <string name="share_app">Bagikan App</string>
+    <string name="not_now">Tidak Sekarang</string>
+    <string name="update_now">Perbarui</string>
+    <string name="vibration">Getar</string>
+    <string name="rateapp">Beri Nilai</string>
+    <string name="play_again">Main Lagi</string>
+    <string name="lets_play">Ayo Bermain</string>
+</resources>

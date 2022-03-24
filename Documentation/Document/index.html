@@ -1,0 +1,1272 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Quiz Online - Documentation by WRTeam</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+         <link rel="shortcut icon" href="images/icon.png" />
+    </head>
+    <body>
+        <section id="header">
+            <header>
+                <span class="image avatar"><img src="images/icon.png" alt="" /></span>
+                <h4 id="logo"><a href="#">Quiz Online</a></h4>
+            </header>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#introduction" class="active">Introduction</a></li>
+                    <li><a href="#admin_panel">Quiz Admin Panel</a>
+                    <li><a href="#quiz_app">Quiz App</a>
+                    <li><a href="#quiz_web">Quiz Web</a>
+                    <li><a href="#quiz_ios">Quiz IOS</a>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#rating">Your Feedback</a></li>
+                    <li><a href="#contactus">Contact Us</a></li>
+                </ul>
+            </nav>
+        </section>
+        <div id="wrapper">
+            <div id="main">
+                <section id="introduction">
+                    <div class="container">
+                        <header class="major">
+                            <h3>Introduction</h3>
+                        </header>
+                        <div class="borderTop">
+                            <div class="span-12 last">
+                                <p class="prepend-top append-0">Thank you for purchasing code. It really means a lot and It's our pleasure to serve top-notch service to you. Thank you so much for choosing<a href="https://wrteam.in/" style='color:#3c55d1' target="_blank"> WRTeam </a>. If you have trouble with the code and documentation please contact to our Support Team <a href="#support" style="color:#3c55d1">Here</a>.
+                            </div>
+                        </div>
+                    </div>  
+                </section>
+
+                <section id="admin_panel">
+                    <div class="container">
+                        <header class="major">
+                            <h3>Quiz Online Admin Panel</h3>
+                        </header>
+                        <div class="borderTop">
+                            <ol class="alpha">
+                                <li><a href="#installation">Configure on your server</a></li>
+                                <li><a href="#notification-management">Notification Management</a></li>
+                                <li><a href="#system-configurations">Set System Configurations</a></li>
+                                <li><a href="#pp">Set Privacy Policy</a></li>
+                                <li><a href="#tc">Set Terms Conditions</a></li>
+                                <li><a href="#about_us">Set About Us</a></li>
+                                <li><a href="#instructions">Set Instructions</a></li>
+                            </ol>
+                        </div>
+
+                        <h3 id="installation"> 1. How to Install Quiz Online on Your shared hosting?</h3>
+                        <ol>
+                            <li>Create your domain or subdomain in your shared hosting</li>
+                            <li>Create an empty database in your shared hosting and remember this credentials:
+                                <br/><span>i. database name</span>
+                                <br/><span>ii. database username</span>
+                                <br/><span>iii. database password</span>                                
+                            </li>
+                            <li>Upload the source code you have downloaded from CodeCanyon and unzip it.</li>
+                            <li>Now navigate to the url where your project is located.<br/>
+                                ex. mydomain.com or subdomain.mydomain.com
+                            </li>
+                            <li>The installation screen should appear and guide you in the process.</li>
+                        </ol>
+                        <p>Thats it! Now you are ready to run your first Quiz Online : <b>https://quizdemo.wrteam.in</b></p>
+                        <b>Default Login Details</b><br>
+                        User: admin<br>
+                        Pass: admin123<br><br>
+
+                        <div class="section_bdr"></div>
+
+                        <h4 id="notification-management">Notification Management</h4>
+                        <p>First Of all,we need to set the FCM server key from <a href="https://console.firebase.google.com" target="_blank">Firebase console</a></p>
+                        <img src="images/panel/notification-setting.png"/>
+                        <div class="section_bdr"></div>
+
+                        <h4 id="system-configurations">Set System Configurations</h4>
+                        <p>Set Configurations for you app. All the changes are maded here will directly reflect in the App</p>
+                        <p>From here you can set System & App Timezone, App Play store or market place Link, Enable / Disable Answer Display, Language Mode, Option E Mode, Force Update App, Daily Quiz Mode, Contest Mode, Battle Random Category Mode, Battle Group Category Mode & In App Purchase. Manage App Version and Update Shareapp Text. Set fix Question in level</p>
+                        <img src="images/panel/system-configurations.png" alt='System Configurations' title='System Configurations'>
+                        <div class="section_bdr"></div>
+
+                        <h4 id="pp">Set Privacy Policy</h4>
+                        <p>Set Privacy Policy for your website and app.</p>
+                        <img src="images/panel/pp.png"/>
+                        <div class="section_bdr"></div>
+
+                        <h4 id="tc">Set Terms Conditions</h4>
+                        <p>Set Terms Conditions for your website and app.</p>
+                        <img src="images/panel/tc.png"/>					
+                        <div class="section_bdr"></div>
+
+                        <h4 id="about_us">About Us Content</h4>
+                        <p>Set and manage your about us content for app.</p>
+                        <img src="images/panel/about-us.png"/>					
+                        <div class="section_bdr"></div>
+
+                        <h4 id="instructions">7. Instructions Content</h4>
+                        <p>Set and manage your instructions content for app.</p>
+                        <img src="images/panel/instructions.png"/>					
+                        <div class="section_bdr"></div>      
+                    </div>
+                </section>
+
+                <section id="quiz_app">
+                    <div class="container">
+                        <header class="major">
+                            <h3>Quiz Online App</h3>
+                        </header>
+                        <div class="borderTop">
+                            <ol class="alpha">
+                                <li><a href='#appname'>How to change the app name?</a></li>
+                                <li><a href='#privacy'>How to change the Privacy Policy?</a></li>
+                                <li><a href='#countrycode'>How to set country code default?</a></li>
+                                <li><a href='#packagename'>How to change package name?</a></li>
+                                <li><a href='#admin'>How to change server url to application?</a></li>
+                                <li><a href='#create_fcm'>Create Firebase Project for Application.</a></li>
+                                <li><a href='#realtime'>Realtime Database.</a></li>
+                                <li><a href='#emailLogin'>Authenticate Using Email and Password on Android With Firebase.</a></li>
+                                <li><a href='#googleLogin'>Authenticate Using Google Sign-In on Android With Firebase.</a></li>
+                                <li><a href='#phoneLogin'>Authenticate Using Mobile Sign-In on Android With Firebase.</a></li>
+                                <li><a href='#facebookLogin'>Authenticate Using Facebook Login on Android with Firebase.</a></li>
+                                <li><a href='#fcm'>How to Integrate Firebase Cloud Messaging in app?</a></li>
+                                <li><a href='#inapp'>How to Change IN-APP Purchase key and Coins in app?</a></li>
+                                <li><a href='#arc'>How to Change Arc in NavigationView?</a></li>
+                                <li><a href='#ttf'>Want to change TextToSpeech language in Application?</a></li>
+                                <li><a href='#levelComplete'>How to config your values within app?</a></li>
+                                <li><a href='#lock'>How to Remove Level Lock feature from Application?</a></li>
+                                <li><a href='#appcountroll'>How to Remove Admob Ads open feature from Application?</a></li>
+                                <li><a href='#constant'>Want to costomize some value? like maximum questions per level etc..?</a></li>
+                                <li><a href='#languageMode'>System Settings for Application.</a></li>
+                                <li><a href='#howtoaddads'>How to add change Admob and Facebook Banner/Rewarded id?</a></li>
+                                <li><a href='#howtomediation'>How to add Facebook Audience Network with Mediation?</a></li>
+                                <li><a href='#howtoaddlanguage'>How to add string file from your language?</a></li>
+                                <li><a href="#support">Need Support?</a></li>
+                                <li><a href="#rating">Your Feedback</a></li>
+                                <li><a href="#contactus">Contact Us</a></li>
+                            </ol>
+                        </div>
+
+                        <section id="appname">
+                            <div class="container">
+                                <h3>How to change app name? </h3>
+                                <ul>
+                                    <li>Open Android Studio > app > res > values > strings.xml</li>
+                                    <li>Enter your app name inside <b>"app_name"</b> string tag:<br />
+                                        <code>&lt;string name="app_name"&gt;<b>Quiz</b>&lt;/string&gt;</code></li>
+                                    <li>You can also change other string text here.</li>
+                                </ul>
+                                <img src="images/app/appname_1.png" alt="image">  
+                                <div class="section_bdr"></div>
+                            </div>                            
+                        </section>
+
+                        <section id="privacy">
+                            <div class="container">
+                                <h3>How to change the Privacy Policy? </h3>
+                                <ul>
+                                    <li>Open Android Studio > app > res > values > strings.xml</li>
+                                    <li>Enter your Privacy Policy inside <b>"term_privacy"</b> string tag:<br />
+                                        <code>&lt;string name="term_privacy"&gt;<b>By Logging / SigningUp in, you agree to our Terms of Service and Privacy Policy</b>&lt;/string&gt;</code></li>
+                                    <li>Use Same Word in your Languge in<code>&lt;string name="privacy_policy"&gt;</code> And <code>&lt;string name="terms"&gt;</code> </li>
+                                    <li><a style="color:#8B0000">If you Don't Use Same Word in your Language Application Will crash.</a></li>
+                                </ul>
+                                <img src="images/app/privacy.png" alt="image">
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="countrycode">
+                            <div class="container">
+                                <h3>How to set country code default?</h3>
+                                <ul>
+                                    <li>Go to fragment > LoginActivityFragment.java</li>
+                                    <li>You will get county code <a href="CountryCode.html">here</a>, Copy code from table.</li>
+                                    <li>Go to Line number <strong>753</strong>  replace your country code in line number <strong>753 </strong> between <strong>"</strong>IN<strong>"</strong>.</li>
+                                </ul>
+                                <img src="images/app/CONTRYCODE.png" alt="image">
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="packagename">
+                            <div class="container">
+                                <h3>How to change the package name? </h3>
+                                <p> You can change it easily from Android Studio. Here are the steps: 
+                                <ul>
+                                    <li>In the Android pane, click on the little gear icon.Uncheck/Deselect the Compact Empty Middle Packages option.</li>
+                                    <li>Your package directory will now be broken up in individual directories.</li>
+                                    <li>Individually select each directory you want to rename, and: Right-click itSelect RefactorClick on RenameIn the Pop-up dialog.</li>
+                                    <li>Click on Rename Package instead of Rename Directory Enter the new name and hit RefactorAllow a minute to let Android Studio update all changes.</li>
+                                    <li>Now open your build.gradle (Usually 'app' or 'mobile'). Update the applicationId to your Package Name and Sync Gradle, if it hasn't already been updated automatically.</li>
+                                </ul>
+                                Note: When renaming com in Android Studio, it might give a warning. In such case, selectRename All.
+                                <img src="images/app/packagename_1.png" alt="image"><br/>
+                                <img src="images/app/packagename_2.png" alt="image"><br/>
+                                <img src="images/app/packagename_3.png" alt="image"><br/>
+                                <img src="images/app/packagename_4.png" alt="image"><br/>
+                                <img src="images/app/packagename_5.png" alt="image"><br/>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="admin">
+                            <div class="container">
+                                <h3>How to set JWT Key and Admin panel url in Android and PHP</h3>
+                                <ul>
+                                    <li>go to android >app >java > com.wrteam.quiz > Constant.java  </li>
+                                    <li>JWT Key is just like password you can create your own and it must be same in Quiz App as well as Php side.</li>
+                                </ul>
+                                <img src="images/app/admin.png" alt="image">
+                                <div class="section_bdr"></div>                                
+                            </div>
+                        </section>
+
+                        <section id="create_fcm">
+                            <div class="container">
+                                <h3>Create Firebase Project for Application.</h3>
+                                <ul>
+                                    <li>We need Firebase project for <b>Firebase PushNotification, Google Sign-In and Facebook Login.</b> </li>
+                                    <li>here is steps for craete project.</li>
+                                </ul>
+                                <img src="images/app/create1.png" alt="image"><br/>
+                                <img src="images/app/create2.png" alt="image"><br/>
+                                <img src="images/app/create3.png" alt="image"><br/>
+                                <img src="images/app/create4.png" alt="image"><br/>
+                                <img src="images/app/create5.png" alt="image"><br/>
+                                <img src="images/app/create6.png" alt="image"><br/>
+                                <img src="images/app/create7.png" alt="image"><br/>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="realtime">
+                            <div class="container">
+                                <h3>Enable Realtime database in firebase console.</h3>
+                                <ul>
+                                    <li>Realtime database we use for battle feture.</li>
+                                    <li style="color:#8B0000">Use Database Default Location (us-central1) If you change then Battle Mode Not Working.
+                                        <img src="images/app/db0.png" alt="image"/><br/>
+                                        <img src="images/app/db.png" alt="image"/>
+                                    </li>
+                                    <li style="color:#8B0000">Realtime database rules must be true like below.because if user dont have read and right permission then they cannot play battle game.
+                                        <img src="images/app/db1.png" alt="image"/>
+                                    </li>
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="emailLogin">
+                            <div class="container">
+                                <h3>Authenticate Using Email and Password on Android With Firebase.</h3>
+                                <ul>
+                                    <li>First of all we have to enable <b>Google Sign-In</b> method in firebase console.</li>
+                                    <li>Now open your project in firebase console.</li>
+                                    <li>In the Firebase console, open the Auth section.</li>
+                                    <li>On the Sign in method tab, enable the Email/password sign-in method and click Save.
+                                        <img src="images/app/email_login1.png" alt="image"><br>
+                                        <img src="images/app/email_login2.png" alt="image"><br>
+                                    </li>
+                                </ul>
+                                <h4 style="color:#8B0000">Only Change sender Name and Subject for verify email and reset Password.</h4>
+                                <img src="images/app/sub_1.png" alt="image"><br>
+                                <img src="images/app/sub_2.png" alt="image"><br>
+                                <div class="section_bdr"></div>                               
+                            </div>
+                        </section>
+
+                        <section id="googleLogin">
+                            <div class="container">
+                                <h3>Authenticate Using Google Sign-In on Android With Firebase.</h3>
+                                <ul>
+                                    <li>First of all we have to enable <b>Google Sign-In</b> method in firebase console.</li>
+                                    <li>Now open your project in firebase console.
+                                        <img src="images/app/google_1.png" alt="img"><br>
+                                        <img src="images/app/google_2.png" alt="img">
+                                    </li>
+                                    <li>Search Android Device Verification and Enable. 
+                                        <img src="images/app/map3.png" alt="img">
+                                    </li>
+                                </ul>
+                                <div class="section_bdr"></div>               
+                            </div>
+                        </section>
+
+                        <section id="phoneLogin">
+                            <div class="container">
+                                <h3>Authenticate Using Mobile Sign-In on Android With Firebase.</h3>
+                                <ul>
+                                    <li>First of all we have to enable <b>Phone Sign-In</b> method in firebase console.</li>
+                                    <li>Now open your project in firebase console.
+                                        <img src="images/app/mobile_login.png" alt="img"><br>
+                                        <img src="images/app/mobile_login1.png" alt="img">   
+                                    </li>
+                                    <li>Do This setting for get SHA-1 KEY goto File ---> Setting ---> Experimental Unchecked below setting.
+                                        <img src="images/app/settingexperi.png" alt="img">
+                                    </li>
+                                    <li>If you haven't yet specified your app's SHA-1 & SHA-256 fingerprint, do so from the Settings page of the Firebase console.
+                                        <img src="images/app/sha_1.png" alt="img"><br> 
+                                        <img src="images/app/google_5.png" alt="img">
+                                    </li>
+                                    <li>After you integrate Google Sign-In, your LoginActivity has code for login you don't have to add anything extra.</li>
+                                    <li>If you want to read code for google sign-in for android you can read here. </li>
+                                    <li><a href="https://developers.google.com/identity/sign-in/android/sign-in" target="_blank">Steps for Integrating Google Sign-In into Your Android App</a>
+                                    <li><font color="green">Refer this video for Google sign-in.</font>
+                                        <iframe width="700" height="500" src="https://www.youtube.com/embed/FpXhZICPVZA?autoplay=0"></iframe>
+                                    </li> 
+                                    <li><b>Note</b> There was <b>three</b> type of SHA-1.
+                                        <ol>
+                                            <li><b>Debug SHA-1 : </b> you can get this sha from your android stuido.</li>
+                                            <li><b>Release SHA-1 :</b> when you create keystore(.jks) file for generate sign apk. you can get release sha from your key store file.
+                                                Use this Desktop App for get release sha from keystore file. <a href="https://keystore-explorer.org/" target="_blank">KeyStore Explorer.</a>
+                                                Add this sha in your firebase project when you test realese apk.</li>
+                                            <li><b>Sign SHA-1:</b>You have add this sha when you publish your app on playstore. You can get this sign sha from your PlayConsole. Without Sign sha your google login not work when your app published on PlayStore.</li>
+
+                                        </ol>
+                                    <li>For App signing certificate  go to > Play Console > Select your App > Release Management > App Signing </li>
+                                </ul>
+                                <img src="images/app/singing.png" alt="img"/>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="facebookLogin">
+                            <div class="container">
+                                <h3>Authenticate Using Facebook Login on Android with Firebase.</h3>
+                                <ul>
+                                    <li>first create project for your application , go to  
+                                        <a href="https://developers.facebook.com/" target="_blank">Facebook for Developers</a>
+                                    </li>
+                                    <li> Go to Facebook Quick Start Integrate the Facebook SDK</li>
+                                    <li>On the <a href="https://developers.facebook.com/" target="_blank">Facebook for Developers</a> site, get the <b>App ID</b> and an <b>App Secret</b> for your app. </li>
+                                    <li> In the <a href="https://console.firebase.google.com/u/0/" target="_blank">Firebase console</a>, open the <b>Auth</b> section. Enable Facebook Login.</li>
+                                    <li>On the <b>Sign in method</b> tab, enable the <b>Facebook</b> sign-in method and specify the <b>App ID</b> and <b>App Secret</b> you got from Facebook.
+                                        <img src="images/app/fb0.png" alt="img"/>
+                                    </li>
+                                    <li>Then, make sure your <b>OAuth redirect URI</b> (e.g. my-app-12345.firebaseapp.com/__/auth/handler) is listed as one of your <b>OAuth redirect URIs</b> in your Facebook app's settings page on the <a href="https://developers.facebook.com/" target="_blank">Facebook for Developers</a> site in the <b>Product Setting > Facebook Login</b> config </li>
+                                    <li>Add the dependencies for Firebase Authentication and Facebook Login SDK to your app-level build.gradle file:
+                                        <img src="images/app/fb1.png" alt="img"/>
+                                    </li>
+                                    <li><b>Edit Your Resources and Manifest</b></li>
+                                    <li>Create strings for your Facebook app ID and for those needed to enable Chrome Custom Tabs. Also, add FacebookActivity to your Android manifest.</li>
+                                    <li>Open your app >res >values >strings.xml file.
+                                        <img src="images/app/fb3.png" alt="img">
+                                    </li>
+                                    <li>Open the app >manifest >AndroidManifest.xml file.</li>
+                                    <li>Add the following meta-data element, an activity for Facebook
+                                        <img src="images/app/fb2.png" alt="img">
+                                    </li>
+                                    <li>Associate Your Package Name and Default Class with Your App</li>
+
+                                    <li>Provide the Development and Release Key Hashes for Your App</li>
+                                    <li>To ensure the authenticity of the interactions between your app and Facebook, you need to supply us with the Android key hash for your development environment. If your app has already been published, you should add your release key hash too.
+                                        <img src="images/app/fb5.png" alt="img">
+                                    </li>
+                                    <li><b>Generating a Development Key Hash</b>
+                                        <ol>
+                                            <li>We will use SHA-1 key to generate hashkey for facebook login.</li>
+                                            <li>you can generate hash online. Here is external link for generate key has for facebook login.<a href="http://tomeko.net/online_tools/hex_to_base64.php" target="_blank">Key hash Genrate Link</a>
+                                                <img src="images/app/hash_key1.png" alt="img"><br> 
+                                                <img src="images/app/hash_key2.png" alt="img">
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li><font color="green">Refer this video for Facebook Login.</font>
+                                        <iframe width="700" height="500" src="https://www.youtube.com/embed/vO2hwOB29wQ?autoplay=0"></iframe>
+                                    </li>
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="fcm">
+                            <div class="container">
+                                <h3>How to Integrate Firebase Cloud Messaging in app?</h3>
+                                <ul>
+                                    <li><b>Integrating Firebase Cloud Messaging</b></li>
+                                    <li>For FCM Notification first you have to register your application with firebase.<li>
+                                    <li><a href='#create_fcm'>Create Firebase Project for Application.</a>  If you already created firebase project then you dont have to do that again.</li>
+                                    <li>Firebase dependency, service class and all nacessary class are already included in project.</li>
+                                    <li>So, you dont have to do extra code here.</li>
+                                    <li>Just download <b>Google-service.json</b> and replace with existing file.</li>
+                                    <li><b>Sending Messages from PHP Backend</b></li>
+                                    <li>Add <b>Firebase Server Key</b> in notification setting. Get server key from your firebase project and set in panel.</li>
+                                </ul>
+                                <img src="images/app/notification1.png" alt="img"><br/>
+                                <img src="images/app/notification.png" alt="img">
+                                <div class="section_bdr"></div>                                
+                            </div>
+                        </section>
+
+                        <section id="inapp">
+                            <div class="container"> <br>
+                                <h3>How to Change IN-APP Purchase key and Coins in app?</h3>
+                                <img src="images/app/inappsetting.png" alt="img"><br/>
+                                <h3>How to Create Product in Google Play Console</h3>
+                                <p>Follow this Link you can get How to Create In-App Purchase Product.<a href="https://support.google.com/googleplay/android-developer/answer/1153481?hl=en#zippy=%2Ccreate-a-single-in-app-product" target="_blank">Click Me</a></p>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="arc">
+                            <div class="container">
+                                <h3>How to Change Arc in NavigationView?</h3>
+                                <ul>
+                                    <li>There is two type arc style for navigation view in quiz you can set according  your own.
+                                        <ol>
+                                            <li> cropInSide </li>
+                                            <li> cropOutSide </li>
+                                        </ol>
+                                        <img src="images/app/arc1.png" alt="img">
+                                    </li>
+                                    <li>You have to just change <b>"arc_cropDirection"</b> value in xml file. </li>
+                                    <li>go to android > app > res > layout > drawer_activity.xml  
+                                        <img src="images/app/arc2.png" alt="img">
+                                    </li>
+                                    <li><b>Use Default Drawer</b></li>
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="levelComplete">
+                            <div class="container">
+                                <h3>Want to costomize some value? like how many correct answers you need to complete current level etc...?</h3>
+                                <ul>
+                                    <li>go to android >app >java > com.wrteam.quiz > Constant.java  </li>
+                                    <li>Here we define  maximum correct answers you need to complete level, rewarded coin when level completed  , some static values and more. </li>
+                                </ul>
+                                <img src="images/app/constant.png" alt="img">
+                                <div class="section_bdr"></div>                                
+                            </div>
+                        </section>
+
+                        <section id="lock">
+                            <div class="container">
+                                <h3>How to Remove Level Lock feature from Application?</h3>
+                                <ul>
+                                    <li>go to android >app >java > com.wrteam.quiz > activity >LevelActivity.java  </li>
+                                    <li>In LevelActivity class there is adapter for levelList, inside  adapter there was some condition for level lock.if you dont want add in your app, then remove it.see below image.</li>
+                                </ul>
+                                <img src="images/app/lock1.png" alt="img"/>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="appcountroll">
+                            <div class="container">
+                                <h3>How to Remove Admob Ads open feature from Application?</h3>
+                                <ul>
+                                    <li>go to android >app >java > com.wrteam.quiz > helper >AppController.java  </li>
+                                    <li>Remove below image line your admob ads open will removed. </li>
+                                </ul>
+                                <img src="images/app/appcountrol.png" alt="image">
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="constant">
+                            <div class="container">
+                                <h3>Constant</h3>
+                                <ul>
+                                    <li>go to android >app >java > com.wrteam.quiz > Constant.java</li>
+                                    <li>Here we define some static values and more.</li>
+                                    <li><h4>How to change circular progress width, color, textSize etc?</h4></li>
+                                    <li>We have two Indicator class in application CircleTimer.java and AudienceProgress.java. </li>
+                                    <li>Now Go to android > app> java > com.wrteam.quiz > helper> Constants.java</li>
+                                    <li>Here you can set background color, progress color,width,strock width,  text attributes and many more.</li>
+                                    <li>In dimen.xml ,we set circle's hight and width.  
+                                        <img src="images/app/circle_constant.png" alt="img"/>
+                                    </li>
+                                    <li><h4>How to change Time , complete level configs, mark for correct and incorrect, textSize etc?</h4>
+                                        <img src="images/app/constant.png" alt="img"/>
+                                    </li>
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="languageMode">
+                            <div class="container">                                
+                                <h3>System Settings for Application.</h3>
+                                <ul>
+                                    <li>Answer Display:= When User Give Wrong Answer You Can Enable and Disable Answer Show Or Not.</li>
+                                    <li>Language Mode:= Enable and Disable Language from admin panel.</li>
+                                    <li>Option E Mode:= Enable and Disable Opation E from admin panel
+                                        <img src="images/app/language_mode.png" alt="img"/>
+                                    </li>
+                                    <li>You Can set Refer & Earn Coin from admin panel.</li>
+                                    <li>You Can set Rward Coin(Watch Videos And earn Coin) from admin panel 
+                                        <img src="images/app/referearn.png" alt="img"/>
+                                    </li>
+                                    <li>App Link:= You have to set Your Application Playstore Link.</li>
+                                    <li>More Apps Link := You Can set Your Developer Page link of Playstore. </li>
+                                    <li>Shareapp Text:= You have to set Your Application Share Text.
+                                        <img src="images/app/applink.png" alt="img">
+                                    </li>
+                                    <li>You can change True and False Value.
+                                        <img src="images/app/truefalse.png" alt="img"/>
+                                    </li>
+                                    <li>About Us:= Add Your Company Details It Will Reflect in Application About Us .</li>
+                                    <li>Instructions:= Add Your Quiz Instructions It Will Reflect in Application Instrucations</li>
+                                    <li>Privacy Policy:= Add Your Quiz Privacy Policy It Will Reflect in Application Privacy Policy</li>
+                                    <li>Terms Conditions:= Add Your Quiz Terms Conditions It Will Reflect in Application Terms of Service
+                                        <img src="images/app/atip.png" alt="img">
+                                    </li>
+                                    <li>Force Update App:= Here you can Enable and Disable Forcefully Update Dailog.</li>
+                                    <li>Daily Quiz Mode:= Here you can Enable and Disable DailyQuiz button. </li>
+                                    <li>Contest Mode:= Here you can Enable and Disable Contest Button.</li>
+                                    <li>In-App Purchase Mode:= Here you can Enable and Disable In-App Purchase Button.
+                                        <img src="images/app/systembtn.png" alt="img">
+                                    </li>
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="howtoaddads">
+                            <div class="container">
+                                <h3>How to change admob id? </h3>
+                                <ul>
+                                    <li>Open Admin panel > Setting > System Configuration</li>
+                                    <li>You have to replace your live AdmobId with Test admobId.</li>
+                                    <li>You can also turn off Ads from in App ads.</li>
+                                </ul>
+                                <img src="images/app/adsimg.png" alt="img">
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <section id="howtomediation">
+                    <div class="container">
+                        <h3>How to add Facebook Audience Network with Mediation? </h3>
+                        <ul>
+                            <li>Please Follow Below Link documentation Don't miss any step.</li>
+                            <li><a href="https://developers.google.com/admob/android/mediation/facebook" target="_blank" style='color:#3c55d1'>Click Here to see Documentation.</a></p></li>
+                            
+                        </ul>
+                    
+                        <div class="section_bdr"></div>
+                    </div>
+                </section>
+            </div>
+        </section>
+                <section id="howtoaddlanguage">
+                    <div class="container">
+                        <h3>How to add string file in your language? </h3>
+                        <ul>
+                            <li>Open Android studio > values > open string.xml file</li>
+                        </ul>
+                        <img src="images/app/langfirst.png" alt="img"><br>
+                        <ul>
+                            <li>How you can translate String.xml file in your language <a href="https://asrt.gluege.boerde.de/" target="_blank">Click here</a></li>
+                            <li>How you can set Default Application language? Constant.java file you can set it. </li>
+                            <img src="images/app/defaultlang.png" alt="img"><br>
+                        </ul>
+                    
+                        <div class="section_bdr"></div>
+                    </div>
+                </section>
+            </div>
+        </section>
+                <section id="quiz_web">
+                    <div class="container">
+                        <header class="major">
+                            <h3>Quiz Online Web</h3>
+                        </header>
+                        <div class="borderTop">
+                            <ol class="alpha">
+                                <li><a href='#admin'>How to change Domain Url to Web Quiz?</a></li>
+                                <li><a href='#create_Firebase'>Create Firebase Project for Web Quiz.</a></li>
+                                <li><a href='#realtime_Database'>Realtime Database.</a></li>
+                                <li><a href='#email_Login'>Authenticate Using Email and Password on Web Quiz With Firebase.</a></li>
+                                <li><a href='#google_Login'>Authenticate Using Google Sign-In on Web Quiz With Firebase.</a></li>
+                                <li><a href='#facebook_Login'>Authenticate Using Facebook Login on Web Quiz with Firebase.</a></li>
+                                <li><a href='#phone_Login'>Authenticate Using Phone Authentication on Web Quiz with Firebase.</a></li>
+                                <li><a href='#setting_Mode'>System Settings for Web Quiz.</a></li>
+                            </ol>
+                        </div>
+
+                        <section id="admin">
+                            <div class="container">
+                                <h3>How to change domain url in Web Quiz?</h3>
+                                <ul>
+                                    <li>Go to <code>assets > js > constant.js</code> </li>
+                                    <li>Set your DOMAIN_URL like this >>  'https://yourdomain.com/' <br/> <b>Note : </b>Especially don't forget to add <b>' forward slash '</b> at the end of the domain URL like this <code>'/'</code></li>
+                                    <li>JWT secret key is just like password & You can create your own. It should be same in Quiz Panel.<br> Replace <b>'set_your_strong_jwt_secret_key'</b> with your values. That's all</li>
+                                </ul>
+                                <img src="images/web/api-url.png">
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="create_Firebase">
+                            <div class="container">
+                                <h3>Create Firebase Project for Web Quiz.</h3>
+                                <ul>
+                                    <li>We need Firebase project for <b>Google Sign-In and Facebook Login.</b></li>
+                                    <li>here is steps for create project.</li>
+                                </ul>                        
+                                <ol>
+                                    <li>Goto 
+                                        <a href="https://console.firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase console.</a>
+                                    </li>
+                                    <li>Register new account or try to log in with existing accout
+                                        <img src='images/web/consolepage.png' alt="Console Page">
+                                    </li>
+                                    <li>Once logged in, you can see firebase console dashboard. Click on Add Project. Provide a project name and then after that click on Create Project. For example, see the below image.
+                                        <img src='images/web/AddProject.png' alt="Add Project">
+                                        <img src='images/web/CreateProject.png' alt="Create Project">
+                                    </li>
+                                    <li>Once the project has been created, it will automatically redirect to Firebase dashboard screen
+                                        <img src='images/web/Dashboard.png' alt="Dashboard">
+                                    </li>
+                                    <li>You need to add web project/application to the firebase project.
+                                        <img src='images/web/Dashboard_1.png' alt="Dashboard">
+                                    </li>
+                                    <li>As mentioned in an earlier image, you can add Firebase to your web app.
+                                        <img src='images/web/Add_webapp_1.png' alt="Add Web Quiz">
+                                    </li>
+                                    <li>Once the web quiz been added into Firebase, you'll get a web quiz configuration Javascript code.
+                                        <img src='images/web/firebase_config.png' alt="Web Quiz Configuration">                                
+                                    </li>
+                                    <li>Set above configuration code in quiz panel. <b>Go to Setting>>Web Firebase Settings menu</b>
+                                        <img src='images/web/firebase_config1.png' alt="Web Quiz Configuration">    
+                                    </li>
+                                </ol>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="realtime_Database">
+                            <div class="container">
+                                <h3>Enable Realtime database in firebase console.</h3>                       
+                                <ul>                             
+                                    <li>Realtime database we use for battle feture.</li>
+                                    <li><p style="color:#8B0000">Use Database Default Location (us-central1) If you change then Battle Mode Not Working.</p>
+                                        <img src="images/web/db0.png" alt="Realtime database">
+                                        <img src="images/web/db.png" alt="Realtime database">
+                                    </li>
+                                    <li>
+                                        <a style="color:#8B0000">Realtime database rules must be true like below.because if user dont have read and right permission then they cannot play battle game.</a>
+                                        <img src="images//web/db1.png" alt="Realtime database">
+                                    </li>                            
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="email_Login">
+                            <div class="container">
+                                <h3>Authenticate Using Email and Password on Web With Firebase.</h3>
+                                <ul>
+                                    <li>First of all we have to enable <b>Google Sign-In</b> method in firebase console.</li>
+                                    <li>Now open your project in firebase console.</li>
+                                    <li>In the Firebase console, open the Auth section.</li>
+                                    <li>On the Sign in method tab, enable the Email/password sign-in method and click Save.</li>
+                                </ul>
+                                <img src="images/web/email_login1.png" alt="Email-Password">
+                                <img src="images/web/email_login2.png" alt="Email-Password"><br/>
+                                <h4 style="color:#8B0000">Only Change sender Name and Subject for verify email and reset Password.</h4>
+                                <img src="images/web/sub_1.png" alt="reset Password">
+                                <img src="images/web/sub_2.png" alt="reset Password">
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="google_Login">
+                            <div class="container">
+                                <h3>Authenticate Using Google Sign-In on Web With Firebase.</h3>
+                                <ul>
+                                    <li>First of all we have to enable <b>Google Sign-In</b> method in firebase console.</li>
+                                    <li>Now open your project in firebase console.
+                                        <img src="images/web/google_1.png" alt="Google Sign-In"><br><br>
+                                        <img src="images/web/google_2.png" alt="Google Sign-In"><br><br>                              
+                                    </li>
+                                    <li>
+                                        Now at the bottom of the page,  in "Authorized domains", localhost and a Firebase domain  are automatically added. Here we've to add domain name without http:// and https:// webquiz will get hosted.
+                                        <small>If you're using www as prefix of domain name then you must have to add that.</small>
+                                        <img src='images/web/firebase-authentication.png' alt="firebase authentication">
+                                    </li>
+                                    <li>Go to <a href="https://console.developers.google.com/" target="_blank">Google Developers Console</a></li>
+                                    <li>In the API & Services, open the Credentials section.</li>
+                                    <li>
+                                        Copy Client ID from OAuth 2.0 Client IDs in Credentials section and Paste in quiz panel. <b>Go to Setting>>Web Firebase Settings menu</b>
+                                        <img src="images/web/developer_console.png" alt="Developers Console">  
+                                    </li>                            
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="facebook_Login">
+                            <div class="container">
+                                <h3>Authenticate Using Facebook Login on Web with Firebase.</h3>
+                                <ul>
+                                    <li>You must configure your webquiz with <b>https</b></li>
+                                    <li>first create project for your application , go to  <a href="https://developers.facebook.com/" target="_blank">Facebook for Developers</a></li>
+                                    <li>Go to Facebook Quick Start Integrate the Facebook SDK</li>
+                                    <li>On the <a href="https://developers.facebook.com/" target="_blank">Facebook for Developers</a> site, get the <b>App ID</b> and an <b>App Secret</b> for your app. </li>
+                                    <li>Go to Setting > Basic, Add your app domain, without http:// and https://
+                                        <img src="images/web/fb_add_domain.png" alt="Facebook Login">
+                                    </li>
+                                    <li>In the <a href="https://console.firebase.google.com/u/0/" target="_blank">Firebase console</a>, open the <b>Auth</b> section. Enable Facebook Login.</li>
+                                    <li>On the <b>Sign in method</b> tab, enable the <b>Facebook</b> sign-in method and specify the <b>App ID</b> and <b>App Secret</b> you got from Facebook.
+                                        <a href="#facebook_Login"><img src="images/web/fb0.png"></a><br><br>
+                                    </li>
+                                    <li>Then, make sure your <b>OAuth redirect URI</b> (e.g. my-app-12345.firebaseapp.com/__/auth/handler) is listed as one of your <b>OAuth redirect URIs</b> in your Facebook app's settings page on the <a href="https://developers.facebook.com/" target="_blank">Facebook for Developers</a> site in the <b>Product Setting > Facebook Login</b> config </li>
+                                    <li>
+                                        Change Your Facebook app ID in quiz panel. <b>Go to Setting>>Web Firebase Settings menu</b>
+                                        <img src="images/web/firebase_config1.png" alt="Firebase">  
+                                    </li>
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="phone_Login">
+                            <div class="container">
+                                <h3>Authenticate Using Phone Authentication on Web with Firebase.</h3>
+                                <ol>
+                                    <li>
+                                        To enable phone authentication mode from the Firebase console. From the left sidebar there will be an option for Authentication. Once you click on the Authentication menu there will be an option for Sign-In Method.
+                                    </li>
+                                    <li>Once you click on Sign-In Method, a new list with the multiple sign in providers will appear. From that list you need to choose the Phone option to enable it. So you need to click on the pencil icon which will appear when you hover on Phone from the list. You need to eneble the phone authentication from the screen just like the below images.
+                                        <img src='images/web/PhoneMethod.png' alt="Phone Method">
+                                        <img src='images/web/EnablePhone.png' alt="Enable Phone">
+                                    </li>
+                                    <li>There will be an option to test authentication as well, so you can click on it. There, you need to provide the number. It will automatically send the verification code to the given number. In  this way you can test and verify the authentication using your phone number.
+                                        <img src='images/web/Verification.png' alt="Verification">
+                                    </li>                            
+                                </ol>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="setting_Mode">
+                            <div class="container">
+                                <h3>System Settings for Web Quiz.</h3>
+                                <ul>
+                                    <li>Answer Display:= When User Give Wrong Answer You Can Enable and Disable Answer Show Or Not.</li>
+                                    <li>Language Mode:= Enable and Disable Language from admin panel.</li>
+                                    <li>Option E Mode:= Enable and Disable Opation E from admin panel.</li>
+                                    <li>Daily Quiz Mode:= Here you can Enable and Disable DailyQuiz button.</li>
+                                    <li>Contest Mode:= Here you can Enable and Disable Contest Button.
+                                        <img src="images/web/setting_mode.png" alt="System Settings">
+                                    </li>
+                                    <li>You Can set fix number of question per level.
+                                        <img src="images/web/levelNumber.png" alt="System Settings">
+                                    </li>
+                                    <li>You Can set Refer & Earn Coin from admin panel.
+                                        <img src="images/web/referearn.png" alt="System Settings">
+                                    </li>
+                                    <li>You can change True and False Value.
+                                        <img src="images/web/truefalse.png" alt="System Settings">
+                                    </li>                            
+                                    <li>About Us:= Add Your Company Details It Will Reflect in Web Quiz About Us .</li>
+                                    <li>Instructions:= Add Your Quiz Instructions It Will Reflect in Web Quiz Instrucations</li>
+                                    <li>Privacy Policy:= Add Your Quiz Privacy Policy It Will Reflect in Web Quiz Privacy Policy</li>
+                                    <li>Terms Conditions:= Add Your Quiz Terms Conditions It Will Reflect in Web Quiz Terms of Service
+                                        <img src="images/web/atip.png" alt="System Settings">
+                                    </li>                            
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section id="quiz_ios">
+                    <div class="container">
+                        <header class="major">
+                            <h3>Quiz Online IOS</h3>
+                        </header>
+                        <div class="borderTop">
+                            <ol class="alpha">
+                                <li><a href='#iosadmin'>How to change server url & Access key in application?</a></li>
+                                <li><a href='#ioslaunchScreen'>How to change Launch screen / Splash screen in application?</a></li>
+                                <li><a href='#iosrealTimeDatabase'>Firebase Function Integration</a></li>
+                                <li><a href='#iosemailLogin'>Authenticate Using Email and Password on iOS With Firebase.</a></li>
+                                <li><a href='#iosgoogleLogin'>Authenticate Using Google Sign-In & OTP Based Login on iOS With Firebase.</a></li>
+                                <li><a href='#iosfacebookLogin'>Authenticate Using Facebook Login on iOS with Firebase.</a></li>
+                                <li><a href='#iosappleSign'>Authentication Using Sign in with Apple with Firebase</a></li>
+                                <li><a href='#iosinAppPurchase'>How to Add / Change In-App purchase Ids and Coins in app?</a></li>
+                                <li><a href="#iossysConfig">How to Configure System? ( How to Set App Link , Link for More Apps of Your own , Maintain Your App Version , Text to Share App , TimeZone )</a></li>
+                                <li><a href="#iosenableMode">How to Enable / Disable Language Mode Or Option E Mode Or Force Update App Or Daily Quiz Mode Or Contest Mode?</a></li>
+                                <li><a href="#iossysConfig2"> Where to Set Refer Coin, Earn Coin, Reward Coin, Answer mode,Fix Question per Level & True or False Value ? </a></li>
+                                <li><a href="#iossysConfig3"> Where to Set Random / Group Battle with Category Or without Category Selection? & Also Enable / Disable In-App Purchase? </a></li>
+                                <li><a href="#iossysConfig4"> Where to Set About Us, Instructions , Terms Conditions and privacy Policy ? </a></li>
+                                <li><a href='#ioslevelComplete'>Want to costomize some value? like how many correct answers you need to complete current level etc ...? </a></li>
+                                <li><a href='#ioslock'>How to Remove Level Lock feature from Application?</a></li>
+                                <li><a href='#ioshowtoaddads'>How to add / change Admob Banner/Rewarded id?</a></li>
+                                <li><a href='#iosnotification'>How to Set Notification Settings?</a></li>
+                                <li><a href='#iosdailyquiz'>How to Set Daily Quiz Settings?</a></li>
+                                <li><a href='#ioscontest'>How to Set Contest Settings?</a></li>
+                                <li><a href='#iosremoveads'>How to Remove Admob Ads?</a></li>
+                                <li><a href='#iosnote'>Notes</a></li>
+                            </ol>
+                        </div>
+
+                        <section id="iosadmin">
+                            <div class="container">
+                                <h3>How to change admin page url, Access key and JWT Key in application?</h3>
+                                <ul>
+                                    <li>go to Quiz > Quiz.xcworkspace > Quiz > ExtensionFile > QuizSetting.swift  </li>
+                                    <li>JWT is just like password you can create by your own & it must be same in Quiz App and Php side as well. </li>
+                                </ul>
+                                <a href="#admin"><img src="images/ios/apiUrl.png"></a><br>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="ioslaunchScreen">
+                            <div class="container">
+                                <h3>How to change Launch screen / Splash screen in application?</h3>
+                                <ul>
+                                <li>go to Quiz > Quiz.xcworkspace > Quiz > LaunchScreen.storyboard file.</li>
+                                <li>Change Background Color Image & App Logo Image and Label Text there as Shown below.</li>
+                                                                </ul>
+                                <a href="#admin"><img src="images/ios/launchScreen.png"></a><br>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="iosrealTimeDatabase">
+                            <div class="container">
+                                <h2>Firebase Function Integration</h2>
+                                <h3><b>Create a Firebase project</b></h3>
+                                <ul>
+                                    <li>1. In the <a href="https://console.firebase.google.com/u/0/">Firebase console</a>, click <b>Add project</b>, then select or enter a <b>Project name</b>.
+                                        If you have an existing Google Cloud Platform (GCP) project, you can select the project from the <b> Project name </b>dropdown menu. Otherwise, enter a new <b>Project name</b>.
+                                    </li>
+                                    <li>2. (Optional) Edit the Project ID. <br>
+                                        Firebase automatically assigns a unique ID to your Firebase project. Visit <a href="https://firebase.google.com/docs/projects/learn-more#project-id"> Understand Firebase Projects </a>to learn about how Firebase uses the project ID.</li>
+                                    <li>3. Follow the remaining setup steps in the Firebase console, then click <b>Create project</b> (or <b>Add Firebase</b>, if you're using an existing Google project).</li>
+                                    <li>Firebase automatically provisions resources for your Firebase project. When the process completes, you'll be taken to the overview page for your Firebase project in the Firebase console.</li>
+                                    <li>Now that you have a project, you can add your iOS app to it:</p>
+                                    <li>1. Click <b>Add Firebase to your iOS app</b> and follow the setup steps. If you're importing an existing Google project, this may happen automatically and you can just <a href="https://support.google.com/firebase/answer/7015592"> download the config file.</a></li>
+                                    <li>2. When prompted, enter your app's bundle ID. It's important to enter the bundle ID your app is using; this can only be set when you add the app to your Firebase project.</li>
+                                    <li>3. Go to Database Tab, Then Select <b>Realtime Databse</b> > Rules > Set .read and .write to <b>true</b>.
+                                        <a href="#iosadmin"><img src="images/ios/Firebase-Rules.png"></a><br>
+                                    </li>
+                                    <li>4. Add the Firebase iOS configuration file to your app:</li>
+                                    <li>Click <b>Download GoogleService-Info.plist</b> to obtain your Firebase iOS config file <code> (GoogleService-Info.plist)</code>.<br>
+                                        You can download your <a href="https://support.google.com/firebase/answer/7015592">Firebase iOS config file</a> again at any time.</li>
+                                    <li>Move your config file into the root of your Xcode project. If prompted, select to add the config file to all targets.</li>
+                                    <li>* Note: The Firebase config file contains unique, but non-secret identifiers for your project.
+                                        Visit Understand Firebase Projects to learn more about this config file.</li>
+                                    <li>5. After you add the initialization code, run your app to send verification to the Firebase console that you've successfully installed Firebase.</li>
+                                    <li>Visit <a href="https://firebase.google.com/docs/projects/learn-more#best-practices"> Understand Firebase Projects</a> to learn more about best practices and considerations for adding apps to a Firebase project, including how to handle multiple build variants.</li>
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+
+                        <section id="iosemailLogin">
+                            <div class="container">
+                                <h3>Authenticate Using Email and Password on iOS With Firebase.</h3>
+                                <h4><b>Implement Email Sign-In</b></h4>
+                                <ul>
+                                <li>a. In the <a href="https://console.firebase.google.com/u/0/">Firebase console</a>, open the <b>Authentication</b> section.</li>
+                                <li>b. On the <b> Sign-in method </b>tab , enable the <b>Email/Password</b> sign-in method.</li>
+                                <li>c. You can change Sender Name , From , Subject , Message From <b> Authentication </b> Section , In <b>Templates</b> Tab >  <b>Email Address Verification</b> and <b>Password reset.</b></li>
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="iosgoogleLogin">
+                            <div class="container">
+                                <h3>Authenticate Using Google Sign-In & OTP Based Login on iOS With Firebase.</h3>
+                                <h4><b>Implement Google Sign-In</b></h4>
+                               <h5><b>1. Add custom URL schemes to your Xcode project:</b></h5>
+                                <ul>
+                                <li>a. Open your project configuration: double-click the project name in the left tree view. Select your app from the <b>TARGETS</b> section, then select the <b>Info</b> tab, and expand the <b>URL Types</b> section. </li>
+                                <li>b. Click the <b>+</b> button, and add a <b>URL scheme </b>for your reversed client ID. To find this value, open the <code>GoogleService-Info.plist</code> configuration file, and look for the <code>REVERSED_CLIENT_ID </code> key. Copy the value of that key, and paste it into the URL Schemes box on the configuration page. Leave the other fields blank.<br/>
+                                    When completed, your config should look something similar to the following (but with your application-specific values): </li>
+                                </ul>
+                                <img src="images/ios/xcode_infotab_url_type_values.png"/>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="iosfacebookLogin">
+                            <div class="container">
+                                <h3>Authenticate Using Facebook Login on iOS</h3>
+                                <ul>
+                                    <li>1. If you haven't yet connected your app to your Firebase project, do so from the <a href="https://console.firebase.google.com/u/0/">Firebase console</a></li>
+                                    <li>2. On the <a href="https://developers.facebook.com/">Facebook for Developers </a> site, get the <b>App ID </b>and an <b>App Secret</b> for your app. </li>
+                                    <li>3. Enable Facebook Login: </li>
+                                    <li>a. In the <a href="https://console.firebase.google.com/u/0/">Firebase console</a>, open the <b>Auth</b> section.</li>
+                                    <li>b. On the <b> Sign in method </b>tab, enable the <b>Facebook</b> sign-in method and specify the <b>App ID </b>and <b>App Secret</b> you got from Facebook.</li>
+                                    <li>c. Then, make sure your <b> OAuth redirect URI </b><code>(e.g. my-app-12345.firebaseapp.com/__/auth/handler)</code> is listed as one of your <b>OAuth redirect URIs </b>in your Facebook app's settings page on the <a href="https://developers.facebook.com/">Facebook for Developers site</a> in the <b> Product Settings > Facebook Login </b> config.</li>
+</ul>
+                                    <h2>Add Facebook Id at Info.plist file</h2>
+                                    <img src="images/ios/fb-info.png"><br><br>
+
+                                    <h2>At Info > URL Types</h2>
+                                    <img src="images/ios/fb-url-types.png"><br><br>
+
+                                <div class="section_bdr"></div>
+
+                            </div>
+                        </section>
+
+                        <section id="iosappleSign">
+                            <div class="container">
+
+                                <h3>Authentication Using Sign in with Apple with Firebase</h3>
+                                <ul>
+                                <li>a. In the <a href="https://console.firebase.google.com/u/0/">Firebase console</a>, open the <b>Authentication</b> section.</li>
+                                <li>b. On the <b> Sign-in method </b>tab , enable the <b>Apple</b> sign-in method.</li>
+                                </ul>
+                                    <p>To configure code project, perform the following steps in Xcode:</p>
+                                    <ul>
+                                    <li><p>On the Signing &amp; Capabilities pane, <a href="https://help.apple.com/xcode/mac/current/#/deve21d0239c">set the bundle ID</a> to a unique identifier (you must change the bundle ID to proceed).</p></li>
+                                    <li><p><a href="https://help.apple.com/xcode/mac/current/#/devaf282080a">Add your Apple ID account</a> and <a href="https://help.apple.com/xcode/mac/current/#/dev23aab79b4">assign the target to a team</a> so Xcode can enable the Sign in with Apple capability with your provisioning profile.</p></li>
+                                    <li><p>Add Capability by clicking the + button. Search for Sign In with Apple Capability in Capability Library.</p>
+                                         <a href="#admin"><img src="images/ios/apple.png"></a>
+                                    </li>                                   
+                                    <li><p>Choose a run destination from the scheme pop-up menu that you’re signed into with an Apple ID and that uses Two-Factor Authentication.</p></li>
+                                    <li><p>If necessary, click Register Device in the Signing &amp; Capabilities pane to create the provisioning profile.</p></li>
+                                    <li><p>In the toolbar, click Run, or choose Product &gt; Run (⌘R).</p></li>
+                                </ul>
+                                <div class="section_bdr"></div>
+                            </div>
+                        </section>
+
+                        <section id="iosinAppPurchase">
+                            <div class="container">
+
+                                <h2>How to Add / Change In-App purchase Ids and Coins in app?</h2>
+                                <ul>
+                                    <li><p>For in-App Purchase setup in your AppStore Account > Your App, Please Follow Steps Mentioned <a href="https://help.apple.com/app-store-connect/#/devb57be10e7">Here</a></p></li>
+
+                                    <li><p>After successful setup of In-App Purchase in your AppStore Connect > Your App, Add Capability by clicking the + button. Search for In-App Purchase in Capability Library & add it.</p></li>
+                                    <a href="#iosadmin"><img src="images/ios/inAppPurchase.png"></a><br>
+                                    <li><p>Go to Quiz > CollectionViewFiles > CoinStoreViewController.swift file.</p></li>
+                                    <li><p>You will find <b>var productIdentifier & productIdentifier2 </b> there. Change value of it same as you have prepared in your <b>Appstore Connect Account > Your App > In-App Purchase</b> & add all that Product Ids there in <b>productIDS of fetchProduct() function</b> in the same file.</p></li>
+                                    <li><p>You can add as much Products you want. Here we have added only 4 Products with 2 different Product Ids and you can also add different Imageset in Assets folder & you will be able to customise number of coins also as shown below.</p></li>
+                                    <a href="#iosadmin"><img src="images/ios/inAppPurchaseCode.png"></a><br>
+                                </ul>
+
+                                <div class="section_bdr"></div>
+
+                            </div>
+                        </section>
+
+
+                        <section id="iossysConfig">
+                            <div class="container">
+                                <h2>How to Configure System? (How to Set App Link , More Apps of Your own , Maintain Your App Version , Text to Share App , TimeZone )</h2>
+
+
+                                <li>go to Admin Panel > Settings > System Configurations </li>
+                                1. System Timezone As Per your Requirement.</br>
+                                2. iOS App Link.</br>
+                                3. More App Links - Link of Your Apple Store Profile to find Your Other apps.</br>
+                                4. App Version.</br>
+                                5. Custom Share App text.</br>
+                                Don't forget to click <b>Save Settings</b>.</li><br>
+
+
+                                <a href="#iosadmin"><img src="images/ios/sysConfig.png"></a><br>
+                                <br>
+                                </p>
+
+                                <div class="section_bdr"></div>
+
+                                </ul>
+                            </div>
+                        </section>
+
+
+                        <section id="iosenableMode">
+                            <div class="container">
+                                <h2>How to Enable / Disable Language Mode Or Option E Mode Or Force Update App Or Daily Quiz Mode Or Contest Mode?</h2>
+
+
+                                <li>go to Admin Panel > Settings > System Configurations. </li><br>
+                                <li>Code handled in <b>SystemConfig.swift</b> File  </li><br>
+
+                                <div class="section_bdr"></div>
+
+                                </ul>
+                            </div>
+                        </section>
+
+
+                        <section id="iossysConfig2">
+                            <div class="container">
+                                <h2> Where to Set Refer Coin, Earn Coin, Reward Coin, Answer mode,Fix Question per Level & True or False Value ? </h2>
+
+
+                                <li>Now Admin can set values of Refer Coin for A Friend Who uses your Refer Code & Earn Coin for User whose Refer Code is going to be used by Friends. <br> We have also <b>added True / False Questions</b> As we have added <b>Option E</b> In Previous Update </li>
+                                <li>Go to Admin Panel > Settings > System Configurations </li>
+                                1. Refer Coin </br>
+                                2. Earn Coin </br>
+                                3. Reward Coin - As it's name suggests, here you can set value of Coins to be earned by watching Reward Ads During Play Quiz.</br>
+                                4. Answer Display - Enable this If you want users to see Correct Answer while they choose Wrong one from Given Options.</br>
+                                5. Fix Question in Level and Total Question per Level - Enable this If you want Fix Number of Questions for Every Level and If You are enabling it, it will set Limit for all Level Questions as the One You Select in Total Question per Level here.</br>
+                                6. True Or False Value - Incase You are using specific Language other than English, Then you can set Values for True Or False. </br>
+                                7. Force Update - You can enable / disable Force App Version Update Dialogue in your App.</br>
+                                Make Sure none of fields are blank here, even if You don't have any specific value, then You can put any dummy value for testing too.<br>
+                                Don't forget to click <b>Save Settings</b>.</li><br>
+
+
+                                <a href="#admin"><img src="images/ios/sysConfig2.png"></a><br>
+                                <br>
+                                </p>
+
+                                <div class="section_bdr"></div>
+
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="iossysConfig3">
+                            <div class="container">
+                                <h2> Where to Set Random / Group Battle with Category Or without Category Selection? & Also Enable / Disable In-App Purchase?  </h2>
+
+
+                                <li>Now Admin can set values for  Random Battle / Group Battle with Selected Category Or With just Random Category & In-App Purchase as well.</li>
+                                <li>Go to Admin Panel > Settings > System Configurations </li>
+                                1. Battle Random Category Mode </br>
+                                2. Battle Group Category Mode </br>
+                                3. In-App Puchase</br>
+                                Don't forget to click <b>Save Settings</b>.</li><br>
+
+
+                                <a href="#admin"><img src="images/ios/sysConfig3.png"></a><br>
+                                <br>
+                                </p>
+
+                                <div class="section_bdr"></div>
+
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="iossysConfig4">
+                            <div class="container">
+                                <h2> Where to Set About Us, Instructions , Terms Conditions and privacy Policy ?  </h2>
+
+
+                                <li>About Us: Add Your Company Details It Will Reflect in Application About Us .</li>
+                                <li>Instructions: Add Your Quiz Instructions It Will Reflect in Application Instructions</li>
+                                <li>Privacy Policy: Add Your Quiz Privacy Policy It Will Reflect in Application Privacy Policy</li>
+                                <li>Terms Conditions: Add Your Quiz Terms Conditions It Will Reflect in Application Terms of Service</li><br>
+                                Don't forget to click <b>Save Settings</b>.</li><br>
+
+
+                                <a href="#admin"><img src="images/ios/sysConfig4.png"></a><br>
+                                <br>
+                                </p>
+
+                                <div class="section_bdr"></div>
+
+                                </ul>
+                            </div>
+                        </section>
+
+
+                        <section id="ioslevelComplete">
+                            <div class="container">
+                                <h2>Want to costomize some value? like how many correct answers you need to complete current level etc...?</h2>
+
+
+                                <li>Go to quiz > Quiz.xcworkspace > Quiz > QuizSetting.swift  </li>
+                                <li>Here we define maximum correct answers you need to complete level, rewarded coin when level completed, Points for Right Answers in Contest, timer value for Group Battle and some static values and more. </li><br>
+
+
+                                <a href="#ioslevelComplete"><img src="images/ios/qstn-status.png"></a><br>
+                                <br>
+                                </p>
+
+                                <div class="section_bdr"></div>
+
+                                </ul>
+                            </div>
+                        </section>
+
+
+                        <section id="ioslock">
+                            <div class="container">
+                                <h2>How to Remove Level Lock feature from Application?</h2>
+
+
+                                <li>Go to quiz > Quiz.xcworkspace > Quiz > LevelView.swift  </li>
+                                <p>If no need lock level, remove this code from here:</p>
+                                <img src="images/ios/level-lock-unlock.png"><br>
+                                <p>Also remove the highlighted boxed line from LevelView.swift file.</p>
+                                <img src="images/ios/level-lock-unlock3.png"><br>
+
+                                <li>Go to quiz > Quiz.xcworkspace > Quiz > ResultsViewController.swift </li>
+                                <p>Change this code from <code>@IBAction func nxtButton(_ sender: UIButton)</code> function </p>
+                                <img src="images/ios/level-lock-unlock2.png">
+                                <br>
+                                <br>
+                                </p>
+
+                                <div class="section_bdr"></div>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="ioshowtoaddads">
+                            <div class="container">
+                                <br>
+                                <h2>How to change admob id? </h2>
+                                <p>
+                                <h4>Update your Info.plist</h4>
+                                <li>In your app's Info.plist file, add a GADApplicationIdentifier key with a string value of your AdMob app ID. </li>
+                                <img src="images/ios/admob_app_id_plist.png"><br><br>
+                                <li>Open quiz > Quiz.xcworkspace > Quiz > QuizSetting.swift</li>
+                                <p>Change AD Unit Id from here:</p>
+                                <img src="images/ios/admob.png"><br>
+                                </ol>
+                                </p>
+
+                                <div class="section_bdr"></div>
+
+                            </div>
+                        </section>
+
+
+                        <section id="iosnotification">
+                            <div class="container"> <br>
+                                <h2>How to Set Notification Settings?</h2>
+                                <b>In Xcode</b>
+                                <li>Set Notifications by Adding <b>Capability</b> from <b>Signing & Capabilities</b> Tab</li>
+                                1). Background Modes > A). Background Fetch, B).Remote Notifications, C).Background Processing.<br>
+                                2). Push Notifications If you haven't added it already!  As Shown below.
+                                <img src="images/ios/notificationSetting-Xcode.png"><br><br>
+
+                                <b>In Firebase</b></br>
+                                1). You can Copy Server Key from <b>Project Credentials</b> Inside <b>Cloud Messaging</b> Tab</br>
+                                2). Upload APNs Authentication key / Certificate inside <b>IOS app Configuration</b> on the same tab.<br>
+                                <img src="images/ios/notificationSetting-firebase.png"><br><br>
+
+                                <b>In Admin Panel</b></br>
+                                <li>go to Admin Panel > Settings > Notification Settings > FCM Server Key & Enter Server URL Copied from Firebase. And Don't Forget to Click <b>Update FCM Server Key</b> </li>
+                               <img src="images/ios/AdminPanel-1.png"><br><br>
+
+                                <li>To Send Notification, Move to <b>Send Notifications</b> Menu<br></li>
+                                1). Select <b>Selected Users</b> type As All or Just some of Selected User from list on Right Side & Don't Forget to Click <b>Get Selected Users</b> incase Of selected Users only.<br>
+                                2). Select <b>Type</b> As Default or Main Category. Incase you select Main Category, you have to select Main category from given List of Categories.<br>
+                                3). Set <b>Title</b> and <b>Message</b> as you want.</br>
+                                4). If you want to attach an image file to your Notification, Just Check <b>include image</b>  & Choose File from your System. & Click <b>Send Notification</b>.  That's it !!
+
+                               <img src="images/ios/AdminPanel-2.png">
+
+                                <div class="section_bdr"></div>
+
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="iosdailyquiz">
+                            <div class="container"> <br>
+                                <h2>How to Set Daily Quiz Settings?</h2>
+                                <b>In Admin Panel</b></br>
+                                <li>go to Admin Panel > Daily Quiz > Select Main Category & Sub Category > <b>Filter Questions</b> & select the ones you want to <b>Add</b> in Daily Quiz. And Don't Forget to Click <b>Save</b> </li>
+                                <img src="images/ios/DailyQuiz.png"><br><br>
+
+                                <div class="section_bdr"></div>
+
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="ioscontest">
+                            <div class="container"> <br>
+                                <h2>How to Set Contest Settings?</h2>
+                                <b>In Admin Panel</b></br>
+                                <li>go to Admin Panel > Contest > You can Create a Contest , Manage Contest Questions and you can also Import Questions for Contest.</li>
+                                <a href="#appname"><img src="images/ios/Contest.png"></a><br><br>
+
+                                <b>In Xcode</b></br>
+                                <li>You can set Points for Right Answer of Contest Question from QuizSettings & we are using same points deduction for Wrong answer As Main Quiz i.e. 2 Points.</li>
+                                <a href="#appname"><img src="images/ios/contest_truePoints.png"></a><br><br>
+
+                                <div class="section_bdr"></div>
+
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="iosremoveads">
+                            <div class="container"> <br>
+                                <h2>How to Remove Admob Ads?</h2>
+                                To Remove Ads in ios app you have to go through following steps ,<br>
+                                1.  remove GADApplicationIdentifier key and its value from info.plist<br>
+                                2.  remove BANNER_AD_UNIT_ID,REWARD_AD_UNIT_ID,INTERSTITIAL_AD_UNIT_ID,AD_TEST_DEVICE variables from ExtensionFile > QuizSetting.swift and remove wherever this variables are used throughout project.<br>
+                                3.  remove import GoogleMobileAds header file wherever used, throughout project, and on the same swift files - you will find objects of type GADInterstitial , GADBannerView,requestAppOpen,GADAppOpenAd  and related properties of an object, delegates GADBannerViewDelegate,GADFullScreenContentDelegate and  func RequestInterstitialAd(),Ad(),watchAd() throughout the project & also remove extension in MoreOptionsView.<br>
+                                4.  For reward ads - Change alert message and concept by your own in  ShowAlertForNotEnoughCoins() In some Play Areas.<br>
+                                5.  remove  pod 'Google-Mobile-Ads-SDK' from podfile<br>
+                                6.  remove Google-Mobile-Ads-SDK throughout podfile.lock file<br>
+                                7. Install pods using Terminal<br>
+
+                                <div class="section_bdr"></div>
+
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id = "iosnote"><br>
+                            <p><b>Note: </b>If you are changing any object positioning or something in Design. make sure you change in both files <b>Main.storyboard</b> & <b>Ipad.storyboard</b> for Ipad.</p>
+                            <p><b>Note:</b> Regarding Installation of App Version 7.0.1.<br>Uninstall any previous version of app (i.e. 7.0.0, 6.0.1, 5.5, etc.) before running this version of app in real device / simulator as there is some change in Core/Local Data element Names.</p>
+                            <div class="section_bdr"></div>
+                        </section>
+
+                    </div>
+                </section>
+
+                <section id="support">
+                    <div class="container">
+                        <h3>Need Support?</h3>
+                        <p>Its our pleasure to serve our service and support. please contact our support team.</p>
+                        <p>Android Head of Customer Support : Kishan Mevada <a href="https://join.skype.com/invite/vSHBqBXIDPzO" target="_blank" style='color:#3c55d1'>Skype Name :  Kishan Mevada</a></p>
+                        <p>IOS Head of Customer Support : Devanshi Gor <a href="https://join.skype.com/invite/qrIHyaH38j1n" target="_blank" style='color:#3c55d1'>Skype Name :  Devanshi Gor</a></p>
+                        <p>To help our customers, we constantly be in touch with every customer if they need any assistance regarding our product. 
+                            We offer our customers a support from  <strong> Mon – Fri 9.00am to 6.00pm IST (GMT +5.30) – We are a Team located in India – Asia.</strong></p>
+                        <p>Typically we reply our customers for all the questions and queries within 24 hours of time via comments, support forum or emails.</p>
+                    </div>
+                </section>
+                <section id="rating">
+                    <div class="container"> <br>
+                        <h3>Your Feedback </h3>
+                        <p>Dear valuable customer,
+                            Thank you very much for choosing our product.
+                            It's our pleasure to serve top-notch service to you.
+                            Please give us your honest feedback that will help us to make a more strong and reliable product by click here <a href="https://codecanyon.net/item/quiz-online/22412465" style='color:#3c55d1' target="_blank">Rate Us</a>.
+                            Thank you very much.</p>
+                    </div>
+                </section>
+                <section id="contactus">
+                    <div class="container">
+                        <h3>Contact Us</h3>
+                        <p>WRTeam has creative and dedicated group of developers who are mastered in Apps Developments and Web Application Development with a niche in delivering quality solutions to customers across the globe.
+                            Contact us today to find out how we can help you or for freelance work.
+                        <p>Visit Us : <a href="https://wrteam.in/" target="_blank"><span style="color:#0e8bcb;">https://wrteam.in</span> </a>
+                        <p>Mail Us : info@wrteam.in</p>
+                        <p>Thank you very much.</p>
+                        <div class="section_bdr"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- Scripts --> 
+        <script src="assets/js/jquery.min.js"></script> 
+        <script src="assets/js/jquery.scrollzer.min.js"></script> 
+        <script src="assets/js/jquery.scrolly.min.js"></script> 
+        <script src="assets/js/skel.min.js"></script> 
+        <script src="assets/js/util.js"></script> 
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

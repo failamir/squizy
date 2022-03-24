@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+    <defs>
+        <clipPath id="htky06vyka">
+            <path d="M0 0h21v21H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="name" style="clip-path:url(#htky06vyka)">
+        <g data-name="Layer 2">
+            <g data-name="Layer 1">
+                <path data-name="Path 4848" d="M14.251 11.007a6.141 6.141 0 0 0 2.405-5.8 6.141 6.141 0 1 0-9.908 5.752 10.7 10.7 0 0 0-6.745 8.912 1.024 1.024 0 0 0 1.024 1.11 1.024 1.024 0 0 0 1.024-.87 8.6 8.6 0 0 1 8.444-7.851h.1a8.608 8.608 0 0 1 8.352 7.851 1.024 1.024 0 0 0 1.024.87 1.024 1.024 0 0 0 1.024-1.105 10.686 10.686 0 0 0-6.745-8.864zm-3.818-.737a4.248 4.248 0 1 1 .1 0z"/>
+            </g>
+        </g>
+    </g>
+</svg>

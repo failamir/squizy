@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39.437" height="42.501" viewBox="0 0 39.437 42.501">
+    <defs>
+        <filter id="uv4cdqshma" x="0" y="0" width="39.437" height="42.501" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g style="filter:url(#uv4cdqshma)" data-name="play">
+        <path data-name="play" d="M20.308 10.274 3.464.317A2.284 2.284 0 0 0 0 2.293V22.2a2.3 2.3 0 0 0 3.464 1.98l16.844-9.953a2.294 2.294 0 0 0 0-3.953z" transform="translate(9 6)" style="fill:#fff"/>
+    </g>
+</svg>
