@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/imgsplash"
-        android:layout_width="173dp"
-        android:layout_height="179dp"
+        android:layout_width="169dp"
+        android:layout_height="160dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:background="@drawable/ic_homelogo"
