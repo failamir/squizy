@@ -228,6 +228,26 @@
                     android:paddingTop="@dimen/margin_10dp"
                     android:paddingBottom="@dimen/margin_10dp">
 
+
+
+                    <RelativeLayout
+                        android:id="@+id/faceookryt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_dp"
+                        android:background="@drawable/fb_bg"
+
+                        >
+
+<!--                        <com.kokngoding.squizy.helper.CircleImageView1-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:padding="@dimen/margin_10dp"-->
+<!--                            app:srcCompat="@drawable/ic_facebookimg" />-->
+
+
+                    </RelativeLayout>
+
                     <RelativeLayout
                         android:id="@+id/googleryt"
                         android:layout_width="wrap_content"
@@ -244,35 +264,17 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/faceookryt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/margin_dp"
-                        android:background="@drawable/fb_bg"
-
-                        >
-
-                        <com.kokngoding.squizy.helper.CircleImageView1
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="@dimen/margin_10dp"
-                            app:srcCompat="@drawable/ic_facebookimg" />
-
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
                         android:id="@+id/mobileryt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/guest_bg">
 
-                        <com.kokngoding.squizy.helper.CircleImageView1
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/ic_phoneimg"
+<!--                        <com.kokngoding.squizy.helper.CircleImageView1-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            app:srcCompat="@drawable/ic_phoneimg"-->
 
-                            />
+<!--                            />-->
                     </RelativeLayout>
                 </LinearLayout>
             </RelativeLayout>

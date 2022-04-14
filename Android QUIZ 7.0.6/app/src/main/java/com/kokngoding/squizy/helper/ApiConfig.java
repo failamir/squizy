@@ -9,7 +9,7 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.kokngoding.squizy.Constant;
-import com.google.gson.GsonBuilder;
+//import com.google.gson.GsonBuilder;
 
 
 import java.util.HashMap;
@@ -49,9 +49,9 @@ public class ApiConfig {
         }, params);
     }
 
-    public static String getDump(Object o) {
-        return new GsonBuilder().setPrettyPrinting().create().toJson(o);
-    }
+//    public static String getDump(Object o) {
+//        return new GsonBuilder().setPrettyPrinting().create().toJson(o);
+//    }
     public static void MultipartRequestToVolley(final VolleyCallback callback, final Map<String, String> params, final Map<String, String> fileParams) {
         VolleyMultiPartRequest multipartRequest = new VolleyMultiPartRequest(Constant.QUIZ_URL, response -> callback.onSuccess(true, response),
                 error -> callback.onSuccess(false, "")) {
@@ -59,13 +59,13 @@ public class ApiConfig {
             public Map<String, String> getHeaders() {
                 Map<String, String> params1 = new HashMap<String, String>();
                 params1.put(Constant.AUTHORIZATION, "Bearer " + AppController.createJWT("quiz", "quiz Authentication"));
-                getDump(params1);
+//                getDump(params1);
                 return params1;
             }
             @Override
             public Map<String, String> getDefaultParams() {
                 params.put(Constant.accessKey, Constant.accessKeyValue);
-                getDump(params);
+//                getDump(params);
                 return params;
             }
             @Override
@@ -84,7 +84,7 @@ public class ApiConfig {
             public Map<String, String> getHeaders() {
                 Map<String, String> params1 = new HashMap<String, String>();
                 params1.put(Constant.AUTHORIZATION, "Bearer " + AppController.createJWT("quiz", "quiz Authentication"));
-                getDump(params1);
+//                getDump(params1);
                 System.out.println("AuthoRization::="+params1);
                 return params1;
             }
@@ -92,7 +92,7 @@ public class ApiConfig {
             @Override
             protected Map<String, String> getParams() {
                 params.put(Constant.accessKey, Constant.accessKeyValue);
-                getDump(params);
+//                getDump(params);
                 return params;
             }
         };

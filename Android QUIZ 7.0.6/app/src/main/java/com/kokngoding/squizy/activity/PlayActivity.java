@@ -213,6 +213,10 @@ public class PlayActivity extends AppCompatActivity implements OnClickListener {
 
 
     public void RewardsAdsGoogleLoads() {
+//         Bundle extras = new Bundle();
+//         extras.putString("max_ad_content_rating", "G");
+// //        AdRequest request = new AdRequest.Builder() .addNetworkExtrasBundle(AdMobAdapter.class, extras) .tagForChildDirectedTreatment(true) .build();
+//         adRequest = new AdRequest.Builder() .addNetworkExtrasBundle(AdMobAdapter.class, extras) .build();
         adRequest = new AdRequest.Builder().build();
         RewardedAd.load(this, Constant.ADMOB_REWARDS_ADS,
                 adRequest, new RewardedAdLoadCallback() {

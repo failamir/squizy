@@ -79,10 +79,10 @@ public class CoinStoreActivity extends AppCompatActivity implements PurchasesUpd
 
     public ArrayList<InApp> setPurchaseIds() {
         purchaseIds = new ArrayList<>();
-        purchaseIds.add(new InApp("android.test.purchased", "100"));
-        purchaseIds.add(new InApp("android.test.purchased", "500"));
-        purchaseIds.add(new InApp("android.test.purchased", "1000"));
-        purchaseIds.add(new InApp("android.test.purchased", "5000"));
+        purchaseIds.add(new InApp("coin_100", "100"));
+        purchaseIds.add(new InApp("coin_500", "500"));
+        purchaseIds.add(new InApp("coin_1000", "1000"));
+        purchaseIds.add(new InApp("coin_5000", "5000"));
         return purchaseIds;
     }
 

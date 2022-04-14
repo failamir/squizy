@@ -31,7 +31,7 @@ public class SplashActivity extends Activity {
             Intent intent = new Intent(SplashActivity.this, LoginTabActivity.class);
             startActivity(intent);
             finish();
-        }, 3000);
+        }, 1000);
 
         changeLocale(Session.getApplanguage(SplashActivity.this));
 
